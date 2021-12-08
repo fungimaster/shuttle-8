@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .btn-pill {
+    @apply text-white
+    font-bold
+    uppercase
+    text-sm
+    px-6
+    py-3
+    rounded-full
+    shadow
+    outline-none
+    focus:outline-none
+    mr-1
+    mb-1
+    ease-linear
+    transition-all
+    duration-150;
+  }
+  .btn-pill:active {
+    @apply bg-pink-600;
+  }
+  .btn-pill:hover {
+    @apply shadow-lg;
+  }
+  .btn-pill:focus {
+    @apply outline-none;
+  }
+  .btn-lg {
+    @apply px-8 py-3 shadow-md;
+  }
+  .headline1 {
+    @apply text-5xl font-normal leading-normal mt-0 mb-2;
+    font-family: 'Alice', Georgia, 'Times New Roman', serif;
+  }
+  .headline2 {
+    @apply text-2xl font-normal leading-normal mt-0 mb-2 text-pink-800;
+    font-family: 'Alice', Georgia, 'Times New Roman', serif;
+  }
+  .text {
+    @apply text-base font-light leading-relaxed mt-0 mb-4 text-base text-gray-500;
+  }
+  .bold {
+    @apply text-lg leading-relaxed mt-6 mb-4 font-semibold text-gray-800;
+  }
+}
