@@ -1,30 +1,32 @@
 <template>
   <div>
-    <HeroSection
-      :headline1="hero.headline1"
-      :headline2="hero.headline2"
-      color="text-white"
-      imgurl=""
-    />
-    <div
-      class="
-        container
-        mx-auto
-        px-4
-        grid grid-cols-1
-        md:grid-cols-3
-        gap-2
-        place-items-center
-        pt-20
-      "
-    >
-      <Card class="m-3" :content="event1" />
-      <Card class="m-3" :content="event2" />
-      <Card class="m-3" :content="event3" />
-      <Card class="m-3" :content="event1" />
-      <Card class="m-3" :content="event2" />
-      <Card class="m-3" :content="event3" />
-    </div>
+    <client-only>
+      <HeroSection
+        :headline1="hero.headline1"
+        :headline2="hero.headline2"
+        color="text-white"
+        imgurl=""
+      />
+      <div
+        class="
+          container
+          mx-auto
+          px-4
+          grid grid-cols-1
+          md:grid-cols-3
+          gap-2
+          place-items-center
+          pt-20
+        "
+      >
+        <Card class="m-3" :content="event1" />
+        <Card class="m-3" :content="event2" />
+        <Card class="m-3" :content="event3" />
+        <Card class="m-3" :content="event1" />
+        <Card class="m-3" :content="event2" />
+        <Card class="m-3" :content="event3" />
+      </div>
+    </client-only>
   </div>
 </template>
 

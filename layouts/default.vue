@@ -1,7 +1,9 @@
 <template>
   <div>
-    <Top />
-    <Nuxt />
-    <Footer />
+    <client-only>
+      <Top />
+      <Nuxt />
+      <Footer />
+    </client-only>
   </div>
 </template>
