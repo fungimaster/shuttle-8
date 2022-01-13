@@ -1,139 +1,72 @@
 <template>
-  <div class="relative inline-block text-left text-gray-800">
-    <div>
-      <span class="rounded-md shadow-sm">
-        <button
-          @click="isMenuOpen = !isMenuOpen"
-          type="button"
-          class="
-            inline-flex
-            items-center
-            justify-between
-            w-full
-            rounded-md
-            border border-gray-300
-            h-10
-            px-4
-            py-4
-            text-sm
-            leading-5
-            font-medium
-            text-gray-700
-            hover:text-gray-500
-            focus:outline-none focus:border-blue-300 focus:shadow-outline-blue
-            active:bg-gray-100 active:text-gray-800
-            transition
-            ease-in-out
-            duration-150
-            btn-focus
-          "
-          id="options-menu"
-          aria-haspopup="true"
-          aria-expanded="true"
-        >
-          <span> {{ ':)' }} </span>
-          <img
-            src="https://s.svgbox.net/hero-solid.svg?ic=chevron-down&fill=grey-800"
-            class="-mr-1 ml-2 h-5 w-5"
-          />
-        </button>
-      </span>
-    </div>
-    <transition
-      enter-active-class="transition ease-out duration-100"
-      enter-class="transform opacity-0 scale-95"
-      enter-to-class="transform opacity-100 scale-100"
-      leave-active-class="transition ease-in duration-75"
-      leave-class="transform opacity-100 scale-100"
-      leave-to-class="transform opacity-0 scale-95"
+  <div class="mt-2 w-56 z-20 px-20 w-full">
+    <div
+      class="bg-white"
+      role="menu"
+      aria-orientation="vertical"
+      aria-labelledby="options-menu"
     >
-      <div
-        v-if="isMenuOpen"
-        class="
-          origin-top-right
-          absolute
-          right-0
-          mt-2
-          w-56
-          rounded-md
-          shadow-lg
-          text-sm
-          overflow-hidden
-          border
-          z-20
-        "
-      >
-        <div
-          class="rounded-md bg-white shadow-xs"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="options-menu"
-        >
-          <div>
-            <div class="hidden bg-gray-100 p-4 flex items-center">
-              <div class="w-full">
-                <img
-                  class="h-8 w-8 rounded-full mb-2"
-                  src="https://fayazz.co/fayaz.jpg"
-                  alt="avatar"
-                />
-                <p class="font-semibold text-base">Fayaz Ahmed</p>
-                <button
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    w-full
-                    focus:outline-none
-                  "
-                >
-                  <p class="text-gray-600">fayaz@email.com</p>
-                  <img
-                    src="https://s.svgbox.net/hero-solid.svg?ic=cog&fill=grey-700"
-                    class="h-4 w-4"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="border-t border-gray-100"></div>
-          <div class="py-1">
-            <nuxt-link to="/" class="p-4 flex items-center space-x-2">
-              <span> Hem </span>
-            </nuxt-link>
-            <nuxt-link
-              to="/insamlingsevent"
-              class="p-4 flex items-center space-x-2"
-            >
-              <span> Insamlingsevent </span>
-            </nuxt-link>
-          </div>
-          <div class="border-t border-gray-100"></div>
-          <div class="py-1">
-            <nuxt-link
-              to="/"
-              @click.native="isMenuOpen = false"
-              class="p-4 flex items-center space-x-2"
-            >
-              <img
-                src="https://s.svgbox.net/hero-outline.svg?ic=logout"
-                class="h-6 w-6"
-              />
-              <span> Logout </span>
-            </nuxt-link>
-          </div>
+      <div class="py-1">
+        <div class="my-5">
+          <nuxt-link to="/">
+            <span class="tracking-wide text-lg"> Hem </span>
+          </nuxt-link>
+          <hr class="text-black w-full mt-5" />
+        </div>
+        <div class="my-5">
+          <nuxt-link to="/insamlingsevent">
+            <span class="tracking-wide text-lg"> Insamlingsevent </span>
+          </nuxt-link>
+          <hr class="text-black w-full mt-5" />
+        </div>
+        <div class="my-5">
+          <nuxt-link to="/">
+            <span class="tracking-wide text-lg"> Hem </span>
+          </nuxt-link>
+          <hr class="text-black w-full mt-5" />
+        </div>
+        <div class="my-5">
+          <nuxt-link to="/">
+            <span class="tracking-wide text-lg"> Hem </span>
+          </nuxt-link>
+          <hr class="text-black w-full mt-5" />
         </div>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
+
 <script>
+import { createPopper } from '@popperjs/core'
+
+import { utilityMethodsMixin } from '@/plugins/mixins/utilityMethodsMixin'
+
 export default {
+  mixins: [utilityMethodsMixin],
+
   data() {
     return {
       isMenuOpen: false,
+
+      dropdownPopoverShow: false,
     }
+  },
+
+  methods: {
+    isCurrentPage(page) {
+      return this.currentPage === page ? 'active' : null
+    },
+    toggleDropdown() {
+      if (this.dropdownPopoverShow) {
+        this.dropdownPopoverShow = false
+      } else {
+        this.dropdownPopoverShow = true
+        createPopper(this.$refs.btnDropdownRef, this.$refs.popoverDropdownRef, {
+          placement: 'bottom-start',
+        })
+      }
+    },
   },
 }
 </script>

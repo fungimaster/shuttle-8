@@ -14,7 +14,11 @@
         bg-pink-600
       "
     >
-      <img alt="..." :src="imgurl" class="w-full align-middle rounded-t-lg" />
+      <img
+        alt="..."
+        :src="content.imgurl"
+        class="w-full align-middle rounded-t-lg h-60"
+      />
       <blockquote class="relative p-8 mb-4">
         <svg
           preserveAspectRatio="none"
@@ -28,10 +32,9 @@
             class="text-pink-600 fill-current"
           ></polygon>
         </svg>
-        <h4 class="text-xl font-bold text-white">Top Notch Services</h4>
+        <h4 class="text-xl font-bold text-white">{{ content.headline }}</h4>
         <p class="text-md font-light mt-2 text-white">
-          The Arctic Ocean freezes every winter and much of the sea-ice then
-          thaws every summer, and that process will continue whatever happens.
+          {{ content.body1 }}
         </p>
       </blockquote>
     </div>
@@ -40,6 +43,6 @@
 
 <script>
 export default {
-  props: ['imgurl'],
+  props: ['content'],
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="p-2 mt-0 w-full z-10 top-0">
+    <nav class="p-2 py-5 mt-0 w-full z-10 top-0">
       <div class="container mx-auto flex items-center">
         <div
           class="
@@ -15,10 +15,10 @@
         >
           <a
             class="text-black no-underline hover:text-white hover:no-underline"
-            href="#"
+            @click="$_handleRouting('/')"
           >
             <img
-              class="w-1/2 md:w-80"
+              class="w-1/2 md:w-50"
               src="https://slagforhjaltar.se/wp-content/uploads/2021/03/Slag-for-hjaltar-logo-liten.png"
               alt="logo"
             />
@@ -63,9 +63,10 @@
                 "
                 @click="$_handleRouting('/')"
                 :class="[isCurrentPage('index')]"
-                >Active</a
+                >Hem</a
               >
             </li>
+
             <li class="mr-3">
               <a
                 class="
@@ -101,12 +102,13 @@
                   hover:opacity-75
                   cursor-pointer
                 "
-                href="#"
-                >link</a
+                @click="$_handleRouting('/stiftelsen')"
+                >Om stiftelsen</a
               >
             </li>
             <li class="mr-3">
               <a
+                @click="$_handleRouting('/hjalp')"
                 class="
                   px-3
                   py-2
@@ -120,18 +122,78 @@
                   hover:opacity-75
                   cursor-pointer
                 "
-                s
-                href="#"
-                >link</a
+                >Så hjälper vi</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                @click="$_handleRouting('/hjaltar')"
+                class="
+                  px-3
+                  py-2
+                  flex
+                  items-center
+                  text-xs
+                  uppercase
+                  font-bold
+                  leading-snug
+                  text-black
+                  hover:opacity-75
+                  cursor-pointer
+                "
+                >Hjältar</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                @click="$_handleRouting('/kontakt')"
+                class="
+                  px-3
+                  py-2
+                  flex
+                  items-center
+                  text-xs
+                  uppercase
+                  font-bold
+                  leading-snug
+                  text-black
+                  hover:opacity-75
+                  cursor-pointer
+                "
+                >Kontakt</a
               >
             </li>
           </ul>
         </div>
+        <div class="flex flex-wrap">
+          <div class="w-full sm:w-6/12 md:w-4/12 px-4"></div>
+        </div>
         <div class="md:hidden">
-          <DropdownMenu />
+          <button @click="showDropdown = !showDropdown" class="pr-3">
+            <div id="nav-icon1" :class="showDropdown ? 'open' : ''">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div id="nav-icon2" :class="showDropdown ? 'open' : ''">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
         </div>
       </div>
     </nav>
+    <div>
+      <DropdownMenu
+        v-if="showDropdown"
+        class="lgMenu"
+        :class="showDropdown ? 'enter' : ''"
+      />
+    </div>
   </div>
 </template>
 
@@ -146,6 +208,7 @@ export default {
   data() {
     return {
       active: false,
+      showDropdown: false,
     }
   },
 
@@ -170,6 +233,100 @@ export default {
 .active {
   color: #c30075;
 }
+
+#nav-icon1,
+#nav-icon2,
+#nav-icon3,
+#nav-icon4 {
+  width: 24px;
+  height: 16px;
+  position: relative;
+
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+
+  height: 2.5px;
+  width: 100%;
+  background: #000000;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -20px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 10px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/* .lgMenu {
+  top: 0;
+  left: -400px;
+  overflow: hidden;
+
+  position: absolute;
+  z-index: 11;
+  opacity: 0;
+  transition: all 5s;
+  -webkit-transition: all 5s;
+}
+
+.lgMenu.enter {
+  opacity: 1;
+  left: 0;
+} */
 </style>
+
+
+
 
 

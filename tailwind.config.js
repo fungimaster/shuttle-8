@@ -16,6 +16,7 @@ module.exports = {
         'pink-dark-hero': '#C30175',
         'purple-hero': '#430D3F',
         'pink-hero': '#E8B8CF',
+        'hero-yellow': '#FFF2CB',
       },
     },
   },

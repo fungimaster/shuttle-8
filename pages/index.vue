@@ -1,50 +1,53 @@
 <template>
   <div>
-    <Hero
+    <HeroSection
       :headline1="hero.headline1"
       :headline2="hero.headline2"
-      color="text-gray-300"
+      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/o_20/v1641996251/medal_mtvkui.png"
+      imgurl2="https://res.cloudinary.com/dk1b2ytfl/image/upload/o_20/v1641997457/vector_ixay5z.png"
+      color="text-white"
     >
       <template #buttons>
-        <button class="btn-pill btn-lg bg-pink-dark-hero" type="button">
+        <button class="btn-pill btn-lg bg-white" type="button">
           Ge en gåva
         </button>
-        <button class="btn-pill btn-lg bg-pink-dark-hero">
+        <button class="btn-pill btn-lg bg-white" type="button">
           Läs mer om oss
         </button>
       </template>
-    </Hero>
-    <div class="pb-20 bg-gray-300 -mt-24">
+    </HeroSection>
+    <div class="pb-20 pt-24 py-20">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap">
-          <Box class="pt-12" />
-          <Box />
-          <Box class="pt-12" />
+          <Box class="pt-12" :content="box1" />
+          <Box :content="box2" />
+          <Box class="pt-12" :content="box3" />
         </div>
       </div>
     </div>
-    <div class="-mt-24 mb-12">
+    <div class="py-24 bg-gray-50">
       <TextAndCard
-        class="bg-gray-300"
         :ingress="event1.ingress"
         :headline="event1.headline"
-        :imgurl="event1.imgurl"
+        :content="event1"
       >
         <template #content>
+          <h3 class="text-3xl mb-2 font-semibold leading-normal">
+            Rubrik och tjohej!
+          </h3>
           <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-            Don't let your uses guess by attaching tooltips and popoves to any
-            element. Just make sure you enable them first via JavaScript.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id
+            tenetur nulla pariatur distinctio atque in asperiores facilis!
+            Aspernatur nam velit repellat suscipit ipsa eius expedita molestiae
+            cum voluptatum error.
           </p>
           <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-            The kit comes with three pre-built pages to help you get started
-            faster. You can change the text and images and you're good to go.
-            Just make sure you enable them first via JavaScript.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id
+            tenetur nulla pariatur distinctio atque in asperiores facilis!
+            Aspernatur nam velit repellat suscipit ipsa eius expedita molestiae
+            cum voluptatum error.
           </p>
-          <a
-            href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-            class="font-bold text-gray-800 mt-8"
-            >Check Tailwind Starter Kit!</a
-          >
+          <a href="#" class="font-bold text-gray-800 mt-8">Link to stuff</a>
         </template>
       </TextAndCard>
     </div>
@@ -56,15 +59,31 @@ export default {
   data() {
     return {
       hero: {
-        headline1: 'Insamlingsevent',
+        headline1: 'Slag För Hjältar',
         headline2:
-          'Varje år arrangerar vi flera insamlingsevents där vi alla kan fira med kärlek, glädje, gemenskap & engagemang!',
+          'Genom evenemang tillsammans med förening- och näringslivet donerar vi insamlade medel till icke vinstdrivande organisationer som arbetar inom vård, hälsa och omsorg.',
       },
       event1: {
-        ingress: 'Lorem ipsum dolor sit, amet consectetur',
-        headline: '2021',
+        body1:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
+        headline: '2021 - Insamlingsevent',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/allerum-golf-2.jpg',
+          'https://slagforhjaltar.se/wp-content/uploads/2021/11/slagforhjaltar-2021.jpg',
+      },
+      box1: {
+        headline: 'Vilka är vi?',
+        text: 'Här nedan kan du klicka vidare för att läsa mer om hur allt startade och vad vi göra idag. Du kan också läsa om våra hjältar och hur vår stiftelse kunnat hjälpa till.',
+        color: 'bg-pink-300',
+      },
+      box2: {
+        headline: 'Insamlingsevent',
+        text: 'Varje år håller vi flera insamlingsevents för att kunna knyta nya kontakter och dela en vacker gemenskap.',
+        color: 'bg-pink-600',
+      },
+      box3: {
+        headline: 'Så hjälper du!',
+        text: 'Läs mer om hur just du kan komma att betyda mycket för de som inte har det så lätt just nu.',
+        color: 'bg-pink-900',
       },
     }
   },

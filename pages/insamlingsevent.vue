@@ -1,24 +1,29 @@
 <template>
   <div>
-    <Hero
+    <HeroSection
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
+      imgurl=""
     />
-    <TextOverImage class="my-28 md:mx-28 sm:mx-0" />
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 place-items-center pt-40">
-      <Card
-        class="m-3"
-        imgurl="https://slagforhjaltar.se/wp-content/uploads/2021/03/barncancerfonden.jpg"
-      />
-      <Card
-        class="m-3"
-        imgurl="https://slagforhjaltar.se/wp-content/uploads/2021/03/barncancerfonden.jpg"
-      />
-      <Card
-        class="m-3"
-        imgurl="https://slagforhjaltar.se/wp-content/uploads/2021/03/barncancerfonden.jpg"
-      />
+    <div
+      class="
+        container
+        mx-auto
+        px-4
+        grid grid-cols-1
+        md:grid-cols-3
+        gap-2
+        place-items-center
+        pt-20
+      "
+    >
+      <Card class="m-3" :content="event1" />
+      <Card class="m-3" :content="event2" />
+      <Card class="m-3" :content="event3" />
+      <Card class="m-3" :content="event1" />
+      <Card class="m-3" :content="event2" />
+      <Card class="m-3" :content="event3" />
     </div>
   </div>
 </template>
@@ -28,15 +33,30 @@ export default {
   data() {
     return {
       hero: {
-        headline1: 'Insamlingsevent',
+        headline1: 'Insamlings- event',
         headline2:
           'Varje år arrangerar vi flera insamlingsevents där vi alla kan fira med kärlek, glädje, gemenskap & engagemang!',
       },
       event1: {
-        ingress: 'Lorem ipsum dolor sit, amet consectetur',
+        body1:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
         headline: '2021',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/allerum-golf-2.jpg',
+          'https://slagforhjaltar.se/wp-content/uploads/2021/03/ellas-hjaltar.jpg',
+      },
+      event2: {
+        body1:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
+        headline: '2020',
+        imgurl:
+          'https://slagforhjaltar.se/wp-content/uploads/2021/03/1080x600_eston.jpg',
+      },
+      event3: {
+        body1:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
+        headline: '2019',
+        imgurl:
+          'https://slagforhjaltar.se/wp-content/uploads/2021/03/ellas-hjaltar.jpg',
       },
     }
   },

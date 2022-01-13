@@ -11,7 +11,14 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/pro-regular-svg-icons": "^5.15.4",
+    "@fortawesome/pro-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.6",
     "@nuxtjs/axios": "^5.13.6",
+    "@popperjs/core": "2.9.1",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
     "sass": "^1.43.5"

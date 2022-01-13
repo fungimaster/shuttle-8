@@ -14,31 +14,25 @@
           mb-6
           shadow-lg
           rounded-full
-          bg-gray-100
+          bg-pink-dark-hero
         "
       >
-        <i class="fas fa-user-friends text-xl"></i>
+        <font-awesome-icon class="h-4 text-white" :icon="['far', 'heart']" />
       </div>
-      <h3 class="text-3xl mb-2 font-semibold leading-normal">
-        {{ headline }}
-      </h3>
 
       <div v-if="$slots.content">
         <slot name="content"> </slot>
       </div>
     </div>
     <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-      <Card
-        class="m-3"
-        imgurl="https://slagforhjaltar.se/wp-content/uploads/2021/03/barncancerfonden.jpg"
-      />
+      <Card class="m-3" :content="content" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['headline', 'ingress', 'imgurl'],
+  props: ['headline', 'ingress', 'content'],
 }
 </script>
 
