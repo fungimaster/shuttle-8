@@ -14,20 +14,32 @@
           <hr class="text-black w-full mt-5" />
         </div>
         <div class="my-5">
-          <nuxt-link to="/insamlingsevent">
+          <nuxt-link to="/insamlingsevent" @click.native="closeMenu">
             <span class="tracking-wide text-lg"> Insamlingsevent </span>
           </nuxt-link>
           <hr class="text-black w-full mt-5" />
         </div>
         <div class="my-5">
-          <nuxt-link to="/">
-            <span class="tracking-wide text-lg"> Hem </span>
+          <nuxt-link to="/bakgrund" @click.native="closeMenu">
+            <span class="tracking-wide text-lg"> Bakgrund </span>
           </nuxt-link>
           <hr class="text-black w-full mt-5" />
         </div>
         <div class="my-5">
-          <nuxt-link to="/">
-            <span class="tracking-wide text-lg"> Hem </span>
+          <nuxt-link to="/hjalp" @click.native="closeMenu">
+            <span class="tracking-wide text-lg"> Så hjälper du</span>
+          </nuxt-link>
+          <hr class="text-black w-full mt-5" />
+        </div>
+        <div class="my-5">
+          <nuxt-link to="/hjaltar" @click.native="closeMenu">
+            <span class="tracking-wide text-lg"> Hjältar </span>
+          </nuxt-link>
+          <hr class="text-black w-full mt-5" />
+        </div>
+        <div class="my-5">
+          <nuxt-link to="/kontakt" @click.native="closeMenu">
+            <span class="tracking-wide text-lg"> Kontakt </span>
           </nuxt-link>
           <hr class="text-black w-full mt-5" />
         </div>
@@ -38,34 +50,14 @@
 
 
 <script>
-import { createPopper } from '@popperjs/core'
-
 import { utilityMethodsMixin } from '@/plugins/mixins/utilityMethodsMixin'
 
 export default {
   mixins: [utilityMethodsMixin],
 
-  data() {
-    return {
-      isMenuOpen: false,
-
-      dropdownPopoverShow: false,
-    }
-  },
-
   methods: {
-    isCurrentPage(page) {
-      return this.currentPage === page ? 'active' : null
-    },
-    toggleDropdown() {
-      if (this.dropdownPopoverShow) {
-        this.dropdownPopoverShow = false
-      } else {
-        this.dropdownPopoverShow = true
-        createPopper(this.$refs.btnDropdownRef, this.$refs.popoverDropdownRef, {
-          placement: 'bottom-start',
-        })
-      }
+    closeMenu() {
+      this.$emit('closeMenu')
     },
   },
 }

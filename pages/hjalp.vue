@@ -7,7 +7,22 @@
       imgurl=""
     />
     <div class="container mx-auto px-4">
-      <div>
+      <div class="pb-20 pt-24 py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="headline1 text-pink-dark-hero py-10">
+            Tillsammans så gör vi stor skillnad. Hur kan du hjälpa?
+          </h1>
+
+          <div class="flex flex-wrap">
+            <Box class="w-full md:w-3/12" :content="box1" />
+            <Box class="w-full md:w-3/12" :content="box2" />
+            <Box class="w-full md:w-3/12" :content="box3" />
+            <Box class="w-full md:w-3/12" :content="box4" />
+          </div>
+        </div>
+
+        <!-- <TextAndImage class="sm:mx-0" :content="content1" /> -->
+
         <div
           class="
             container
@@ -17,14 +32,13 @@
             md:grid-cols-3
             gap-2
             place-items-center
-            pt-40
+            pt-20
           "
         >
           <Card :content="help1" class="m-3" />
           <Card :content="help2" class="m-3" />
           <Card :content="help3" class="m-3" />
         </div>
-        <TextAndImage class="sm:mx-0" :content="content1" />
       </div>
     </div>
   </div>
@@ -35,27 +49,31 @@ export default {
   data() {
     return {
       hero: {
-        headline1: 'Så hjälper vi tillsammans',
+        headline1: 'Så hjälper du',
         headline2: '',
       },
-      content1: {
-        body1:
-          'Det finns en rad sätt du kan hjälpa stiftelsen att hjälpa ännu fler barn och unga med behov.',
-        body2:
-          '1. Du/ ditt företag är välkommen att delta på någon av våra insamlingsevent som arrangeras varje år. Se ”Insamlingsevent” för närmare info.',
-        body3:
-          '2. Du är välkommen att arrangera ett eget insamlingsinitiativ i samråd med oss. Kontakta oss genom vårt kontaktformulär så tar vi ett prat kring det hela.',
-        body4:
-          '3. Du är också givetvis alltid välkommen att bidra till våra insamlingar via vårt Swish nummer eller QR kod.',
-        body5:
-          '4. Vi hoppas också såklart att du vill följa stiftelsen i våra kanaler på Facebook och Instagram. Samt bjuder in dina vänner att göra detsamma!',
-        body6:
-          'Med andra ord – vi är glada och tacksamma för allt stöd som leder till större möjlighet att hjälpa fler barn och unga!',
 
-        headline: 'Hur kan du hjälpa?',
-        imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/barncancerfonden.jpg',
+      box1: {
+        headline: 'Delta på Insamlingsevent',
+        text: 'Du/ditt företag är välkommen att delta på någon av våra insamlingsevent som arrangeras varje år. Se ”Insamlingsevent” för närmare info.',
+        color: 'bg-pink-300',
       },
+      box2: {
+        headline: 'Arrangera event',
+        text: 'Du är välkommen att arrangera ett eget insamlingsinitiativ i samråd med oss. Kontakta oss genom vårt kontaktformulär så tar vi ett prat kring det hela.',
+        color: 'bg-pink-600',
+      },
+      box3: {
+        headline: 'Swish en gåva',
+        text: 'Du är också givetvis alltid välkommen att bidra till våra insamlingar via vårt Swish nummer eller QR kod.',
+        color: 'bg-pink-300',
+      },
+      box4: {
+        headline: 'Följ oss och sprid budskapet!',
+        text: 'Vi hoppas också såklart att du vill följa stiftelsen i våra kanaler på Facebook och Instagram. Samt bjuder in dina vänner att göra detsamma!',
+        color: 'bg-pink-600',
+      },
+
       help1: {
         body1:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod unde, et est porro fuga quibusdam expedita modi voluptatum quaerat laboriosam doloribus eaque consectetur excepturi numquam alias eveniet odit quis facilis?',

@@ -1,7 +1,7 @@
 <template>
   <div
     class="relative pt-16 pb-16 flex content-center items-center justify-center"
-    style="min-height: 75vh"
+    style="min-height: 85vh"
   >
     <div
       class="

@@ -1,11 +1,20 @@
 
    
 <template>
-  <footer class="relative bg-pink-100 text-gray-300 pt-8 pb-6 pt-28">
+  <footer
+    class="
+      relative
+      text-pink-dark-hero
+      pt-8
+      pb-6
+      pt-28
+      border-t-4 border-pink-dark-hero
+    "
+  >
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4">
-          <h4 class="text-3xl font-semibold text-gray-900">Kontakt</h4>
+          <h4 class="text-3xl font-semibold">Kontakt</h4>
 
           <a href="mailto:info@slagforhjaltar.se">
             <h5 class="text-lg mt-0 mb-2 text-gray-600">
@@ -13,7 +22,7 @@
             </h5></a
           >
 
-          <h4 class="mt-6 text-3xl font-semibold text-gray-900">Adress</h4>
+          <h4 class="mt-6 text-3xl font-semibold">Adress</h4>
           <h5 class="text-lg mt-0 mb-2 text-gray-600">
             Adress: Rååvägen 39 25270 Råå
           </h5>

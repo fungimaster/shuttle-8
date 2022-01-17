@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <client-only>
       <HeroSection
         :headline1="hero.headline1"
@@ -18,12 +18,12 @@
         </template>
       </HeroSection>
 
-      <div class="pb-20 pt-24 py-20">
+      <div class="-mt-60 md:-mt-40 pb-20 pt-24 py-20">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
-            <Box class="pt-12" :content="box1" />
-            <Box :content="box2" />
-            <Box class="pt-12" :content="box3" />
+            <Box class="pt-12 w-full md:w-4/12" :content="box1" />
+            <Box class="w-full md:w-4/12" :content="box2" />
+            <Box class="pt-12 w-full md:w-4/12" :content="box3" />
           </div>
         </div>
       </div>

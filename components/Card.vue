@@ -9,7 +9,6 @@
         bg-white
         w-full
         mb-6
-        shadow-lg
         rounded-lg
         bg-pink-600
       "
@@ -17,7 +16,7 @@
       <img
         alt="..."
         :src="content.imgurl"
-        class="w-full align-middle rounded-t-lg h-60"
+        class="w-full align-middle rounded-t-lg h-80"
       />
       <blockquote class="relative p-8 mb-4">
         <svg

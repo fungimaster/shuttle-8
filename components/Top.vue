@@ -102,8 +102,8 @@
                   hover:opacity-75
                   cursor-pointer
                 "
-                @click="$_handleRouting('/stiftelsen')"
-                >Om stiftelsen</a
+                @click="$_handleRouting('/bakgrund')"
+                >Bakgrund</a
               >
             </li>
             <li class="mr-3">
@@ -122,7 +122,7 @@
                   hover:opacity-75
                   cursor-pointer
                 "
-                >Så hjälper vi</a
+                >Så hjälper du</a
               >
             </li>
             <li class="mr-3">
@@ -192,6 +192,7 @@
         v-if="showDropdown"
         class="lgMenu"
         :class="showDropdown ? 'enter' : ''"
+        @closeMenu="showDropdown = false"
       />
     </div>
   </div>

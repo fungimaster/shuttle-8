@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 pt-20">
+  <div class="container mx-auto px-4 py-20">
     <div class="flex flex-wrap">
       <div class="block md:hidden w-full md:w-6/12 ml-auto mr-auto px-4">
         <img

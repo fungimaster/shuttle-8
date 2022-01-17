@@ -44,21 +44,21 @@ export default {
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
         headline: '2021',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/ellas-hjaltar.jpg',
+          'https://res.cloudinary.com/dk1b2ytfl/image/upload/c_crop,h_500/v1642251732/barncancerfonden3_hlxxcj.jpg',
       },
       event2: {
         body1:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
         headline: '2020',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/1080x600_eston.jpg',
+          'https://res.cloudinary.com/dk1b2ytfl/image/upload/c_crop,h_500/v1642251451/slag-for-hjaltar-events_fs52yg.jpg',
       },
       event3: {
         body1:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
         headline: '2019',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/ellas-hjaltar.jpg',
+          'https://res.cloudinary.com/dk1b2ytfl/image/upload/c_crop,h_600/v1642251732/barncancerfonden3_hlxxcj.jpg',
       },
     }
   },

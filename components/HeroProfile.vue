@@ -21,7 +21,7 @@
         style="height: 70px"
       ></div>
     </section>
-    <section class="relative py-16 bg-gray-300">
+    <section class="relative py-16 border-2 border-pink-hero">
       <div class="container mx-auto px-4">
         <div
           class="
