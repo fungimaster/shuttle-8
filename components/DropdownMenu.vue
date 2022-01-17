@@ -7,39 +7,9 @@
       aria-labelledby="options-menu"
     >
       <div class="py-1">
-        <div class="my-5">
-          <nuxt-link to="/">
-            <span class="tracking-wide text-lg"> Hem </span>
-          </nuxt-link>
-          <hr class="text-black w-full mt-5" />
-        </div>
-        <div class="my-5">
-          <nuxt-link to="/insamlingsevent" @click.native="closeMenu">
-            <span class="tracking-wide text-lg"> Insamlingsevent </span>
-          </nuxt-link>
-          <hr class="text-black w-full mt-5" />
-        </div>
-        <div class="my-5">
-          <nuxt-link to="/bakgrund" @click.native="closeMenu">
-            <span class="tracking-wide text-lg"> Bakgrund </span>
-          </nuxt-link>
-          <hr class="text-black w-full mt-5" />
-        </div>
-        <div class="my-5">
-          <nuxt-link to="/hjalp" @click.native="closeMenu">
-            <span class="tracking-wide text-lg"> Så hjälper du</span>
-          </nuxt-link>
-          <hr class="text-black w-full mt-5" />
-        </div>
-        <div class="my-5">
-          <nuxt-link to="/hjaltar" @click.native="closeMenu">
-            <span class="tracking-wide text-lg"> Hjältar </span>
-          </nuxt-link>
-          <hr class="text-black w-full mt-5" />
-        </div>
-        <div class="my-5">
-          <nuxt-link to="/kontakt" @click.native="closeMenu">
-            <span class="tracking-wide text-lg"> Kontakt </span>
+        <div class="my-5" v-for="route in routes" :key="route.index">
+          <nuxt-link :to="route.value" @click.native="closeMenu">
+            <span class="tracking-wide text-lg"> {{ route.displayname }} </span>
           </nuxt-link>
           <hr class="text-black w-full mt-5" />
         </div>
@@ -53,6 +23,7 @@
 import { utilityMethodsMixin } from '@/plugins/mixins/utilityMethodsMixin'
 
 export default {
+  props: ['routes'],
   mixins: [utilityMethodsMixin],
 
   methods: {

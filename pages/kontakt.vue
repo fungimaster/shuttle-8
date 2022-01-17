@@ -6,21 +6,9 @@
       color="text-white"
       imgurl=""
     />
-    <div
-      class="
-        container
-        mx-auto
-        px-4
-        grid grid-cols-1
-        md:grid-cols-3
-        gap-2
-        place-items-center
-        pt-40
-      "
-    >
-      <Card class="m-3" :content="event1" />
-      <Card class="m-3" :content="event1" />
-      <Card class="m-3" :content="event1" />
+
+    <div class="container mx-auto px-4 pb-52">
+      <TextOverImage :content="content1" class="py-28 mb-52" />
     </div>
   </div>
 </template>
@@ -31,12 +19,14 @@ export default {
     return {
       hero: {
         headline1: 'Kontakt',
+        headline2: '',
       },
-      event1: {
-        ingress: 'Lorem ipsum dolor sit, amet consectetur',
-        headline: '2021',
+      content1: {
+        body: 'Du är alltid välkommen att kontakta oss och det gör du på bästa sätt genom att skicka ett mejl till info@slagforhjaltar.se. Vi tar gärna emot förslag på verksamheter som jobbar med att förbättra livet för barn och unga på olika vis. Har du något förslag eller önskar söka medel är du välkommen att skriva till oss via formuläret nedan. ',
+        headline: 'Kontakta oss ',
+        body2: 'info@slagforhjaltar.se',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/allerum-golf-2.jpg',
+          'https://slagforhjaltar.se/wp-content/uploads/2021/03/slag-for-hjaltar-events.jpg',
       },
     }
   },

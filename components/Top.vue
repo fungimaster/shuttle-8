@@ -46,7 +46,7 @@
               items-center
             "
           >
-            <li class="mr-3">
+            <li class="mr-3" v-for="route in routes" :key="route.index">
               <a
                 class="
                   px-3
@@ -61,106 +61,9 @@
                   hover:opacity-75
                   cursor-pointer
                 "
-                @click="$_handleRouting('/')"
-                :class="[isCurrentPage('index')]"
-                >Hem</a
-              >
-            </li>
-
-            <li class="mr-3">
-              <a
-                class="
-                  px-3
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-black
-                  hover:opacity-75
-                  cursor-pointer
-                "
-                :class="[isCurrentPage('insamlingsevent')]"
-                @click="$_handleRouting('/insamlingsevent')"
-                >Insamlingsevent</a
-              >
-            </li>
-            <li class="mr-3">
-              <a
-                class="
-                  px-3
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-black
-                  hover:opacity-75
-                  cursor-pointer
-                "
-                @click="$_handleRouting('/bakgrund')"
-                >Bakgrund</a
-              >
-            </li>
-            <li class="mr-3">
-              <a
-                @click="$_handleRouting('/hjalp')"
-                class="
-                  px-3
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-black
-                  hover:opacity-75
-                  cursor-pointer
-                "
-                >Så hjälper du</a
-              >
-            </li>
-            <li class="mr-3">
-              <a
-                @click="$_handleRouting('/hjaltar')"
-                class="
-                  px-3
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-black
-                  hover:opacity-75
-                  cursor-pointer
-                "
-                >Hjältar</a
-              >
-            </li>
-            <li class="mr-3">
-              <a
-                @click="$_handleRouting('/kontakt')"
-                class="
-                  px-3
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-black
-                  hover:opacity-75
-                  cursor-pointer
-                "
-                >Kontakt</a
+                @click="$_handleRouting(route.value)"
+                :class="[isCurrentPage(route.value ? route.value : 'index')]"
+                >{{ route.displayname }}</a
               >
             </li>
           </ul>
@@ -193,6 +96,7 @@
         class="lgMenu"
         :class="showDropdown ? 'enter' : ''"
         @closeMenu="showDropdown = false"
+        :routes="routes"
       />
     </div>
   </div>
@@ -210,6 +114,14 @@ export default {
     return {
       active: false,
       showDropdown: false,
+      routes: [
+        { value: '/', displayname: 'Hem' },
+        { value: 'insamlingsevent', displayname: 'Insamlingsevent' },
+        { value: 'bakgrund', displayname: 'Bakgrund' },
+        { value: 'hjaltar', displayname: 'Hjältar' },
+        { value: 'hjalp', displayname: 'Så hjälper du' },
+        { value: 'kontakt', displayname: 'Kontakt' },
+      ],
     }
   },
 

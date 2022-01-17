@@ -39,9 +39,10 @@
     font-family: 'Alice', Georgia, 'Times New Roman', serif;
   }
   .headline2 {
-    @apply text-2xl font-normal leading-normal mt-0 mb-2 text-pink-800;
+    @apply text-4xl md:text-6xl font-normal leading-normal mt-0 mb-2 text-pink-800;
     font-family: 'Alice', Georgia, 'Times New Roman', serif;
   }
+
   .text {
     @apply text-base font-light leading-relaxed mt-0 mb-4 text-base text-gray-500;
   }
