@@ -2,17 +2,17 @@
   <div class="">
     <client-only>
       <HeroSection
+        :isIndex="true"
         :headline1="hero.headline1"
         :headline2="hero.headline2"
-        imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/o_20/v1641996251/medal_mtvkui.png"
         imgurl2="https://res.cloudinary.com/dk1b2ytfl/image/upload/o_20/v1641997457/vector_ixay5z.png"
         color="text-white"
       >
         <template #buttons>
-          <button class="btn-pill btn-lg bg-white" type="button">
+          <button class="btn-pill btn-lg bg-pink-dark-hero" type="button">
             Ge en gåva
           </button>
-          <button class="btn-pill btn-lg bg-white" type="button">
+          <button class="btn-pill btn-lg bg-pink-dark-hero" type="button">
             Läs mer om oss
           </button>
         </template>

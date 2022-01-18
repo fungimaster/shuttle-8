@@ -5,7 +5,7 @@
         :headline1="hero.headline1"
         :headline2="hero.headline2"
         color="text-white"
-        imgurl=""
+        imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/o_20/v1641996251/medal_mtvkui.png"
       />
       <div
         class="
