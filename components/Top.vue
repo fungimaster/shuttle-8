@@ -15,7 +15,7 @@
         >
           <a
             class="text-black no-underline hover:text-white hover:no-underline"
-            @click="$_handleRouting('/')"
+            @click="$_handleRouting('/'), (showDropdown = false)"
           >
             <img
               class="w-1/2 md:w-50"
@@ -72,7 +72,7 @@
           <div class="w-full sm:w-6/12 md:w-4/12 px-4"></div>
         </div>
         <div class="md:hidden">
-          <button @click="showDropdown = !showDropdown" class="pr-3">
+          <button @click="showDropdown = !showDropdown" class="p-5 pb-3">
             <div id="nav-icon1" :class="showDropdown ? 'open' : ''">
               <span></span>
               <span></span>

@@ -9,10 +9,10 @@
         color="text-white"
       >
         <template #buttons>
-          <button class="btn-pill btn-lg bg-pink-dark-hero" type="button">
+          <button class="btn-pill btn-lg bg-white" type="button">
             Ge en gåva
           </button>
-          <button class="btn-pill btn-lg bg-pink-dark-hero" type="button">
+          <button class="btn-pill btn-lg bg-white" type="button">
             Läs mer om oss
           </button>
         </template>

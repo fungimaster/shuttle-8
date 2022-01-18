@@ -4,7 +4,7 @@
 
 @layer utilities {
   .btn-pill {
-    @apply text-white
+    @apply text-black
     font-bold
     uppercase
     text-sm
@@ -18,7 +18,9 @@
     mb-1
     ease-linear
     transition-all
-    duration-150;
+    duration-150
+    border-2 
+    border-black;
   }
   .btn-pill:active {
     @apply bg-pink-600;
