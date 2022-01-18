@@ -24,7 +24,7 @@ export default {
       content1: {
         body: 'Du är alltid välkommen att kontakta oss och det gör du på bästa sätt genom att skicka ett mejl till info@slagforhjaltar.se. Vi tar gärna emot förslag på verksamheter som jobbar med att förbättra livet för barn och unga på olika vis. Har du något förslag eller önskar söka medel är du välkommen att skriva till oss via formuläret nedan. ',
         headline: 'Kontakta oss ',
-        body2: 'info@slagforhjaltar.se',
+        ending: 'info@slagforhjaltar.se',
         imgurl:
           'https://slagforhjaltar.se/wp-content/uploads/2021/03/slag-for-hjaltar-events.jpg',
       },

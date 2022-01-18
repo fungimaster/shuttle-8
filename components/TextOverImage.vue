@@ -9,8 +9,8 @@
           {{ content.headline }}
         </h2>
         <p class="text-pink-hero font-extrabold text-lg">{{ content.body }}</p>
-        <h1 class="headline2 text-pink-dark-hero pt-24">
-          info@slagforhjaltar.se
+        <h1 class="headline2 text-pink-dark-hero pt-24" v-if="content.ending">
+          {{ content.ending }}
         </h1>
       </div>
     </div>
