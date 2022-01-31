@@ -13,7 +13,7 @@
         rounded-lg
       "
     >
-      <div class="px-4 py-5 flex-auto">
+      <div class="px-4 py-10 flex-auto h-72">
         <button
           class="
             text-white

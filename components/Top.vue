@@ -1,20 +1,10 @@
 <template>
-  <div>
+  <div class="text-black">
     <nav class="p-2 py-5 mt-0 w-full z-10 top-0">
       <div class="container mx-auto flex items-center">
-        <div
-          class="
-            flex
-            w-full
-            md:w-1/2
-            justify-center
-            md:justify-start
-            text-black
-            font-extrabold
-          "
-        >
+        <div class="flex w-full md:w-1/2 justify-start font-extrabold">
           <a
-            class="text-black no-underline hover:text-white hover:no-underline"
+            class="no-underline pl-10 hover:text-white hover:no-underline"
             @click="$_handleRouting('/'), (showDropdown = false)"
           >
             <img
@@ -46,25 +36,34 @@
               items-center
             "
           >
-            <li class="mr-3" v-for="route in routes" :key="route.index">
-              <a
-                class="
-                  px-3
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-black
-                  hover:opacity-75
-                  cursor-pointer
-                "
-                @click="$_handleRouting(route.value)"
-                :class="[isCurrentPage(route.value ? route.value : 'index')]"
-                >{{ route.displayname }}</a
-              >
+            <li
+              class="mr-3 relative"
+              v-for="route in routes"
+              :key="route.index"
+            >
+              <div class="flex justify-center">
+                <font-awesome-icon
+                  v-if="isCurrentPage(route.value ? route.value : 'index')"
+                  class="absolute h-5 -top-3"
+                  :icon="['far', 'long-arrow-down']"
+                />
+
+                <a
+                  class="
+                    px-3
+                    py-2
+                    flex
+                    items-center
+                    tracking-wide
+                    text-lg
+                    hover:opacity-75
+                    cursor-pointer
+                  "
+                  @click="$_handleRouting(route.value)"
+                  :class="[isCurrentPage(route.value ? route.value : 'index')]"
+                  >{{ route.displayname }}</a
+                >
+              </div>
             </li>
           </ul>
         </div>
@@ -143,9 +142,9 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
-.active {
+/* .active {
   color: #c30075;
-}
+} */
 
 #nav-icon1,
 #nav-icon2,
@@ -174,7 +173,7 @@ export default {
 
   height: 2.5px;
   width: 100%;
-  background: #000000;
+  background: black;
   border-radius: 2px;
   opacity: 1;
   left: 0;

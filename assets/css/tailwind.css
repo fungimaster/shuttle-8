@@ -35,12 +35,10 @@
     @apply px-8 py-3 shadow-md;
   }
   .headline1 {
-    @apply text-5xl font-normal leading-normal mt-0 mb-2;
-    font-family: 'Alice', Georgia, 'Times New Roman', serif;
+    @apply text-5xl font-extrabold leading-normal mt-0 mb-2;
   }
   .headline2 {
     @apply text-4xl md:text-6xl font-normal leading-normal mt-0 mb-2 text-pink-800;
-    font-family: 'Alice', Georgia, 'Times New Roman', serif;
   }
 
   .text {

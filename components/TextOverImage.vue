@@ -9,9 +9,9 @@
           {{ content.headline }}
         </h2>
         <p class="text-pink-hero font-extrabold text-lg">{{ content.body }}</p>
-        <h1 class="headline2 text-pink-dark-hero pt-24" v-if="content.ending">
+        <h2 class="text-pink-dark-hero pt-24" v-if="content.ending">
           {{ content.ending }}
-        </h1>
+        </h2>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
 @import '@/assets/css/helper-classes.css';
 
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   word-break: break-word;
   font-weight: 800;
 }

@@ -4,12 +4,12 @@
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
-      imgurl=""
+      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625254/slagforhjaltar-9_rs8lpa.jpg"
     />
     <div class="container mx-auto px-4">
       <div class="pb-20 pt-24 py-20">
         <div class="container mx-auto px-4 text-center">
-          <h1 class="headline1 text-pink-dark-hero py-10">
+          <h1 class="text-pink-dark-hero py-10 headline1">
             Tillsammans så gör vi stor skillnad. Hur kan du hjälpa?
           </h1>
 

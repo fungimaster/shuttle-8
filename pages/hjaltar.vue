@@ -4,10 +4,18 @@
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
-      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/o_20/v1641995935/superhero_oyqcui.png"
+      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg"
     />
     <div class="container mx-auto px-4">
-      <TextOverImage :content="content1" class="py-28 mb-52" />
+      <TextOverImage
+        :content="content1"
+        class="py-28 md:pb-10 mb-52 md:mb-10"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10">
+        <Stats class="py-10 mt-5" :content="stats1" />
+        <Stats class="py-10 mt-5" :content="stats1" />
+        <Stats class="py-10 mt-5" :content="stats1" />
+      </div>
       <HeroProfile :hero="hero1" class="mb-20 pt-20" />
       <HeroProfile :hero="hero1" class="mb-20" />
       <HeroProfile :hero="hero1" class="mb-20" />
@@ -18,7 +26,7 @@
         <HeroSmall :hero="hero1" />
         <HeroSmall :hero="hero1" />
       </div>
-      <div class="flex flex-col mt-20">
+      <div class="flex flex-col mt-20 md:px-36">
         <HeroMention class="mb-10" :hero="hero1" />
         <HeroMention class="mb-10" :hero="hero1" />
         <HeroMention class="mb-10" :hero="hero1" />
@@ -33,9 +41,14 @@
 export default {
   data() {
     return {
+      stats1: {
+        metric: '1500000',
+        tagline: 'INSAMLAT & UTDELAT 2016-2018',
+      },
       hero: {
-        headline1: 'Hjältar',
-        headline2: '',
+        headline1: 'Alla våra Hjältar',
+        headline2:
+          'Våra hjältar delar våran värdegrund formad runt kärlek, glädje, gemenskap & engagemang.',
       },
       content1: {
         body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed reiciendis, amet magnam ipsam est tempore explicabo accusamus quas perspiciatis, voluptates qui saepe, nostrum possimus itaque consequuntur non quam nobis.',

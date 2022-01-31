@@ -4,7 +4,7 @@
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
-      imgurl=""
+      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
     />
 
     <div class="container mx-auto px-4 pb-52">

@@ -5,25 +5,25 @@
         :isIndex="true"
         :headline1="hero.headline1"
         :headline2="hero.headline2"
-        imgurl2="https://res.cloudinary.com/dk1b2ytfl/image/upload/o_20/v1641997457/vector_ixay5z.png"
+        imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643621911/slagforhjaltar-6_uma48u.jpg"
         color="text-white"
       >
-        <template #buttons>
+        <!--  <template #buttons>
           <button class="btn-pill btn-lg bg-white" type="button">
             Ge en gåva
           </button>
           <button class="btn-pill btn-lg bg-white" type="button">
             Läs mer om oss
           </button>
-        </template>
+        </template> -->
       </HeroSection>
 
-      <div class="-mt-60 md:-mt-40 pb-20 pt-24 py-20">
+      <div class="pb-20 pt-24 py-20">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
-            <Box class="pt-12 w-full md:w-4/12" :content="box1" />
+            <Box class="w-full md:w-4/12" :content="box1" />
             <Box class="w-full md:w-4/12" :content="box2" />
-            <Box class="pt-12 w-full md:w-4/12" :content="box3" />
+            <Box class="w-full md:w-4/12" :content="box3" />
           </div>
         </div>
       </div>
@@ -35,25 +35,20 @@
         >
           <template #content>
             <h3 class="text-3xl mb-2 font-semibold leading-normal">
-              Rubrik och tjohej!
+              Så hjälper vi
             </h3>
             <p
               class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id
-              tenetur nulla pariatur distinctio atque in asperiores facilis!
-              Aspernatur nam velit repellat suscipit ipsa eius expedita
-              molestiae cum voluptatum error.
+              Det arbete vi gör är viktigt för oss och de organisationer vi
+              stödjer. Med hjälp av interna insamlingar där engagerade och
+              involverades hjälp har spelat stor roll så vi lyckats med att
+              stödja organisationer och hjälpa vederbörande till en förbättrad
+              livsstil. Under året 2019 delade vi ut vårt insamlade medel till
+              två organisationer som gör en stor skillnad i vårt samhälle. Alla
+              våra medel gick till Barncancerfonden och Ellas Hjältar – tack för
+              det fina arbetet ni har gjort och fortsätter att göra!
             </p>
-            <p
-              class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id
-              tenetur nulla pariatur distinctio atque in asperiores facilis!
-              Aspernatur nam velit repellat suscipit ipsa eius expedita
-              molestiae cum voluptatum error.
-            </p>
-            <a href="#" class="font-bold text-gray-800 mt-8">Link to stuff</a>
           </template>
         </TextAndCard>
       </div>
@@ -73,24 +68,24 @@ export default {
       event1: {
         body1:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
-        headline: '2021 - Insamlingsevent',
+        headline: 'Utdelning',
         imgurl:
           'https://slagforhjaltar.se/wp-content/uploads/2021/11/slagforhjaltar-2021.jpg',
       },
       box1: {
-        headline: 'Vilka är vi?',
-        text: 'Här nedan kan du klicka vidare för att läsa mer om hur allt startade och vad vi göra idag. Du kan också läsa om våra hjältar och hur vår stiftelse kunnat hjälpa till.',
+        headline: 'Bakgrund',
+        text: 'Engagemanget började redan 2015 sedan en nära väns dotter till en av våra grundare, Daniel Telford, drabbades av cancer.',
         color: 'bg-pink-300',
       },
       box2: {
         headline: 'Insamlingsevent',
         text: 'Varje år håller vi flera insamlingsevents för att kunna knyta nya kontakter och dela en vacker gemenskap.',
-        color: 'bg-pink-600',
+        color: 'bg-pink-300',
       },
       box3: {
         headline: 'Så hjälper du!',
         text: 'Läs mer om hur just du kan komma att betyda mycket för de som inte har det så lätt just nu.',
-        color: 'bg-pink-900',
+        color: 'bg-pink-300',
       },
     }
   },
