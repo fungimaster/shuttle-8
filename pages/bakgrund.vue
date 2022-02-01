@@ -1,11 +1,24 @@
 <template>
   <div>
-    <HeroSection
+    <HeroSection4
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625332/slagforhjaltar-3_lkn6on.jpg"
-    />
+    >
+      <template #svg>
+        <SvgTeam
+          class="md:float-right hidden md:block absolute top-0 left-60"
+        />
+        <SvgTeam class="md:hidden absolute top-60 left-28" />
+      </template>
+    </HeroSection4>
+    <!--  <HeroSection
+      :headline1="hero.headline1"
+      :headline2="hero.headline2"
+      color="text-white"
+      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625332/slagforhjaltar-3_lkn6on.jpg"
+    /> -->
     <ImageAndText :content="content1" />
     <TextAndImage :content="content2" :showicon="false" />
     <div class="container mx-auto px-4 pt-20">

@@ -3,15 +3,18 @@
     <div>
       <img :src="content.imgurl" alt="" />
     </div>
-    <div class="px-4 relative">
-      <div class="absolute md:-ml-32 -mt-32 md:mt-32">
-        <h2 class="text-pink-hero">
+    <div class="px-4">
+      <div class="">
+        <h2 class="font-semibold text-6xl text-pink-hero tracking-wider">
           {{ content.headline }}
         </h2>
-        <p class="text-pink-hero font-extrabold text-lg">{{ content.body }}</p>
-        <h2 class="text-pink-dark-hero pt-24" v-if="content.ending">
+        <p class="text-gray-700 text-wider text-lg">{{ content.body }}</p>
+        <h4
+          class="text-pink-dark-hero text-3xl pt-10 text-wider"
+          v-if="content.ending"
+        >
           {{ content.ending }}
-        </h2>
+        </h4>
       </div>
     </div>
   </div>
@@ -26,10 +29,4 @@ export default {
 
 <style  scoped>
 @import '@/assets/css/helper-classes.css';
-
-h2 {
-  font-size: 4rem;
-  word-break: break-word;
-  font-weight: 800;
-}
 </style>

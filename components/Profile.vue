@@ -34,7 +34,7 @@
           :style="'background-image: url(' + profile.imgurl + ')'"
         ></div>
 
-        <h1 class="text-3xl font-bold pt-8 lg:pt-0">{{ profile.name }}</h1>
+        <h1 class="text-3xl tracking-wider pt-8 lg:pt-0">{{ profile.name }}</h1>
         <div
           class="
             mx-auto
@@ -49,11 +49,11 @@
           class="
             pt-4
             text-base
-            font-bold
             flex
             items-center
             justify-center
             lg:justify-start
+            tracking-wider
           "
         >
           <svg
@@ -76,6 +76,7 @@
             items-center
             justify-center
             lg:justify-start
+            tracking-wider
           "
         >
           <svg
@@ -89,7 +90,7 @@
           </svg>
           {{ profile.location }}
         </p>
-        <p class="pt-8 text-sm">
+        <p class="pt-8 tracking-wider">
           {{ profile.presentation }}
         </p>
 

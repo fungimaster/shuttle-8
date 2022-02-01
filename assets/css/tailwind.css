@@ -5,7 +5,7 @@
 @layer utilities {
   .btn-pill {
     @apply text-black
-    font-bold
+    tracking-wider
     uppercase
     text-sm
     px-6
@@ -20,7 +20,8 @@
     transition-all
     duration-150
     border-2 
-    border-black;
+    bg-white
+    border-pink-hero;
   }
   .btn-pill:active {
     @apply bg-pink-600;

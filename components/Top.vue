@@ -1,5 +1,5 @@
 <template>
-  <div class="text-black">
+  <div class="text-black shadow-sm mb-1">
     <nav class="p-2 py-5 mt-0 w-full z-10 top-0">
       <div class="container mx-auto flex items-center">
         <div class="flex w-full md:w-1/2 justify-start font-extrabold">
@@ -23,7 +23,7 @@
             pt-2
             content-center
             justify-between
-            md:w-1/2 md:justify-end
+            md:w-4/6 md:justify-end
           "
         >
           <ul
@@ -44,7 +44,7 @@
               <div class="flex justify-center">
                 <font-awesome-icon
                   v-if="isCurrentPage(route.value ? route.value : 'index')"
-                  class="absolute h-5 -top-3"
+                  class="absolute h-5 -top-3 text-pink-hero"
                   :icon="['far', 'long-arrow-down']"
                 />
 
@@ -54,10 +54,12 @@
                     py-2
                     flex
                     items-center
-                    tracking-wide
                     text-lg
                     hover:opacity-75
                     cursor-pointer
+                    font-extralight
+                    tracking-widest
+                    text-gray-600
                   "
                   @click="$_handleRouting(route.value)"
                   :class="[isCurrentPage(route.value ? route.value : 'index')]"

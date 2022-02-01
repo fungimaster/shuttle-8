@@ -29,37 +29,39 @@
           >
             <font-awesome-icon class="h-4" :icon="['far', 'heart']" />
           </div>
-          <h3 class="text-3xl font-semibold">{{ content.headline }}</h3>
+          <h3 class="text-2xl tracking-wider">
+            {{ content.headline }}
+          </h3>
           <p class="mt-4 text-lg leading-relaxed text-gray-600">
             {{ content.body1 }}
           </p>
           <p
             v-if="content.body2"
-            class="mt-4 text-lg leading-relaxed text-gray-600"
+            class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
           >
             {{ content.body2 }}
           </p>
           <p
             v-if="content.body3"
-            class="mt-4 text-lg leading-relaxed text-gray-600"
+            class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
           >
             {{ content.body3 }}
           </p>
           <p
             v-if="content.body4"
-            class="mt-4 text-lg leading-relaxed text-gray-600"
+            class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
           >
             {{ content.body4 }}
           </p>
           <p
             v-if="content.body5"
-            class="mt-4 text-lg leading-relaxed text-gray-600"
+            class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
           >
             {{ content.body5 }}
           </p>
           <p
             v-if="content.body6"
-            class="mt-4 text-lg leading-relaxed text-gray-600"
+            class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
           >
             {{ content.body6 }}
           </p>

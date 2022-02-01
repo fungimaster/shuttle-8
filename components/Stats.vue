@@ -1,7 +1,7 @@
 <template>
   <div class="shadow-lg rounded-2xl px-5 w-full bg-white dark:bg-gray-800">
     <div class="flex items-center">
-      <h2 class="text-pink-hero text-4xl">INSAMLAT</h2>
+      <h2 class="text-pink-hero text-4xl tracking-wider">INSAMLAT</h2>
     </div>
     <div class="flex flex-col justify-start">
       <p
@@ -9,7 +9,7 @@
           text-gray-700
           dark:text-gray-100
           text-4xl text-left
-          font-bold
+          tracking-wider
           my-4
         "
       >
@@ -28,7 +28,9 @@
             d="M1408 1216q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z"
           ></path>
         </svg> -->
-        <span class="text-gray-400"> {{ content.tagline }} </span>
+        <span class="text-gray-400 tracking-wider">
+          {{ content.tagline }}
+        </span>
       </div>
     </div>
   </div>

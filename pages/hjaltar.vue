@@ -4,7 +4,7 @@
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
-      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg"
+      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
     />
     <div class="container mx-auto px-4">
       <TextOverImage
@@ -16,9 +16,11 @@
         <Stats class="py-10 mt-5" :content="stats1" />
         <Stats class="py-10 mt-5" :content="stats1" />
       </div>
-      <HeroProfile :hero="hero1" class="mb-20 pt-20" />
-      <HeroProfile :hero="hero1" class="mb-20" />
-      <HeroProfile :hero="hero1" class="mb-20" />
+      <div class="grid grid-cols-1 md:px-44">
+        <HeroProfile :hero="hero1" class="mb-20 pt-20" />
+        <HeroProfile :hero="hero1" class="mb-20" />
+        <HeroProfile :hero="hero1" class="mb-20" />
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-1">
         <HeroSmall :hero="hero1" />
         <HeroSmall :hero="hero1" />
@@ -26,7 +28,7 @@
         <HeroSmall :hero="hero1" />
         <HeroSmall :hero="hero1" />
       </div>
-      <div class="flex flex-col mt-20 md:px-36">
+      <div class="flex flex-col mt-20 md:px-56">
         <HeroMention class="mb-10" :hero="hero1" />
         <HeroMention class="mb-10" :hero="hero1" />
         <HeroMention class="mb-10" :hero="hero1" />

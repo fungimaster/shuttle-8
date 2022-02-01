@@ -1,22 +1,33 @@
 <template>
   <div class="">
     <client-only>
-      <HeroSection
+      <HeroSection4
         :isIndex="true"
         :headline1="hero.headline1"
         :headline2="hero.headline2"
         imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643621911/slagforhjaltar-6_uma48u.jpg"
         color="text-white"
       >
-        <!--  <template #buttons>
-          <button class="btn-pill btn-lg bg-white" type="button">
-            Ge en gåva
-          </button>
-          <button class="btn-pill btn-lg bg-white" type="button">
-            Läs mer om oss
-          </button>
-        </template> -->
-      </HeroSection>
+        <template #svg>
+          <SvgHero
+            class="md:float-right hidden md:block absolute top-0 left-60"
+          />
+          <SvgHero class="md:hidden absolute top-60 left-28" />
+        </template>
+        <template #buttons>
+          <div class="hidden md:flex">
+            <button class="btn-pill btn-lg bg-white" type="button">
+              Ge en gåva
+            </button>
+            <button
+              class="btn-pill btn-lg bg-white mt-5 md:mt-0 md:ml-10"
+              type="button"
+            >
+              Läs mer om oss
+            </button>
+          </div>
+        </template>
+      </HeroSection4>
 
       <div class="pb-20 pt-24 py-20">
         <div class="container mx-auto px-4">

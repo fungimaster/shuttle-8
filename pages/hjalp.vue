@@ -9,15 +9,15 @@
     <div class="container mx-auto px-4">
       <div class="pb-20 pt-24 py-20">
         <div class="container mx-auto px-4 text-center">
-          <h1 class="text-pink-dark-hero py-10 headline1">
+          <h1 class="font-semibold text-4xl text-pink-hero tracking-wider">
             Tillsammans så gör vi stor skillnad. Hur kan du hjälpa?
           </h1>
 
           <div class="flex flex-wrap">
-            <Box class="w-full md:w-3/12" :content="box1" />
-            <Box class="w-full md:w-3/12" :content="box2" />
-            <Box class="w-full md:w-3/12" :content="box3" />
-            <Box class="w-full md:w-3/12" :content="box4" />
+            <Box class="w-full md:w-3/12 p-1 h-full" :content="box1" />
+            <Box class="w-full md:w-3/12 p-1 h-full" :content="box2" />
+            <Box class="w-full md:w-3/12 p-1 h-full" :content="box3" />
+            <Box class="w-full md:w-3/12 p-1 h-full" :content="box4" />
           </div>
         </div>
 

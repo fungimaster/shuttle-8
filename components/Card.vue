@@ -10,13 +10,13 @@
         w-full
         mb-6
         rounded-lg
-        bg-pink-600
+        bg-pink-hero
       "
     >
       <img
         alt="..."
         :src="content.imgurl"
-        class="w-full align-middle rounded-t-lg h-80"
+        class="object-cover align-middle rounded h-80"
       />
       <blockquote class="relative p-8 mb-4">
         <svg
@@ -28,11 +28,13 @@
         >
           <polygon
             points="-30,95 583,95 583,65"
-            class="text-pink-600 fill-current"
+            class="text-pink-hero fill-current"
           ></polygon>
         </svg>
-        <h4 class="text-xl font-bold text-white">{{ content.headline }}</h4>
-        <p class="text-md font-light mt-2 text-white">
+        <h4 class="text-xl font-bold text-white tracking-wider">
+          {{ content.headline }}
+        </h4>
+        <p class="text-md font-light mt-2 text-gray-700 tracking-wider">
           {{ content.body1 }}
         </p>
       </blockquote>

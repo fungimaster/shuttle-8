@@ -1,19 +1,7 @@
 <template>
-  <div class="px-4 text-center">
-    <div
-      class="
-        relative
-        flex flex-col
-        min-w-0
-        break-words
-        bg-white
-        w-full
-        mb-8
-        shadow-lg
-        rounded-lg
-      "
-    >
-      <div class="px-4 py-10 flex-auto h-72">
+  <div>
+    <div class="break-words bg-white w-full mb-8">
+      <div class="px-4 py-10">
         <button
           class="
             text-white
@@ -32,8 +20,8 @@
         >
           <font-awesome-icon class="h-4" :icon="['far', 'heart']" />
         </button>
-        <h6 class="text-xl font-semibold">{{ content.headline }}</h6>
-        <p class="mt-2 mb-4 text-gray-600">
+        <p class="text-2xl tracking-wider">{{ content.headline }}</p>
+        <p class="mt-2 mb-4 text-gray-600 tracking-wider">
           {{ content.text }}
         </p>
       </div>

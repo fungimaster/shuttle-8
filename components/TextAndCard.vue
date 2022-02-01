@@ -14,7 +14,7 @@
           mb-6
           shadow-lg
           rounded-full
-          bg-pink-dark-hero
+          bg-pink-hero
         "
       >
         <font-awesome-icon class="h-4 text-white" :icon="['far', 'heart']" />

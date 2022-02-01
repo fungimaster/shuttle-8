@@ -8,7 +8,7 @@
     />
 
     <div class="container mx-auto px-4 pb-52">
-      <TextOverImage :content="content1" class="py-28 mb-52" />
+      <TextAndImage2 :content="content1" class="py-28 mb-52" />
     </div>
   </div>
 </template>
