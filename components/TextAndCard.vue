@@ -1,11 +1,9 @@
 <template>
-  <div class="flex flex-wrap items-center">
-    <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+  <div class="flex flex-wrap items-center px-5">
+    <div class="w-full md:w-5/12 mr-auto ml-auto">
       <div
         class="
-          text-gray-600
-          p-3
-          text-center
+          text-gray-600 text-center
           inline-flex
           items-center
           justify-center
@@ -24,7 +22,7 @@
         <slot name="content"> </slot>
       </div>
     </div>
-    <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+    <div class="w-full md:w-4/12 mr-auto ml-auto">
       <Card class="m-3" :content="content" />
     </div>
   </div>

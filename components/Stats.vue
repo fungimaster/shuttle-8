@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-lg rounded-2xl px-5 w-full bg-white dark:bg-gray-800">
+  <div class="shadow-lg rounded-2xl w-full bg-white dark:bg-gray-800">
     <div class="flex items-center">
       <h2 class="text-pink-hero text-4xl tracking-wider">INSAMLAT</h2>
     </div>

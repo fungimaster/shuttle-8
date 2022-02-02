@@ -25,8 +25,8 @@
       "
     >
       <div class="flex justify-center">
-        <div class="w-full lg:w-12/12 px-4">
-          <div class="p-16">
+        <div class="w-full lg:w-12/12">
+          <div class="px-5 pt-16 md:p-16">
             <section class="md:w-8/12 relative">
               <div>
                 <h1
