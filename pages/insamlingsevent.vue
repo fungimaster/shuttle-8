@@ -1,21 +1,19 @@
 <template>
   <div>
     <client-only>
-      <HeroSection4
+      <HeroSection5
         :headline1="hero.headline1"
         :headline2="hero.headline2"
         color="text-white"
         imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625282/slagforhjaltar-26_e7wuvd.jpg"
       >
         <template #svg>
-          <SvgEvent
-            class="md:float-right hidden md:block absolute top-0 left-60"
-          ></SvgEvent>
-          <SvgEvent class="md:hidden absolute top-60 left-28"></SvgEvent>
+          <SvgEvent></SvgEvent>
         </template>
-      </HeroSection4>
+      </HeroSection5>
       <div
         class="
+          bg-gray-100
           container
           mx-auto
           px-4
