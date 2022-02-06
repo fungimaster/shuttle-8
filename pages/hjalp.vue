@@ -1,11 +1,13 @@
 <template>
   <div>
-    <HeroSection
+    <HeroSection5
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625254/slagforhjaltar-9_rs8lpa.jpg"
-    />
+    >
+      <template #svg> <SvgLove /> </template
+    ></HeroSection5>
     <div class="container mx-auto px-4">
       <div class="pb-20 pt-24 py-20">
         <div class="container mx-auto px-4 text-center">
@@ -50,7 +52,8 @@ export default {
     return {
       hero: {
         headline1: 'Så hjälper du',
-        headline2: '',
+        headline2:
+          'Tveka aldrig att kontakta oss på något av nedanstående sätt, vi svarar gärna på frågor!',
       },
 
       box1: {

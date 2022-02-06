@@ -4,7 +4,7 @@
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       data-name="Layer 1"
-      :width="isMobile ? '266.61' : '400.61'"
+      :width="isMobile ? '266.61' : '700.61'"
       :height="isMobile ? '276.03' : '314.03'"
       viewBox="0 0 1066.61 876.03"
     >

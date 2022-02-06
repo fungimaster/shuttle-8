@@ -3,6 +3,7 @@
     <client-only>
       <HeroSection5
         :headline1="hero.headline1"
+        :headline3="hero.headline3"
         :headline2="hero.headline2"
         color="text-white"
         imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625282/slagforhjaltar-26_e7wuvd.jpg"
@@ -40,7 +41,8 @@ export default {
   data() {
     return {
       hero: {
-        headline1: 'Insamlings- event',
+        headline1: 'Insamlings-',
+        headline3: 'event',
         headline2:
           'Varje år arrangerar vi flera insamlingsevents där vi alla kan fira med kärlek, glädje, gemenskap & engagemang!',
       },

@@ -14,7 +14,7 @@
       px-4
     "
   >
-    <div class="md:hidden flex justify-center" v-if="$slots.svg">
+    <div class="md:hidden flex justify-center pt-10" v-if="$slots.svg">
       <slot name="svg"> </slot>
     </div>
     <div>
@@ -30,6 +30,19 @@
           "
         >
           {{ headline1 }}
+        </h1>
+        <h1
+          v-if="headline3"
+          class="
+            text-center
+            md:text-left
+            leading-normal
+            text-6xl text-pink-hero
+            tracking-wider
+            break-words
+          "
+        >
+          {{ headline3 }}
         </h1>
       </div>
       <div class="flex justify-center">
@@ -63,7 +76,15 @@
 
 <script>
 export default {
-  props: ['isIndex', 'headline1', 'headline2', 'color', 'imgurl', 'imgurl2'],
+  props: [
+    'isIndex',
+    'headline1',
+    'headline3',
+    'headline2',
+    'color',
+    'imgurl',
+    'imgurl2',
+  ],
 
   methods: {
     headline(headline) {

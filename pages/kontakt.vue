@@ -1,11 +1,15 @@
 <template>
   <div>
-    <HeroSection
+    <HeroSection5
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
-    />
+    >
+      <template #svg>
+        <SvgConactus></SvgConactus>
+      </template>
+    </HeroSection5>
 
     <div class="container mx-auto px-4 pb-52">
       <TextAndImage2 :content="content1" class="py-28 mb-52" />

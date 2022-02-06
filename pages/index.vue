@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <client-only>
-      <HeroSection4
+      <HeroSection5
         :isIndex="true"
         :headline1="hero.headline1"
         :headline2="hero.headline2"
@@ -9,10 +9,7 @@
         color="text-white"
       >
         <template #svg>
-          <SvgHero
-            class="md:float-right hidden md:block absolute top-0 left-60"
-          />
-          <SvgHero class="md:hidden absolute top-60 left-28" />
+          <SvgStandout />
         </template>
         <template #buttons>
           <div class="hidden md:flex">
@@ -27,7 +24,7 @@
             </button>
           </div>
         </template>
-      </HeroSection4>
+      </HeroSection5>
 
       <div class="pb-20 pt-24 py-20">
         <div class="container mx-auto px-5">
