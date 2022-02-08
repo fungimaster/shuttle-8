@@ -8,6 +8,7 @@
       rounded-b
       text-teal-900
       px-4
+      md:px-16
       py-3
       shadow-md
     "

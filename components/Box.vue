@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="break-words bg-white w-full mb-8">
-      <div class="px-4 py-10">
+      <div class="pb-5">
         <button
           class="
             text-white

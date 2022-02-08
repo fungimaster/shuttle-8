@@ -8,28 +8,58 @@
     >
       <template #svg> <SvgLove /> </template
     ></HeroSection5>
-    <div class="container mx-auto px-4">
+    <div class="containermx-auto px-4 md:px-16 w-full">
       <div class="pb-20 pt-24 py-20">
-        <div class="container mx-auto px-4 text-center">
-          <h1 class="font-semibold text-4xl text-pink-hero tracking-wider">
+        <!--   <h1 class="font-semibold text-4xl text-pink-hero tracking-wider">
             Tillsammans så gör vi stor skillnad. Hur kan du hjälpa?
-          </h1>
+          </h1> -->
 
-          <div class="flex flex-wrap">
-            <Box class="w-full md:w-3/12 p-1 h-full" :content="box1" />
-            <Box class="w-full md:w-3/12 p-1 h-full" :content="box2" />
-            <Box class="w-full md:w-3/12 p-1 h-full" :content="box3" />
-            <Box class="w-full md:w-3/12 p-1 h-full" :content="box4" />
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div
+            v-for="(help, index) in howToHelp"
+            :key="index"
+            class="
+              w-full
+              col-span-1
+              row-span-1
+              rounded
+              bg-pink-100
+              px-10
+              py-10
+              pb-16
+              hover:shadow-md
+              focus:shadow-md
+            "
+          >
+            <SvgEventMini v-if="index === 0" />
+            <SvgOurSolutionMini v-if="index === 1" />
+            <SvgLovingItMini v-if="index === 2" />
+            <SvgSocialNetworkMini v-if="index === 3" />
+            <h1
+              class="
+                py-10
+                text-left
+                leading-normal
+                text-2xl text-black
+                tracking-wider
+                break-words
+              "
+            >
+              {{ help.headline }}
+            </h1>
+            <p class="tracking-wider text-black text-left">{{ help.text }}</p>
           </div>
         </div>
+      </div>
 
-        <!-- <TextAndImage class="sm:mx-0" :content="content1" /> -->
+      <!-- <TextAndImage class="sm:mx-0" :content="content1" /> -->
 
-        <div
+      <!--      <div
           class="
             container
             mx-auto
             px-4
+            md:px-16
             grid grid-cols-1
             md:grid-cols-3
             gap-2
@@ -40,8 +70,7 @@
           <Card :content="help1" class="m-3" />
           <Card :content="help2" class="m-3" />
           <Card :content="help3" class="m-3" />
-        </div>
-      </div>
+        </div> -->
     </div>
   </div>
 </template>
@@ -55,27 +84,28 @@ export default {
         headline2:
           'Tveka aldrig att kontakta oss på något av nedanstående sätt, vi svarar gärna på frågor!',
       },
-
-      box1: {
-        headline: 'Delta på Insamlingsevent',
-        text: 'Du/ditt företag är välkommen att delta på någon av våra insamlingsevent som arrangeras varje år. Se ”Insamlingsevent” för närmare info.',
-        color: 'bg-pink-300',
-      },
-      box2: {
-        headline: 'Arrangera event',
-        text: 'Du är välkommen att arrangera ett eget insamlingsinitiativ i samråd med oss. Kontakta oss genom vårt kontaktformulär så tar vi ett prat kring det hela.',
-        color: 'bg-pink-600',
-      },
-      box3: {
-        headline: 'Swish en gåva',
-        text: 'Du är också givetvis alltid välkommen att bidra till våra insamlingar via vårt Swish nummer eller QR kod.',
-        color: 'bg-pink-300',
-      },
-      box4: {
-        headline: 'Följ oss och sprid budskapet!',
-        text: 'Vi hoppas också såklart att du vill följa stiftelsen i våra kanaler på Facebook och Instagram. Samt bjuder in dina vänner att göra detsamma!',
-        color: 'bg-pink-600',
-      },
+      howToHelp: [
+        {
+          headline: 'Delta på Insamlingsevent',
+          text: 'Du/ditt företag är välkommen att delta på någon av våra insamlingsevent som arrangeras varje år. Se ”Insamlingsevent” för närmare info.',
+          color: 'bg-pink-300',
+        },
+        {
+          headline: 'Arrangera event',
+          text: 'Du är välkommen att arrangera ett eget insamlingsinitiativ i samråd med oss. Kontakta oss genom vårt kontaktformulär så tar vi ett prat kring det hela.',
+          color: 'bg-pink-600',
+        },
+        {
+          headline: 'Swish en gåva',
+          text: 'Du är också givetvis alltid välkommen att bidra till våra insamlingar via vårt Swish nummer eller QR kod.',
+          color: 'bg-pink-300',
+        },
+        {
+          headline: 'Följ oss och sprid budskapet!',
+          text: 'Vi hoppas också såklart att du vill följa stiftelsen i våra kanaler på Facebook och Instagram. Samt bjuder in dina vänner att göra detsamma!',
+          color: 'bg-pink-600',
+        },
+      ],
 
       help1: {
         body1:

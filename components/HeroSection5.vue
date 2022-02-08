@@ -4,7 +4,7 @@
       container
       mx-auto
       relative
-      pb-80
+      pb-24
       md:py-24
       grid
       md:grid-cols-2
@@ -12,6 +12,8 @@
       grid-cols-1
       place-content-center
       px-4
+      md:px-16
+      py-10
     "
   >
     <div class="md:hidden flex justify-center pt-10" v-if="$slots.svg">

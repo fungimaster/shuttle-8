@@ -3,7 +3,7 @@
     <div>
       <img :src="content.imgurl" alt="" />
     </div>
-    <div class="px-4">
+    <div class="px-4 md:px-16">
       <div class="">
         <h2 class="font-semibold text-6xl text-pink-hero tracking-wider">
           {{ content.headline }}

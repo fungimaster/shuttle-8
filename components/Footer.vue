@@ -11,9 +11,9 @@
       border-t-4 border-pink-dark-hero
     "
   >
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 md:px-16">
       <div class="flex flex-wrap">
-        <div class="w-full lg:w-6/12 px-4">
+        <div class="w-full lg:w-6/12 px-4 md:px-16">
           <h4 class="text-3xl font-semibold">Kontakt</h4>
 
           <a href="mailto:info@slagforhjaltar.se">
@@ -98,7 +98,7 @@
       <div
         class="flex flex-wrap items-center md:justify-between justify-center"
       >
-        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div class="w-full md:w-4/12 px-4 md:px-16 mx-auto text-center">
           <div class="text-sm text-gray-400 font-semibold py-1">
             Copyright © {{ date }} COLBURN COLLABORATION AB.
             <a

@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-12 px-4">
+  <div class="mb-12 px-4 md:px-16">
     <div class="px-6">
       <img
         alt="..."

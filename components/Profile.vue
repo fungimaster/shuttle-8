@@ -103,6 +103,7 @@
               font-bold
               py-2
               px-4
+              md:px-16
               rounded-full
             "
           >
