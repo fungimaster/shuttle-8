@@ -6,7 +6,7 @@
       color="text-white"
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
     />
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 md:px-16">
       <TextOverImage
         :content="content1"
         class="py-28 md:pb-10 mb-52 md:mb-10"
@@ -16,7 +16,7 @@
         <Stats class="py-10 mt-5" :content="stats1" />
         <Stats class="py-10 mt-5" :content="stats1" />
       </div>
-      <div class="grid grid-cols-1 md:px-44">
+      <div class="grid grid-cols-1 md:px-4 md:px-164">
         <HeroProfile :hero="hero1" class="mb-20 pt-20" />
         <HeroProfile :hero="hero1" class="mb-20" />
         <HeroProfile :hero="hero1" class="mb-20" />

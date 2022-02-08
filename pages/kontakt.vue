@@ -11,7 +11,7 @@
       </template>
     </HeroSection5>
 
-    <div class="container mx-auto px-4 pb-52">
+    <div class="container mx-auto px-4 md:px-16 pb-52">
       <TextAndImage2 :content="content1" class="py-28 mb-52" />
     </div>
   </div>

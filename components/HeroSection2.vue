@@ -23,7 +23,7 @@
         />
       </div>
       <div class="flex justify-center">
-        <div class="w-full lg:w-12/12 px-4">
+        <div class="w-full lg:w-12/12 px-4 md:px-16">
           <div class="">
             <section class="w-full md:w-12/12">
               <div>

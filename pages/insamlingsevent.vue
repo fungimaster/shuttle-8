@@ -18,6 +18,7 @@
           container
           mx-auto
           px-4
+          md:px-16
           grid grid-cols-1
           md:grid-cols-3
           gap-2

@@ -26,16 +26,18 @@
         </template>
       </HeroSection5>
 
-      <div class="pb-20 pt-24 py-20">
-        <div class="container mx-auto px-5">
+      <div class="pb-20 pt-0 md:pt-24 py-20">
+        <div class="container mx-auto px-4 md:px-16">
           <div class="flex flex-wrap">
-            <Box class="w-full md:w-4/12" :content="box1" />
-            <Box class="w-full md:w-4/12" :content="box2" />
-            <Box class="w-full md:w-4/12" :content="box3" />
+            <Box class="w-full md:w-4/12 pr-5" :content="box1" />
+            <Box class="w-full md:w-4/12 pr-5" :content="box2" />
+            <Box class="w-full md:w-4/12 pr-5" :content="box3" />
           </div>
+          <Gallery />
         </div>
       </div>
-      <div class="py-24 px-5 bg-gray-50">
+
+      <div class="py-12 px4 md:px-16 bg-gray-50">
         <TextAndCard
           :ingress="event1.ingress"
           :headline="event1.headline"

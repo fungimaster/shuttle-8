@@ -22,7 +22,7 @@
       ></div>
     </section>
     <section class="relative py-16 border-2 border-pink-hero">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 md:px-16">
         <div
           class="
             relative
@@ -39,7 +39,17 @@
         >
           <div class="px-6">
             <div class="flex flex-wrap justify-center">
-              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+              <div
+                class="
+                  w-full
+                  lg:w-3/12
+                  px-4
+                  md:px-16
+                  lg:order-2
+                  flex
+                  justify-center
+                "
+              >
                 <div class="relative">
                   <img
                     alt="..."
@@ -63,6 +73,7 @@
                   w-full
                   lg:w-4/12
                   px-4
+                  md:px-16
                   lg:order-3 lg:text-right lg:self-center
                 "
               >
@@ -78,6 +89,7 @@
                       shadow
                       text-xs
                       px-4
+                      md:px-16
                       py-2
                       rounded
                       outline-none
@@ -94,7 +106,7 @@
                   </button>
                 </div>
               </div>
-              <div class="w-full lg:w-4/12 px-4 lg:order-1"></div>
+              <div class="w-full lg:w-4/12 px-4 md:px-16 lg:order-1"></div>
             </div>
             <div class="text-center mt-12">
               <h3

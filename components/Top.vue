@@ -70,7 +70,7 @@
           </ul>
         </div>
         <div class="flex flex-wrap">
-          <div class="w-full sm:w-6/12 md:w-4/12 px-4"></div>
+          <div class="w-full sm:w-6/12 md:w-4/12 px-4 md:px-16"></div>
         </div>
         <div class="md:hidden">
           <button @click="showDropdown = !showDropdown" class="p-5 pb-3">

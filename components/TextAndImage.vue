@@ -1,14 +1,16 @@
 <template>
-  <div class="container mx-auto px-4 py-20">
+  <div class="container mx-auto px-4 md:px-16 py-20">
     <div class="flex flex-wrap">
-      <div class="block md:hidden w-full md:w-6/12 ml-auto mr-auto px-4">
+      <div
+        class="block md:hidden w-full md:w-6/12 ml-auto mr-auto px-4 md:px-16"
+      >
         <img
           alt="..."
           class="max-h-full rounded-lg shadow-lg"
           :src="content.imgurl"
         />
       </div>
-      <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+      <div class="w-full md:w-5/12 ml-auto mr-auto px-4 md:px-16">
         <div class="md:pr-12 pt-10 md:pt-0">
           <div
             v-if="showicon"
@@ -98,7 +100,9 @@
           </ul>
         </div>
       </div>
-      <div class="hidden md:block w-full md:w-6/12 ml-auto mr-auto px-4">
+      <div
+        class="hidden md:block w-full md:w-6/12 ml-auto mr-auto px-4 md:px-16"
+      >
         <img
           alt="..."
           class="max-h-full rounded-lg shadow-lg"
