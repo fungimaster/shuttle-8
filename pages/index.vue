@@ -44,7 +44,25 @@
           :content="event1"
         >
           <template #content>
-            <h3 class="text-3xl mb-2 font-semibold leading-normal">
+            <h3
+              class="text-3xl mb-2 leading-normal tracking-wider text-pink-hero"
+            >
+              <font-awesome-icon
+                class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  w-10
+                  h-10
+                  p-2
+                  mb-2
+                  shadow-lg
+                  rounded-full
+                  bg-pink-hero
+                  text-white
+                "
+                :icon="['far', 'heart']"
+              />
               Så hjälper vi
             </h3>
             <p
@@ -62,6 +80,7 @@
           </template>
         </TextAndCard>
       </div>
+      <HowToHelp />
     </client-only>
   </div>
 </template>

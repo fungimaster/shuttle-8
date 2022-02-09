@@ -4,11 +4,7 @@
       <div
         class="block md:hidden w-full md:w-6/12 ml-auto mr-auto px-4 md:px-16"
       >
-        <img
-          alt="..."
-          class="max-h-full rounded-lg shadow-lg"
-          :src="content.imgurl"
-        />
+        <img alt="..." class="max-h-full shadow" :src="content.imgurl" />
       </div>
       <div class="w-full md:w-5/12 ml-auto mr-auto px-4 md:px-16">
         <div class="md:pr-12 pt-10 md:pt-0">

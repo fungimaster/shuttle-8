@@ -2,11 +2,7 @@
   <div class="container mx-auto px-4 md:px-16 pt-20">
     <div class="flex flex-wrap">
       <div class="w-full md:w-6/12 ml-auto mr-auto px-4 md:px-16">
-        <img
-          alt="..."
-          class="max-h-full rounded-lg shadow-lg"
-          :src="content.imgurl"
-        />
+        <img alt="..." class="max-h-full shadow" :src="content.imgurl" />
       </div>
       <div class="w-full md:w-5/12 ml-auto mr-auto px-4 md:px-16">
         <div class="md:pr-12 pt-10 md:pt-0">
@@ -28,7 +24,9 @@
           >
             <font-awesome-icon class="h-4" :icon="['far', 'heart']" />
           </div>
-          <h3 class="text-3xl tracking-wider">{{ content.headline }}</h3>
+          <h3 class="text-3xl tracking-wider text-pink-hero">
+            {{ content.headline }}
+          </h3>
           <p class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider">
             {{ content.body1 }}
           </p>

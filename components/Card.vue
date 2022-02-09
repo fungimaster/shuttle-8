@@ -10,7 +10,7 @@
         w-full
         mb-6
         rounded-lg
-        bg-pink-hero
+        shadow-lg
       "
     >
       <img
@@ -28,10 +28,10 @@
         >
           <polygon
             points="-30,95 583,95 583,65"
-            class="text-pink-hero fill-current"
+            class="text-white fill-current"
           ></polygon>
         </svg>
-        <h4 class="text-xl font-bold text-white tracking-wider">
+        <h4 class="text-3xl text-pink-hero tracking-wider">
           {{ content.headline }}
         </h4>
         <p class="text-md font-light mt-2 text-gray-700 tracking-wider">

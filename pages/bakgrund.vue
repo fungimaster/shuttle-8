@@ -47,7 +47,8 @@ export default {
           'Intresset kring initiativet växte och tillsammans med Henrik Karlsson och Bengt Wehlin skapades Insamlingsstiftelsen Slag för Hjältar år 2019. En insamlingsstiftelse som genom insamlade medel ska stötta föreningar och organisationer som arbetar med att hjälpa barn och unga med olika behov. Under våren förstärktes styrelsen med ytterligare två eldsjälar – Anita Duverell och Thomas Krøigård Hansen – och det ideella arbetet med att utveckla stiftelsens sätt att hjälpa påbörjades.',
         headline: 'Vi är stiftelsen som alltid gör allt med kärlek!',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/allerum-golf-2.jpg',
+          'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg',
+
         list: [],
       },
       content2: {
@@ -57,7 +58,7 @@ export default {
           'Insamlingsstiftelsen Slag för Hjältar möjliggör en bättre tillvaro för barn och unga. Genom evenemang tillsammans med förening- och näringslivet donerar vi insamlade medel till icke vinstdrivande organisationer som arbetar inom vård, hälsa och omsorg.',
         headline: '',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/allerum-golf-2.jpg',
+          'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg',
         list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
       },
       profile1: {

@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="max-w-4xl flex items-center h-auto flex-wrap mx-auto my-10 lg:my-0"
-  >
+  <div class="max-w-4xl flex items-center h-auto flex-wrap my-10 lg:my-0">
     <!--Main Col-->
     <div
       id="profile"
@@ -13,7 +11,6 @@
         shadow-2xl
         bg-white
         opacity-75
-        mx-6
         lg:mx-0
       "
     >
