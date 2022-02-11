@@ -8,26 +8,24 @@
       </div>
       <div class="w-full md:w-5/12 ml-auto mr-auto px-4 md:px-16">
         <div class="md:pr-12 pt-10 md:pt-0">
-          <div
-            v-if="showicon"
-            class="
-              text-pink-600
-              p-3
-              text-center
-              inline-flex
-              items-center
-              justify-center
-              w-16
-              h-16
-              mb-6
-              shadow-lg
-              rounded-full
-              bg-pink-300
-            "
-          >
-            <font-awesome-icon class="h-4" :icon="['far', 'heart']" />
-          </div>
           <h3 class="text-2xl tracking-wider">
+            <font-awesome-icon
+              v-if="showicon"
+              class="
+                text-white
+                p-1
+                text-center
+                inline-flex
+                items-center
+                justify-center
+                w-8
+                h-8
+                shadow-lg
+                rounded-full
+                overflow-visible
+              "
+              :icon="['far', 'heart']"
+            />
             {{ content.headline }}
           </h3>
           <p class="mt-4 text-lg leading-relaxed text-gray-600">

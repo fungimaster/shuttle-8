@@ -9,12 +9,13 @@
       pb-6
       pt-28
       border-t-4 border-pink-dark-hero
+      mt-10
     "
   >
     <div class="container mx-auto px-4 md:px-16">
       <div class="flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 md:px-16">
-          <h4 class="text-3xl font-semibold">Kontakt</h4>
+          <h3 class="headline3">Kontakt</h3>
 
           <a href="mailto:info@slagforhjaltar.se">
             <h5 class="text-lg mt-0 mb-2 text-gray-600">
@@ -22,7 +23,7 @@
             </h5></a
           >
 
-          <h4 class="mt-6 text-3xl font-semibold">Adress</h4>
+          <h3 class="mt-6 headline3">Adress</h3>
           <h5 class="text-lg mt-0 mb-2 text-gray-600">
             Adress: Rååvägen 39 25270 Råå
           </h5>

@@ -44,9 +44,7 @@
           :content="event1"
         >
           <template #content>
-            <h3
-              class="text-3xl mb-2 leading-normal tracking-wider text-pink-hero"
-            >
+            <h3 class="headline3">
               <font-awesome-icon
                 class="
                   inline-flex

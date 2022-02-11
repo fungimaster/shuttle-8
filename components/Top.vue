@@ -119,7 +119,7 @@ export default {
         { value: '/', displayname: 'Hem' },
         { value: 'insamlingsevent', displayname: 'Insamlingsevent' },
         { value: 'bakgrund', displayname: 'Bakgrund' },
-        { value: 'hjaltar', displayname: 'Hjältar' },
+        { value: 'hjaltar', displayname: 'Alla våra Hjältar' },
         { value: 'hjalp', displayname: 'Så hjälper du' },
         { value: 'kontakt', displayname: 'Kontakt' },
       ],

@@ -36,10 +36,16 @@
     @apply px-8 py-3 shadow-md;
   }
   .headline1 {
-    @apply text-5xl font-extrabold leading-normal mt-0 mb-2;
+    @apply text-5xl text-pink-hero tracking-wider;
   }
   .headline2 {
-    @apply text-4xl md:text-6xl font-normal leading-normal mt-0 mb-2 text-pink-800;
+    @apply text-4xl text-pink-hero tracking-wider;
+  }
+  .headline3 {
+    @apply text-3xl text-pink-hero tracking-wider;
+  }
+  .headline4 {
+    @apply text-2xl text-pink-hero tracking-wider;
   }
 
   .text {

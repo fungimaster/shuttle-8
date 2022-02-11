@@ -31,9 +31,9 @@
             class="text-white fill-current"
           ></polygon>
         </svg>
-        <h4 class="text-3xl text-pink-hero tracking-wider">
+        <h3 class="headline3">
           {{ content.headline }}
-        </h4>
+        </h3>
         <p class="text-md font-light mt-2 text-gray-700 tracking-wider">
           {{ content.body1 }}
         </p>

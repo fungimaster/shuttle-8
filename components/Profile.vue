@@ -31,7 +31,7 @@
           :style="'background-image: url(' + profile.imgurl + ')'"
         ></div>
 
-        <h1 class="text-3xl tracking-wider pt-8 lg:pt-0">{{ profile.name }}</h1>
+        <h3 class="headline3 lg:pt-0">{{ profile.name }}</h3>
         <div
           class="
             mx-auto

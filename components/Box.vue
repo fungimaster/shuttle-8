@@ -7,7 +7,7 @@
           <font-awesome-icon
             class="
               text-white
-              p-2
+              p-1
               text-center
               inline-flex
               items-center
@@ -16,6 +16,7 @@
               h-8
               shadow-lg
               rounded-full
+              overflow-visible
             "
             :class="content.color"
             :icon="['far', 'heart']"
