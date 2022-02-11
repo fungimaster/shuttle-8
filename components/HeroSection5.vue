@@ -16,7 +16,7 @@
       py-10
     "
   >
-    <div class="md:hidden flex justify-center pt-10" v-if="$slots.svg">
+    <div class="md:hidden flex justify-center md:block pt-10" v-if="$slots.svg">
       <slot name="svg"> </slot>
     </div>
     <div>
@@ -47,7 +47,7 @@
           {{ headline3 }}
         </h1>
       </div>
-      <div class="flex justify-center">
+      <div class="">
         <p
           class="
             text-center
