@@ -18,6 +18,7 @@
               rounded-full
               overflow-visible
               bg-pink-hero
+              overflow-visible
             "
             :icon="['far', 'heart']"
           />
