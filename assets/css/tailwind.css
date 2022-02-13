@@ -36,7 +36,7 @@
     @apply px-8 py-3 shadow-md;
   }
   .headline1 {
-    @apply text-5xl text-pink-hero tracking-wider;
+    @apply text-5xl text-pink-hero tracking-wider mb-10;
   }
   .headline2 {
     @apply text-4xl text-pink-hero tracking-wider;

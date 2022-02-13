@@ -4,24 +4,23 @@
       <img alt="..." class="max-h-full shadow" :src="content.imgurl" />
       <div class="md:pr-12 pt-10 md:pt-0">
         <h3 class="headline3">
-          <font-awesome-icon
+          <span
             class="
-              text-white
-              p-1
-              text-center
+              w-10
+              h-10
+              shadow-lg
+              rounded-full
+              bg-pink-hero
               inline-flex
               items-center
               justify-center
-              w-8
-              h-8
-              shadow-lg
-              rounded-full
-              overflow-visible
-              bg-pink-hero
-              overflow-visible
             "
-            :icon="['far', 'heart']"
-          />
+          >
+            <font-awesome-icon
+              class="w-7 h-7 text-white overflow-visible"
+              :icon="['far', 'heart']"
+            />
+          </span>
           {{ content.headline }}
         </h3>
         <p class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider">
