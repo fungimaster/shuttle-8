@@ -45,23 +45,24 @@
         >
           <template #content>
             <h3 class="headline3">
-              <font-awesome-icon
+              <span
                 class="
-                  inline-flex
-                  items-center
-                  justify-center
                   w-10
                   h-10
-                  p-2
-                  mb-2
                   shadow-lg
                   rounded-full
                   bg-pink-hero
-                  text-white
-                  overflow-visible
+                  inline-flex
+                  items-center
+                  justify-center
                 "
-                :icon="['far', 'heart']"
-              />
+              >
+                <font-awesome-icon
+                  class="w-7 h-7 text-white overflow-visible"
+                  :icon="['far', 'heart']"
+                />
+              </span>
+
               Så hjälper vi
             </h3>
             <p
