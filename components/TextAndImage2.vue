@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-1 px-4 md:px-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
     <div>
       <img :src="content.imgurl" alt="" />
     </div>

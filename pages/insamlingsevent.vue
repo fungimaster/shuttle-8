@@ -17,7 +17,7 @@
           bg-gray-100
           container
           mx-auto
-          px-4
+          px-8
           md:px-16
           grid grid-cols-1
           md:grid-cols-3

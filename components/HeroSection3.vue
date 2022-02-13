@@ -15,7 +15,7 @@
 
     <div class="container relative py-52 md:py-0 md:px-20 grid grid-cols-2">
       <div class="flex justify-center">
-        <div class="w-full lg:w-12/12 px-4 md:px-16">
+        <div class="w-full lg:w-12/12 px-8 md:px-16">
           <div class="p-16">
             <section class="md:w-8/12">
               <div>

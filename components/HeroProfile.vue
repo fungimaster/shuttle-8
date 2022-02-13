@@ -22,7 +22,7 @@
       ></div>
     </section>
     <section class="relative py-16 border-2 border-pink-hero">
-      <div class="container mx-auto px-4 md:px-4">
+      <div class="container mx-auto px-8 md:px-8">
         <div
           class="
             relative
@@ -39,7 +39,7 @@
         >
           <div class="px-3">
             <div class="flex flex-wrap justify-center h-40">
-              <div class="w-full md:w-12/12 px-4 md:px-16 flex justify-center">
+              <div class="w-full md:w-12/12 px-8 md:px-16 flex justify-center">
                 <img
                   alt="..."
                   :src="hero.imgurl"
@@ -93,7 +93,7 @@
                     hover:shadow-md
                     shadow
                     text-xs
-                    px-4
+                    px-8
                     md:px-16
                     py-2
                     rounded

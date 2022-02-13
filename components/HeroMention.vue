@@ -7,7 +7,7 @@
       border-t-4 border-pink-dark-hero
       rounded-b
       text-teal-900
-      px-4
+      px-8
       md:px-16
       py-3
       shadow-md

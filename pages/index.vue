@@ -27,7 +27,7 @@
       </HeroSection5>
 
       <div class="pb-20 pt-0 md:pt-24 py-20">
-        <div class="container mx-auto px-4 md:px-16">
+        <div class="container mx-auto px-8 md:px-16">
           <div class="flex flex-wrap">
             <Box class="w-full md:w-4/12 pr-5" :content="box1" />
             <Box class="w-full md:w-4/12 pr-5" :content="box2" />

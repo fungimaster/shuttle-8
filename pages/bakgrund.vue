@@ -18,7 +18,7 @@
     /> -->
     <ImageAndText :content="content1" />
     <TextAndImage :content="content2" :showicon="false" />
-    <div class="container mx-auto px-4 md:px-16 pt-20">
+    <div class="container mx-auto px-8 md:px-16 pt-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-28">
         <Profile :profile="profile1" />
         <Profile :profile="profile1" />

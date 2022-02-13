@@ -99,7 +99,7 @@
               text-white
               font-bold
               py-2
-              px-4
+              px-8
               md:px-16
               rounded-full
             "

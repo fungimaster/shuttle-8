@@ -37,7 +37,7 @@
     ></div>
     <div class="container relative mx-auto py-52 md:py-0">
       <div class="flex flex-wrap">
-        <div class="w-full lg:w-12/12 px-4 md:px-16 ml-auto mr-auto">
+        <div class="w-full lg:w-12/12 px-8 md:px-16 ml-auto mr-auto">
           <div class="pr-12">
             <section class="w-full md:w-12/12">
               <div v-if="!isIndex">

@@ -1,12 +1,12 @@
 <template>
-  <div class="container mx-auto px-4 md:px-16 py-20">
+  <div class="container mx-auto px-8 md:px-16 py-20">
     <div class="flex flex-wrap">
       <div
-        class="block md:hidden w-full md:w-6/12 ml-auto mr-auto px-4 md:px-16"
+        class="block md:hidden w-full md:w-6/12 ml-auto mr-auto px-8 md:px-16"
       >
         <img alt="..." class="max-h-full shadow" :src="content.imgurl" />
       </div>
-      <div class="w-full md:w-5/12 ml-auto mr-auto px-4 md:px-16">
+      <div class="w-full md:w-5/12 ml-auto mr-auto px-8 md:px-16">
         <div class="md:pr-12 pt-10 md:pt-0">
           <h3 class="text-2xl tracking-wider">
             <span
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div
-        class="hidden md:block w-full md:w-6/12 ml-auto mr-auto px-4 md:px-16"
+        class="hidden md:block w-full md:w-6/12 ml-auto mr-auto px-8 md:px-16"
       >
         <img
           alt="..."

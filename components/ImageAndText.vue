@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 md:px-16 pt-20">
+  <div class="container mx-auto px-8 md:px-16 pt-20">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <img alt="..." class="max-h-full shadow" :src="content.imgurl" />
       <div class="md:pr-12 pt-10 md:pt-0">

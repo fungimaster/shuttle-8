@@ -11,7 +11,7 @@
       gap-20
       grid-cols-1
       place-content-center
-      px-4
+      px-8
       md:px-16
       py-10
     "

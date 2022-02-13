@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 md:px-16 w-full">
+  <div class="container mx-auto px-8 md:px-16 w-full">
     <div class="pb-20 pt-24 py-20">
       <!--   <h1 class="font-semibold text-4xl text-pink-hero tracking-wider">
             Tillsammans så gör vi stor skillnad. Hur kan du hjälpa?

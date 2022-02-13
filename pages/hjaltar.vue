@@ -8,7 +8,7 @@
     />
     <ImageAndText :content="content1" />
 
-    <div class="container mx-auto px-4 md:px-16 md:pt-20">
+    <div class="container mx-auto px-8 md:px-16 md:pt-20">
       <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10">
         <Stats class="py-10 mt-5" :content="stats1" />
         <Stats class="py-10 mt-5" :content="stats1" />
