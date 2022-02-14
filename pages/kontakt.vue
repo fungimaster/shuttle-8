@@ -7,7 +7,7 @@
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
     >
       <template #svg>
-        <SvgConactus></SvgConactus>
+        <SvgContactus></SvgContactus>
       </template>
     </HeroSection5>
 
@@ -23,14 +23,15 @@ export default {
     return {
       hero: {
         headline1: 'Kontakt',
-        headline2: '',
+        headline2:
+          ' Har du något förslag eller önskar söka medel är du välkommen att skriva till oss via formuläret nedan.',
       },
       content1: {
-        body: 'Du är alltid välkommen att kontakta oss och det gör du på bästa sätt genom att skicka ett mejl till info@slagforhjaltar.se. Vi tar gärna emot förslag på verksamheter som jobbar med att förbättra livet för barn och unga på olika vis. Har du något förslag eller önskar söka medel är du välkommen att skriva till oss via formuläret nedan. ',
+        body: 'Du är alltid välkommen att kontakta oss och det gör du på bästa sätt genom att skicka ett mejl till info@slagforhjaltar.se. Vi tar gärna emot förslag på verksamheter som jobbar med att förbättra livet för barn och unga på olika vis.',
         headline: 'Kontakta oss ',
         ending: 'info@slagforhjaltar.se',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/03/slag-for-hjaltar-events.jpg',
+          'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg',
       },
     }
   },

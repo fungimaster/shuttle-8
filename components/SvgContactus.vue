@@ -3,7 +3,7 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
-      :width="isMobile ? '266.61' : '700.61'"
+      :width="isMobile ? '266.61' : '600.61'"
       :height="isMobile ? '276.03' : '314.03'"
       viewBox="0 0 894.24907 448.2822"
       xmlns:xlink="http://www.w3.org/1999/xlink"

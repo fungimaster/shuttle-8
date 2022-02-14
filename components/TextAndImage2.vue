@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
     <div>
       <img :src="content.imgurl" alt="" />
     </div>
@@ -8,12 +8,9 @@
         {{ content.headline }}
       </h1>
       <p class="text-gray-700 text-wider text-lg">{{ content.body }}</p>
-      <h4
-        class="text-pink-dark-hero text-3xl pt-10 text-wider"
-        v-if="content.ending"
-      >
+      <h3 class="headline3 pt-10" v-if="content.ending">
         {{ content.ending }}
-      </h4>
+      </h3>
     </div>
   </div>
 </template>
