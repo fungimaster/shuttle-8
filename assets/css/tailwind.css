@@ -39,13 +39,13 @@
     @apply text-5xl text-pink-hero tracking-wider mb-10;
   }
   .headline2 {
-    @apply text-4xl text-pink-hero tracking-wider;
+    @apply text-4xl text-pink-hero tracking-wider  mb-8;
   }
   .headline3 {
-    @apply text-3xl text-pink-hero tracking-wider;
+    @apply text-3xl text-pink-hero tracking-wider  mb-6;
   }
   .headline4 {
-    @apply text-2xl text-pink-hero tracking-wider;
+    @apply text-2xl text-pink-hero tracking-wider  mb-4;
   }
 
   .text {
