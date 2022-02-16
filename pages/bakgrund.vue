@@ -10,18 +10,13 @@
         <SvgTeam />
       </template>
     </HeroSection5>
-    <!--  <HeroSection
-      :headline1="hero.headline1"
-      :headline2="hero.headline2"
-      color="text-white"
-      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625332/slagforhjaltar-3_lkn6on.jpg"
-    /> -->
+
     <ImageAndText :content="content1" />
     <TextAndImage :content="content2" :showicon="false" />
     <div class="container mx-auto px-8 md:px-16 pt-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-28">
         <Profile :profile="profile1" />
-        <Profile :profile="profile1" />
+        <Profile :profile="profile2" />
         <Profile :profile="profile1" />
         <Profile :profile="profile1" />
       </div>
@@ -66,6 +61,15 @@ export default {
           'Till vardags är jag hotelldirektör på Scandic Helsingborg Nord. Min familj består av min sambo, mina två döttrar och en bonusson. Jag är väldigt social och gillar att träffa och umgås med människor. Den fritid som blir över lägger jag gärna på golf – och padelspel. ',
         imgurl:
           'https://slagforhjaltar.se/wp-content/uploads/2021/03/3-480x600-1.jpg',
+      },
+      profile2: {
+        name: 'Daniel Telford',
+        title: 'VD',
+        location: 'Skåne',
+        presentation:
+          'Jag är huvudägare av Eriks fönsterputs, delägare och VD på Heberleins samt delägare på Hälsomatlådan.',
+        imgurl:
+          'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1644955127/slag%20f%C3%B6r%20hj%C3%A4ltar/5-480x600-1_mtrrg4.jpg',
       },
       list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
     }

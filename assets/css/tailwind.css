@@ -49,7 +49,7 @@
   }
 
   .text {
-    @apply text-base font-light leading-relaxed mt-0 mb-4 text-base text-gray-500;
+    @apply text-gray-500 tracking-wider leading-loose;
   }
   .bold {
     @apply text-lg leading-relaxed mt-6 mb-4 font-semibold text-gray-800;

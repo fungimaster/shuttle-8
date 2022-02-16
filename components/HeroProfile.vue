@@ -60,17 +60,7 @@
               <h4 class="headline4 mb-5">
                 {{ hero.name }}
               </h4>
-              <div
-                class="
-                  text-sm
-                  leading-normal
-                  mt-0
-                  mb-2
-                  text-gray-500
-                  font-bold
-                  uppercase
-                "
-              >
+              <div class="mt-0 mb-2 text uppercase">
                 <span>
                   <font-awesome-icon
                     class="h-4 inline"
@@ -89,7 +79,6 @@
                     active:bg-pink-600
                     uppercase
                     text-white
-                    font-bold
                     hover:shadow-md
                     shadow
                     text-xs

@@ -65,9 +65,7 @@
 
               Så hjälper vi
             </h3>
-            <p
-              class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-            >
+            <p class="text">
               Det arbete vi gör är viktigt för oss och de organisationer vi
               stödjer. Med hjälp av interna insamlingar där engagerade och
               involverades hjälp har spelat stor roll så vi lyckats med att

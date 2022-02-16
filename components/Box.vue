@@ -3,7 +3,7 @@
     <div class="break-words bg-white w-full mb-8">
       <div class="pb-5">
         <button class=""></button>
-        <p class="text-2xl tracking-wider">
+        <p class="text">
           <span
             class="
               w-10
@@ -23,7 +23,7 @@
           </span>
           {{ content.headline }}
         </p>
-        <p class="mt-2 mb-4 text-gray-600 tracking-wider">
+        <p class="mt-2 text">
           {{ content.text }}
         </p>
       </div>

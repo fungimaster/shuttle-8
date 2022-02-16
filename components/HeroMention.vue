@@ -6,7 +6,7 @@
       bg-teal-100
       border-t-4 border-pink-dark-hero
       rounded-b
-      text-teal-900
+      text
       px-8
       md:px-16
       py-3
@@ -22,8 +22,8 @@
         />
       </div>
       <div class="pl-10">
-        <a class="font-bold">{{ hero.name }}</a>
-        <p class="text-sm">{{ hero.body.slice(0, 30) }}</p>
+        <a class="headline4">{{ hero.name }}</a>
+        <p class="text">{{ hero.body.slice(0, 30) }}</p>
       </div>
     </div>
   </div>

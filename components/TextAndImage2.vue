@@ -7,7 +7,7 @@
       <h1 class="headline1">
         {{ content.headline }}
       </h1>
-      <p class="text-gray-700 text-wider text-lg">{{ content.body }}</p>
+      <p class="text">{{ content.body }}</p>
       <h3 class="headline3 pt-10" v-if="content.ending">
         {{ content.ending }}
       </h3>

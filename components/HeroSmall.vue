@@ -7,8 +7,8 @@
         class="shadow-lg rounded-full max-w-full mx-auto"
       />
       <div class="pt-6 text-center">
-        <h5 class="text-xl font-bold">{{ hero.name }}</h5>
-        <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+        <h4 class="headline4">{{ hero.name }}</h4>
+        <p class="mt-1 textuppercase">
           {{ hero.body.slice(0, 30) }}
         </p>
       </div>

@@ -23,37 +23,22 @@
           </span>
           {{ content.headline }}
         </h3>
-        <p class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider">
+        <p class="mt-4 text">
           {{ content.body1 }}
         </p>
-        <p
-          v-if="content.body2"
-          class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
-        >
+        <p v-if="content.body2" class="mt-4 text">
           {{ content.body2 }}
         </p>
-        <p
-          v-if="content.body3"
-          class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
-        >
+        <p v-if="content.body3" class="mt-4 text">
           {{ content.body3 }}
         </p>
-        <p
-          v-if="content.body4"
-          class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
-        >
+        <p v-if="content.body4" class="mt-4 text">
           {{ content.body4 }}
         </p>
-        <p
-          v-if="content.body5"
-          class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
-        >
+        <p v-if="content.body5" class="mt-4 text">
           {{ content.body5 }}
         </p>
-        <p
-          v-if="content.body6"
-          class="mt-4 text-lg leading-relaxed text-gray-600 tracking-wider"
-        >
+        <p v-if="content.body6" class="mt-4 text">
           {{ content.body6 }}
         </p>
         <ul v-if="content.list" class="list-none mt-6">

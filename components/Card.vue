@@ -34,7 +34,7 @@
         <h3 class="headline3">
           {{ content.headline }}
         </h3>
-        <p class="text-md font-light mt-2 text-gray-700 tracking-wider">
+        <p class="text">
           {{ content.body1 }}
         </p>
       </blockquote>

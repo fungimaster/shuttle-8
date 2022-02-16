@@ -48,19 +48,7 @@
         </h1>
       </div>
       <div class="">
-        <p
-          class="
-            text-center
-            md:text-left
-            mt-4
-            text-lg
-            leading-relaxed
-            text-blueGray-500
-            pt-5
-            tracking-wider
-            leading-loose
-          "
-        >
+        <p class="text text-center md:text-left mt-4 text-lg">
           {{ headline2 }}
         </p>
       </div>

@@ -13,6 +13,7 @@
         opacity-75
         lg:mx-0
       "
+      style="height: 600px"
     >
       <div class="p-4 md:p-12 text-center lg:text-left">
         <!-- Image for mobile view-->
@@ -45,12 +46,11 @@
         <p
           class="
             pt-4
-            text-base
+            text text-sm
             flex
             items-center
             justify-center
             lg:justify-start
-            tracking-wider
           "
         >
           <svg
@@ -67,13 +67,11 @@
         <p
           class="
             pt-2
-            text-gray-600 text-xs
-            lg:text-sm
+            text-sm text
             flex
             items-center
             justify-center
             lg:justify-start
-            tracking-wider
           "
         >
           <svg

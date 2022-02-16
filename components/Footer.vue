@@ -18,15 +18,11 @@
           <h3 class="headline3">Kontakt</h3>
 
           <a href="mailto:info@slagforhjaltar.se">
-            <h5 class="text-lg mt-0 mb-2 text-gray-600">
-              info@slagforhjaltar.se
-            </h5></a
+            <span class="text">info@slagforhjaltar.se </span></a
           >
 
           <h3 class="mt-6 headline3">Adress</h3>
-          <h5 class="text-lg mt-0 mb-2 text-gray-600">
-            Adress: Rååvägen 39 25270 Råå
-          </h5>
+          <span class="text"> Adress: Rååvägen 39 25270 Råå </span>
           <div class="mt-6">
             <button
               @click="
