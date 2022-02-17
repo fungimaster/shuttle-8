@@ -6,7 +6,46 @@
       color="text-white"
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
     />
-    <ImageAndText :content="content1" />
+    <ImageAndText :content="content1">
+      <template #content>
+        <h3 class="headline3">
+          <span
+            class="
+              w-10
+              h-10
+              shadow-lg
+              rounded-full
+              bg-pink-hero
+              inline-flex
+              items-center
+              justify-center
+            "
+          >
+            <font-awesome-icon
+              class="w-7 h-7 text-white overflow-visible"
+              :icon="['far', 'heart']"
+            />
+          </span>
+
+          Vi har många att tacka för mycket!
+        </h3>
+        <p class="text">
+          Vi har många att tacka för mycket! Att ha så många fina, engagerade
+          eldsjälar kopplade till stiftelsen gör oss otroligt ödmjuka och
+          lyckliga! Ni är många och vi önskar lyfta var och en av er till
+          skyarna! Nedan har vi en enkel sammanställning över genomförda event
+          och vilka företag vi haft förmånen att ha med oss på resan.
+        </p>
+        <p class="text">
+          Ni är guld värda och ni står alla för stiftelsens värdeord: kärlek,
+          glädje, gemenskap och engagemang!
+        </p>
+        <p class="text">
+          Tusen varma tack till var och en! För vad ni gör. Vilka ni är. Ni är
+          alla stiftelsens hjältar!
+        </p>
+      </template>
+    </ImageAndText>
 
     <div class="container mx-auto px-8 md:px-16 md:pt-20">
       <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10">
@@ -58,14 +97,6 @@ export default {
           'Våra hjältar delar våran värdegrund formad runt kärlek, glädje, gemenskap & engagemang.',
       },
       content1: {
-        body1: 'Vi har många att tacka för mycket!',
-        body2:
-          'Att ha så många fina, engagerade eldsjälar kopplade till stiftelsen gör oss otroligt ödmjuka och lyckliga! Ni är många och vi önskar lyfta var och en av er till skyarna! Nedan har vi en enkel sammanställning över genomförda event och vilka företag vi haft förmånen att ha med oss på resan.',
-        body3:
-          'Ni är guld värda och ni står alla för stiftelsens värdeord:kärlek, glädje, gemenskap och engagemang!',
-        body4:
-          'Tusen varma tack till var och en! För vad ni gör. Vilka ni är. Ni är alla stiftelsens hjältar!',
-        headline: 'Vi har många att tacka för mycket!',
         imgurl:
           'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625282/slagforhjaltar-26_e7wuvd.jpg',
       },

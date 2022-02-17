@@ -23,7 +23,7 @@
             pt-2
             content-center
             justify-between
-            md:w-4/6 md:justify-end
+            md:w-6/6 md:justify-end
           "
         >
           <ul

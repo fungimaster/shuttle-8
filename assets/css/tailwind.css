@@ -47,9 +47,12 @@
   .headline4 {
     @apply text-2xl text-pink-hero tracking-wider  mb-4;
   }
+  .headline5 {
+    @apply text-xl text-pink-hero tracking-wider  mb-4;
+  }
 
   .text {
-    @apply text-gray-500 tracking-wider leading-loose;
+    @apply text-gray-500 tracking-wider leading-loose pb-4;
   }
   .bold {
     @apply text-lg leading-relaxed mt-6 mb-4 font-semibold text-gray-800;

@@ -12,7 +12,21 @@
     </HeroSection5>
 
     <ImageAndText :content="content1" />
-    <TextAndImage :content="content2" :showicon="false" />
+    <TextAndImage :content="content2" :showicon="false">
+      <template #content>
+        <p class="text">
+          Idag är vi stolta att se stiftelsens insatser ta varierade skepnader
+          genom olika gemensamma aktiviteter med framförallt ett engagerat
+          näringsliv kopplat till styrelsen.
+        </p>
+        <p class="text">
+          Insamlingsstiftelsen Slag för Hjältar möjliggör en bättre tillvaro för
+          barn och unga. Genom evenemang tillsammans med förening- och
+          näringslivet donerar vi insamlade medel till icke vinstdrivande
+          organisationer som arbetar inom vård, hälsa och omsorg.
+        </p>
+      </template>
+    </TextAndImage>
     <div class="container mx-auto px-8 md:px-16 pt-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-28">
         <Profile :profile="profile1" />
@@ -44,11 +58,6 @@ export default {
         list: [],
       },
       content2: {
-        body1:
-          'Idag är vi stolta att se stiftelsens insatser ta varierade skepnader genom olika gemensamma aktiviteter med framförallt ett engagerat näringsliv kopplat till styrelsen.',
-        body2:
-          'Insamlingsstiftelsen Slag för Hjältar möjliggör en bättre tillvaro för barn och unga. Genom evenemang tillsammans med förening- och näringslivet donerar vi insamlade medel till icke vinstdrivande organisationer som arbetar inom vård, hälsa och omsorg.',
-        headline: '',
         imgurl:
           'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg',
         list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
