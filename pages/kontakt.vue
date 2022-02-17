@@ -12,7 +12,38 @@
     </HeroSection5>
 
     <div class="container mx-auto px-8 md:px-16 pb-52">
-      <TextAndImage2 :content="content1" class="py-28 mb-52" />
+      <ImageAndText :content="content1" class="py-28 mb-52">
+        <template #content>
+          <h3 class="headline3">
+            <span
+              class="
+                w-10
+                h-10
+                shadow-lg
+                rounded-full
+                bg-pink-hero
+                inline-flex
+                items-center
+                justify-center
+              "
+            >
+              <font-awesome-icon
+                class="w-7 h-7 text-white overflow-visible"
+                :icon="['far', 'heart']"
+              />
+            </span>
+
+            Kontakt oss!
+          </h3>
+          <p class="text">
+            Du är alltid välkommen att kontakta oss och det gör du på bästa sätt
+            genom att skicka ett mejl till info@slagforhjaltar.se. Vi tar gärna
+            emot förslag på verksamheter som jobbar med att förbättra livet för
+            barn och unga på olika vis.
+          </p>
+          <h4 class="headline4">info@slagforhjaltar.se</h4>
+        </template>
+      </ImageAndText>
     </div>
   </div>
 </template>
@@ -27,9 +58,6 @@ export default {
           ' Har du något förslag eller önskar söka medel är du välkommen att skriva till oss via formuläret nedan.',
       },
       content1: {
-        body: 'Du är alltid välkommen att kontakta oss och det gör du på bästa sätt genom att skicka ett mejl till info@slagforhjaltar.se. Vi tar gärna emot förslag på verksamheter som jobbar med att förbättra livet för barn och unga på olika vis.',
-        headline: 'Kontakta oss ',
-        ending: 'info@slagforhjaltar.se',
         imgurl:
           'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg',
       },

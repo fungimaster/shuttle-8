@@ -26,10 +26,12 @@
           <SvgOurSolutionMini v-if="index === 1" />
           <SvgLovingItMini v-if="index === 2" />
           <SvgSocialNetworkMini v-if="index === 3" />
-          <h1 class="py-5 text-left text-2xl text">
-            {{ help.headline }}
-          </h1>
-          <p class="text text-left">{{ help.text }}</p>
+          <h3 class="headline3 pt-10">
+            <h3 class="text-gray-600">{{ help.headline }}</h3>
+          </h3>
+          <p class="text text-left">
+            <p class="text-gray-500"> {{ help.text }}</p>
+           </p>
         </div>
       </div>
     </div>

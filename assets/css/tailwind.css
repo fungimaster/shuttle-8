@@ -52,7 +52,7 @@
   }
 
   .text {
-    @apply text-gray-500 tracking-wider leading-loose pb-4;
+    @apply text-gray-500 text-lg tracking-wider leading-loose pb-4;
   }
   .bold {
     @apply text-lg leading-relaxed mt-6 mb-4 font-semibold text-gray-800;

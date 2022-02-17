@@ -12,6 +12,66 @@
           <SvgEvent></SvgEvent>
         </template>
       </HeroSection5>
+      <div class="py-12 md:px-16 bg-gray-50">
+        <TextAndCard
+          :ingress="content1.ingress"
+          :headline="content1.headline"
+          :content="content1"
+        >
+          <template #content>
+            <h3 class="headline3">
+              <!--    <span
+                class="
+                  w-10
+                  h-10
+                  shadow-lg
+                  rounded-full
+                  bg-pink-hero
+                  inline-flex
+                  items-center
+                  justify-center
+                "
+              >
+                   <font-awesome-icon
+                class="w-7 h-7 text-white overflow-visible"
+                :icon="['far', 'heart']"
+              /> -
+              </span> -->
+
+              Vilken lycka!
+            </h3>
+            <p class="text">
+              Tävlingen vi väntat så länge på att få hålla. Så många som velat
+              bidra med så mycket!
+            </p>
+            <p class="text">
+              Slag för Hjältar Gollf på fina Allerum Golfklubb den 27 augusti
+              inbringade smått otroliga 248 265 kronor till Barndiabetesfonden!!
+              ❤️
+            </p>
+            <p class="text">
+              Att samla goda människor på ett ställe för att göra gott
+              tillsammans - det visste vi på förhand var en underbar idé! Men
+              det vi skapade igår var inget mindre än ren och skär magi!! ❤️
+              Just nu är vi omtumlade, glada och otroligt lyckliga att ha kunnat
+              genomföra eventet med alla er inblandade - inget mindre än riktiga
+              HJÄLTAR var och en av er! ❤️❤️❤️
+            </p>
+            <p class="text">
+              Häng med oss på vår Facebooksida - Slag för Hjältar - detta är
+              bara ett litet första smakprov av alla underbara bilder vi tagit
+              under dagen. Vi kommer visa er alla deltagande lag, alla våra
+              enastående hålvärdar och såklart alla andra utan vilka vi inte
+              kunnat genomföra denna dag.
+            </p>
+            <p class="text">All KÄRLEK från oss ❤️</p>
+            <h4 class="headline4">
+              Anita Duverell, Daniel Telford, Henrik Karlsson, Bengt Wehlin,
+              Thomas Krøigård Hansen
+            </h4>
+          </template>
+        </TextAndCard>
+      </div>
       <TextAndImage :content="event1" :showicon="false">
         <template #content>
           <h3 class="headline3">
@@ -146,6 +206,13 @@ export default {
       event1: {
         imgurl:
           'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625254/slagforhjaltar-9_rs8lpa.jpg',
+      },
+      content1: {
+        body1:
+          'Dagens insamling överlämnades på plats till glada representanter från Barndiabetesfonden ',
+        headline: 'Vilken lycka!',
+        imgurl:
+          'https://slagforhjaltar.se/wp-content/uploads/2021/11/slagforhjaltar-2021.jpg',
       },
     }
   },

@@ -48,7 +48,18 @@
         </h1>
       </div>
       <div class="">
-        <p class="text text-center md:text-left mt-4 text-lg">
+        <p
+          class="
+            text-gray-500 text-lg
+            tracking-wider
+            leading-loose
+            pb-4
+            text-center
+            md:text-left
+            mt-4
+            text-xl
+          "
+        >
           {{ headline2 }}
         </p>
       </div>
