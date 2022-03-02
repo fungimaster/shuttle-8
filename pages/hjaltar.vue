@@ -5,7 +5,11 @@
       :headline2="hero.headline2"
       color="text-white"
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
-    />
+    >
+      <template #svg>
+        <SvgHero></SvgHero>
+      </template>
+    </HeroSection>
     <ImageAndText :content="content1">
       <template #content>
         <h3 class="headline3">

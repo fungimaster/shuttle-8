@@ -1,7 +1,7 @@
 <template>
   <div>
     <client-only>
-      <HeroSection5
+      <HeroSection
         :headline1="hero.headline1"
         :headline3="hero.headline3"
         :headline2="hero.headline2"
@@ -11,7 +11,7 @@
         <template #svg>
           <SvgEvent></SvgEvent>
         </template>
-      </HeroSection5>
+      </HeroSection>
       <div class="py-12 md:px-16 bg-gray-50">
         <TextAndCard
           :ingress="content1.ingress"
@@ -46,16 +46,27 @@
             </p>
             <p class="text">
               Slag för Hjältar Gollf på fina Allerum Golfklubb den 27 augusti
-              inbringade smått otroliga 248 265 kronor till Barndiabetesfonden!!
-              ❤️
+              inbringade smått otroliga 248 265 kronor till Barndiabetesfonden!
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
             </p>
             <p class="text">
               Att samla goda människor på ett ställe för att göra gott
               tillsammans - det visste vi på förhand var en underbar idé! Men
-              det vi skapade igår var inget mindre än ren och skär magi!! ❤️
+              det vi skapade igår var inget mindre än ren och skär magi!
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
               Just nu är vi omtumlade, glada och otroligt lyckliga att ha kunnat
               genomföra eventet med alla er inblandade - inget mindre än riktiga
-              HJÄLTAR var och en av er! ❤️❤️❤️
+              HJÄLTAR var och en av er!
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
             </p>
             <p class="text">
               Häng med oss på vår Facebooksida - Slag för Hjältar - detta är
@@ -64,7 +75,13 @@
               enastående hålvärdar och såklart alla andra utan vilka vi inte
               kunnat genomföra denna dag.
             </p>
-            <p class="text">All KÄRLEK från oss ❤️</p>
+            <p class="text">
+              All KÄRLEK från oss
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
+            </p>
             <h4 class="headline4">
               Anita Duverell, Daniel Telford, Henrik Karlsson, Bengt Wehlin,
               Thomas Krøigård Hansen

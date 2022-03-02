@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroSection5
+    <HeroSection
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
@@ -9,10 +9,10 @@
       <template #svg>
         <SvgContactus></SvgContactus>
       </template>
-    </HeroSection5>
+    </HeroSection>
 
     <div class="container mx-auto px-8 md:px-16 pb-52">
-      <ImageAndText :content="content1" class="py-28 mb-52">
+      <ImageAndText :content="content1" class="pt-28 pb-16">
         <template #content>
           <h3 class="headline3">
             <span
@@ -44,6 +44,7 @@
           <h4 class="headline4">info@slagforhjaltar.se</h4>
         </template>
       </ImageAndText>
+      <ContactForm />
     </div>
   </div>
 </template>

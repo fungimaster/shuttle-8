@@ -29,7 +29,7 @@
             w-48
             bg-cover bg-center
           "
-          :style="'background-image: url(' + profile.imgurl + ')'"
+          :style="'background-image: url(' + profile.imgurlmobile + ')'"
         ></div>
 
         <h3 class="headline3 lg:pt-0">{{ profile.name }}</h3>
@@ -45,6 +45,7 @@
         ></div>
         <p
           class="
+            hidden
             pt-4
             text text-sm
             flex
@@ -66,6 +67,7 @@
         </p>
         <p
           class="
+            hidden
             pt-2
             text-sm text
             flex

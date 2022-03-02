@@ -1,13 +1,31 @@
 <template>
   <div>
-    <HeroSection5
+    <HeroSection
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625254/slagforhjaltar-9_rs8lpa.jpg"
     >
       <template #svg> <SvgLove /> </template
-    ></HeroSection5>
+    ></HeroSection>
+    <div class="py-12 px4 md:px-16 bg-gray-50">
+      <div class="container mx-auto px-8 md:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <h2 class="headline2">Tillsammans så gör vi stor skillnad</h2>
+            <p>Swischa en gåva idag! Till nummer:</p>
+            <h3 class="headline4 inline">123 558 47 84</h3>
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1645456326/slag%20f%C3%B6r%20hj%C3%A4ltar/qr_mrrlgk.svg"
+              alt="swish"
+              class="h-40"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     <HowToHelp></HowToHelp>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <client-only>
-      <HeroSection5
+      <HeroSection
         :isIndex="true"
         :headline1="hero.headline1"
         :headline2="hero.headline2"
@@ -24,7 +24,7 @@
             </button>
           </div>
         </template>
-      </HeroSection5>
+      </HeroSection>
 
       <div class="pb-20 pt-0 md:pt-24 py-20">
         <div class="container mx-auto px-8 md:px-16">
