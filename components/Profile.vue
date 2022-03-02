@@ -32,7 +32,7 @@
           :style="'background-image: url(' + profile.imgurlmobile + ')'"
         ></div>
 
-        <h3 class="headline3 lg:pt-0">{{ profile.name }}</h3>
+        <h3 class="headline3 pt-10 lg:pt-0">{{ profile.name }}</h3>
         <div
           class="
             mx-auto

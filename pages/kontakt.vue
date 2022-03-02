@@ -11,7 +11,7 @@
       </template>
     </HeroSection>
 
-    <div class="container mx-auto px-8 md:px-16 pb-52">
+    <div class="container pb-52">
       <ImageAndText :content="content1" class="pt-28 pb-16">
         <template #content>
           <h3 class="headline3">
@@ -44,7 +44,7 @@
           <h4 class="headline4">info@slagforhjaltar.se</h4>
         </template>
       </ImageAndText>
-      <ContactForm />
+      <ContactForm class="mx-auto px-8 md:px-16" />
     </div>
   </div>
 </template>
