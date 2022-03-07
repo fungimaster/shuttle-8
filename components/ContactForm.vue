@@ -73,7 +73,9 @@
       <button
         @click="sendMessage"
         class="btn-pill btn-lg bg-white mt-5"
+        :style="!name || !email || !message ? 'opacity: 0.5' : ''"
         type="button"
+        :disabled="!name || !email || !message"
       >
         Skicka
         <font-awesome-icon
@@ -82,7 +84,7 @@
         />
       </button>
       <div
-        v-if="showToast"
+        v-if="showToastSuccess"
         class="
           text-white
           px-6
@@ -119,6 +121,44 @@
           <span>×</span>
         </button>
       </div>
+      <div
+        v-if="showToastFail"
+        class="
+          text-white
+          px-6
+          py-4
+          border-0
+          rounded
+          relative
+          mb-4
+          bg-red-400
+          mt-10
+        "
+      >
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell" />
+        </span>
+        <span class="inline-block text align-middle mr-8" style="padding: 0">
+          <span class="text-white"> Fyll i alla fält</span>
+        </span>
+        <button
+          class="
+            absolute
+            bg-transparent
+            text-2xl
+            font-semibold
+            leading-none
+            right-0
+            top-0
+            mt-4
+            mr-6
+            outline-none
+            focus:outline-none
+          "
+        >
+          <span>×</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -130,25 +170,18 @@ export default {
       email: '',
       name: '',
       message: '',
-      showToastStatus: false,
+      showToastSuccess: false,
+      showToastFail: false,
     }
   },
   methods: {
     sendMessage() {
-      console.log(
-        '%c 👊',
-        'color: #007acc;',
-        this.email,
-        this.name,
-        this.message
-      )
-
       this.name = ''
       this.email = ''
       this.message = ''
-      this.showToastStatus = true
+      this.showToastSuccess = true
       setTimeout(() => {
-        this.showToastStatus = false
+        this.showToastSuccess = false
       }, 3000)
     },
   },

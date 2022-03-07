@@ -13,7 +13,7 @@
         opacity-75
         lg:mx-0
       "
-      style="height: 600px"
+      style="height: 700px"
     >
       <div class="p-4 md:p-12 text-center lg:text-left">
         <!-- Image for mobile view-->
