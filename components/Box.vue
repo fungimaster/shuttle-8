@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="break-words bg-white w-full mb-8">
-      <div class="pb-5">
+      <div class="p-5">
         <button class=""></button>
-        <p class="text">
+        <h3 class="headline3">
           <span
             class="
               w-10
               h-10
               shadow-lg
               rounded-full
-              bg-pink-hero
+              bg-pink-dark-hero
               inline-flex
               items-center
               justify-center
@@ -22,7 +22,7 @@
             />
           </span>
           {{ content.headline }}
-        </p>
+        </h3>
         <p class="mt-2 text">
           {{ content.text }}
         </p>

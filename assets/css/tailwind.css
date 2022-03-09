@@ -39,16 +39,16 @@
     @apply text-5xl text-pink-hero tracking-wider mb-10;
   }
   .headline2 {
-    @apply text-4xl text-pink-hero tracking-wider  mb-8;
+    @apply text-4xl text-pink-dark-hero tracking-wider  mb-8;
   }
   .headline3 {
-    @apply text-3xl text-pink-hero tracking-wider  mb-6;
+    @apply text-3xl text-pink-dark-hero tracking-wider  mb-6;
   }
   .headline4 {
-    @apply text-2xl text-pink-hero tracking-wider  mb-4;
+    @apply text-2xl text-pink-dark-hero tracking-wider  mb-4;
   }
   .headline5 {
-    @apply text-xl text-pink-hero tracking-wider  mb-4;
+    @apply text-xl text-pink-dark-hero tracking-wider  mb-4;
   }
 
   .text {
@@ -56,5 +56,8 @@
   }
   .bold {
     @apply text-lg leading-relaxed mt-6 mb-4 font-semibold text-gray-800;
+  }
+  .heart-bg {
+    @apply bg-pink-dark-hero;
   }
 }

@@ -5,7 +5,7 @@
             Tillsammans så gör vi stor skillnad. Hur kan du hjälpa?
           </h1> -->
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div
           v-for="(help, index) in howToHelp"
           :key="index"

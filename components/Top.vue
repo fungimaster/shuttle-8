@@ -1,14 +1,18 @@
 <template>
   <div class="text-black shadow-sm mb-1">
     <nav class="p-2 py-5 mt-0 w-full z-10 top-0">
-      <div class="container mx-auto flex items-center">
-        <div class="flex w-full md:w-1/2 justify-start font-extrabold">
+      <div class="grid grid-cols-3 lg:grid-cols-5">
+        <div>
           <a
-            class="no-underline pl-10 hover:text-white hover:no-underline"
+            class="
+              no-underline
+              hover:text-white hover:no-underline
+              cursor-pointer
+            "
             @click="$_handleRouting('/'), (showDropdown = false)"
           >
             <img
-              class="w-1/2 md:w-50"
+              class="md:w-30 ml-10 pt-4"
               src="https://slagforhjaltar.se/wp-content/uploads/2021/03/Slag-for-hjaltar-logo-liten.png"
               alt="logo"
             />
@@ -16,8 +20,9 @@
         </div>
         <div
           class="
+            col-span-4
             hidden
-            md:block
+            lg:block
             flex
             w-full
             pt-2
@@ -27,14 +32,7 @@
           "
         >
           <ul
-            class="
-              list-reset
-              flex
-              justify-between
-              flex-1
-              md:flex-none
-              items-center
-            "
+            class="list-reset flex justify-end flex-1 md:flex-none items-center"
           >
             <li
               class="mr-3 relative"
@@ -69,11 +67,12 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-wrap">
-          <div class="w-full sm:w-6/12 md:w-4/12 px-8 md:px-16"></div>
-        </div>
-        <div class="md:hidden">
-          <button @click="showDropdown = !showDropdown" class="p-5 pb-3">
+
+        <div class="lg:hidden col-span-2 lg:col-span-4">
+          <button
+            @click="showDropdown = !showDropdown"
+            class="p-5 pb-3 float-right"
+          >
             <div id="nav-icon1" :class="showDropdown ? 'open' : ''">
               <span></span>
               <span></span>

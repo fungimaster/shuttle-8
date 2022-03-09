@@ -19,7 +19,7 @@
               h-10
               shadow-lg
               rounded-full
-              bg-pink-hero
+              heart-bg
               inline-flex
               items-center
               justify-center
