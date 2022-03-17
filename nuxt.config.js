@@ -26,6 +26,9 @@ export default {
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
     ],
   },
+  generate: {
+    routes: ['/event/1', '/event/2', '/event/3'],
+  },
   publicRuntimeConfig: {
     baseURL:
       process.env.NODE_ENV === 'production'
