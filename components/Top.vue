@@ -116,11 +116,11 @@ export default {
       showDropdown: false,
       routes: [
         { value: '/', displayname: 'Hem' },
-        { value: 'insamlingsevent', displayname: 'Insamlingsevent' },
-        { value: 'bakgrund', displayname: 'Bakgrund' },
-        { value: 'hjaltar', displayname: 'Alla våra Hjältar' },
-        { value: 'hjalp', displayname: 'Så hjälper du' },
-        { value: 'kontakt', displayname: 'Kontakt' },
+        { value: '/insamlingsevent', displayname: 'Insamlingsevent' },
+        { value: '/bakgrund', displayname: 'Bakgrund' },
+        { value: '/hjaltar', displayname: 'Alla våra Hjältar' },
+        { value: '/hjalp', displayname: 'Så hjälper du' },
+        { value: '/kontakt', displayname: 'Kontakt' },
       ],
     }
   },

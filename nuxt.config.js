@@ -26,7 +26,14 @@ export default {
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
     ],
   },
-
+  publicRuntimeConfig: {
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? process.env.AXIOS_BASE_URL
+        : process.env.AXIOS_BASE_URL,
+    cloudinary_preset: process.env.CLOUDINARY_PRESET,
+    cloudinary_upload_url: process.env.CLOUDINARY_UPLOAD_URL,
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@fortawesome/fontawesome-svg-core/styles.css', '~layouts/global.css'],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -49,8 +56,16 @@ export default {
     '@nuxtjs/axios',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  //enable proxy to prevent cors errors in dev.  https://accidental.dev/avoid-api-communication-headaches-by-using-a-proxy/
+  axios: {
+    proxy: false,
+  },
+  proxy: {
+    '/api/': {
+      target: 'http://localhost:7001/',
+      pathRewrite: { '^/api/': '' },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

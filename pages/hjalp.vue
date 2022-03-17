@@ -4,7 +4,6 @@
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
-      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625254/slagforhjaltar-9_rs8lpa.jpg"
     >
       <template #svg> <SvgLove /> </template
     ></HeroSection>
@@ -18,7 +17,7 @@
           </div>
           <div class="flex justify-center">
             <img
-              src="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1645456326/slag%20f%C3%B6r%20hj%C3%A4ltar/qr_mrrlgk.svg"
+              src="https://res.cloudinary.com/dn3hzwewp/image/upload/v1647270154/SFH/site/qr_mrrlgk.svg"
               alt="swish"
               class="h-40"
             />

@@ -8,11 +8,11 @@
     >
       <div class="py-1">
         <div class="my-5" v-for="route in routes" :key="route.index">
-          <nuxt-link :to="route.value" @click.native="closeMenu">
+          <a @click="$_handleRouting(route.value), closeMenu()">
             <span class="tracking-wide text-lg block">
               {{ route.displayname }}
             </span>
-          </nuxt-link>
+          </a>
           <hr class="text-black w-full mt-5" />
         </div>
       </div>

@@ -30,12 +30,12 @@ export default {
   data() {
     return {
       items: [
-        'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg',
-        'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg',
-        'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg',
-        'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643621911/slagforhjaltar-6_uma48u.jpg',
-        'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625282/slagforhjaltar-26_e7wuvd.jpg',
-        'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625254/slagforhjaltar-9_rs8lpa.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269652//SFH/site/slagforhjaltar-21.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269654/SFH/site/slagforhjaltar-18.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269653/SFH/site/slagforhjaltar-20.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269652/SFH/site/slagforhjaltar-19.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269612/SFH/site/slagforhjaltar-49.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269593/SFH/site/slagforhjaltar-38.jpg',
       ],
       index: null,
     }

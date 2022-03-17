@@ -4,7 +4,6 @@
       :headline1="hero.headline1"
       :headline2="hero.headline2"
       color="text-white"
-      imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625884/slagforhjaltar-15_uvgc5d.jpg"
     >
       <template #svg>
         <SvgContactus></SvgContactus>
@@ -60,7 +59,7 @@ export default {
       },
       content1: {
         imgurl:
-          'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625313/slagforhjaltar-49_vjz3zv.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/v1647269654/SFH/site/slagforhjaltar-18.jpg',
       },
     }
   },

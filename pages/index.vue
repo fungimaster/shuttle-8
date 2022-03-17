@@ -5,7 +5,6 @@
         :isIndex="true"
         :headline1="hero.headline1"
         :headline2="hero.headline2"
-        imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643621911/slagforhjaltar-6_uma48u.jpg"
         color="text-white"
       >
         <template #svg>

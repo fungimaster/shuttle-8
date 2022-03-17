@@ -33,6 +33,7 @@ import {
   faHouseUser,
   faLocation,
   faHamburger,
+  faCamera,
 } from '@fortawesome/pro-regular-svg-icons'
 
 import {
@@ -98,4 +99,5 @@ export const iconspro = [
   faTwitter,
   faLocation,
   faHamburger,
+  faCamera,
 ]

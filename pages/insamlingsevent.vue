@@ -6,7 +6,6 @@
         :headline3="hero.headline3"
         :headline2="hero.headline2"
         color="text-white"
-        imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625282/slagforhjaltar-26_e7wuvd.jpg"
       >
         <template #svg>
           <SvgEvent></SvgEvent>
@@ -19,27 +18,7 @@
           :content="content1"
         >
           <template #content>
-            <h3 class="headline3">
-              <!--    <span
-                class="
-                  w-10
-                  h-10
-                  shadow-lg
-                  rounded-full
-                  heart-bg
-                  inline-flex
-                  items-center
-                  justify-center
-                "
-              >
-                   <font-awesome-icon
-                class="w-7 h-7 text-white overflow-visible"
-                :icon="['far', 'heart']"
-              /> -
-              </span> -->
-
-              Vilken lycka!
-            </h3>
+            <h3 class="headline3">Vilken lycka!</h3>
             <p class="text">
               Tävlingen vi väntat så länge på att få hålla. Så många som velat
               bidra med så mycket!
@@ -148,7 +127,7 @@
         </template>
       </TextAndImage>
 
-      <ImageAndText :content="event1">
+      <ImageAndText :content="event2">
         <template #content>
           <h3 class="headline3">
             <span
@@ -222,14 +201,18 @@ export default {
       },
       event1: {
         imgurl:
-          'https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625254/slagforhjaltar-9_rs8lpa.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269525/SFH/site/slagforhjaltar-6.jpg',
+      },
+      event2: {
+        imgurl:
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269652/SFH/site/slagforhjaltar-21.jpg',
       },
       content1: {
         body1:
           'Dagens insamling överlämnades på plats till glada representanter från Barndiabetesfonden ',
         headline: 'Vilken lycka!',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/11/slagforhjaltar-2021.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/v1647270348/SFH/site/slagforhjaltar-2021.jpg',
       },
     }
   },
