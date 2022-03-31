@@ -28,7 +28,7 @@ export default {
   },
   //https://nuxtjs.org/docs/configuration-glossary/configuration-generate/#routes
   generate: {
-    routes: ['/event/1', '/event/2', '/event/3'],
+    routes: ['/event/1', '/event/2', '/event/3', 'event/PG3QsPREucP6nyd3g'],
   },
   publicRuntimeConfig: {
     baseURL:
@@ -64,12 +64,12 @@ export default {
   axios: {
     proxy: false,
   },
-  proxy: {
+  /*   proxy: {
     '/api/': {
       target: 'http://localhost:7001/',
       pathRewrite: { '^/api/': '' },
     },
-  },
+  }, */
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
