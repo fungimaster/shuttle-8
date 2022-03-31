@@ -10,7 +10,7 @@
       </template>
     </HeroSection>
 
-    <div class="py-12 md:px-16 bg-gray-50" v-if="getEvents">
+    <div class="py-12 md:px-16 bg-gray-50" v-if="event">
       <TextAndImage :content="event1" :showicon="false">
         <template #content>
           <h3 class="headline3">{{ event.eventname }}</h3>

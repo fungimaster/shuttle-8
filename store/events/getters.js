@@ -16,6 +16,6 @@ export default {
       return
     }
 
-    return state.events.find((e) => e._id === id)
+    return state.events.find((e) => e._id.toLowerCase() === id.toLowerCase())
   },
 }
