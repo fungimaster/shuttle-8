@@ -25,6 +25,10 @@
         </h3>
         <p class="mt-2 text">
           {{ content.text }}
+          <span v-if="content2" class="text">
+            Insamlat totalt
+            <strong class="text-pink-dark-hero">{{ content2 }}.</strong>
+          </span>
         </p>
       </div>
     </div>
@@ -34,6 +38,6 @@
 
 <script>
 export default {
-  props: ['content'],
+  props: ['content', 'content2'],
 }
 </script>

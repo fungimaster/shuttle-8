@@ -1,5 +1,5 @@
 export default {
-  fetchTestData({ commit }, params) {
+  /* fetchTestData({ commit }, params) {
     return new Promise((resolve, reject) => {
       this.$axios
         .$get(this.$config.baseURL)
@@ -12,11 +12,10 @@ export default {
           reject(error)
         })
     })
-  },
+  }, */
   uploadFile({ dispatch, commit }, payload) {
     return new Promise((resolve, reject) => {
       const cloudinaryUrl = this.$config.cloudinary_upload_url
-      console.log('cloudinaryUrl', cloudinaryUrl)
       let resourceType = ''
 
       if (payload.file.type === 'video/mp4') {
@@ -24,7 +23,7 @@ export default {
       } else {
         resourceType = 'image'
       }
-      console.log('%c 👊', 'color: #007acc;', resourceType)
+      console.log(resourceType)
 
       const formData = new FormData()
       formData.append('file', payload.file)
@@ -55,6 +54,22 @@ export default {
         .catch((error) => {
           reject(error)
         }) */
+    })
+  },
+  getFunds({ dispatch, commit }, payload) {
+    return new Promise((resolve, reject) => {
+      this.$axios
+        .$post(this.$config.baseURL, {
+          method: 'getFunds',
+        })
+        .then((response) => {
+          commit('SET_FUND_TOTAL', response.total)
+          commit('SET_EVENTS', response)
+          resolve(response)
+        })
+        .catch((error) => {
+          reject(error)
+        })
     })
   },
 }

@@ -29,7 +29,11 @@
         <div class="container mx-auto px-8 md:px-16">
           <div class="flex flex-wrap">
             <Box class="w-full md:w-4/12 pr-5" :content="box1" />
-            <Box class="w-full md:w-4/12 pr-5" :content="box2" />
+            <Box
+              class="w-full md:w-4/12 pr-5"
+              :content="box2"
+              :content2="getFundsTotal"
+            />
             <Box class="w-full md:w-4/12 pr-5" :content="box3" />
           </div>
           <Gallery />
@@ -83,6 +87,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   data() {
     return {
@@ -114,6 +120,15 @@ export default {
         color: 'bg-pink-300',
       },
     }
+  },
+  async fetch() {
+    await this.getFunds()
+  },
+  computed: {
+    ...mapGetters('events', ['getFundsTotal']),
+  },
+  methods: {
+    ...mapActions('events', ['getFunds']),
   },
 }
 </script>

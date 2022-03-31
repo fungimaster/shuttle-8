@@ -7,6 +7,8 @@ export default {
   state() {
     return {
       test: '',
+      founds_total: '',
+      events: null,
     }
   },
   mutations,

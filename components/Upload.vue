@@ -1,8 +1,9 @@
 <template>
   <div>
-    <Spinner v-if="loading" />
     <div class="image-upload w-20">
+      <Spinner v-if="loading" />
       <label
+        v-if="!loading"
         :for="eventid"
         class="cursor-pointer text-white hover:text-pink-hero"
       >
@@ -11,6 +12,7 @@
         </span>
       </label>
       <input
+        v-if="!loading"
         class="inputfile"
         type="file"
         :id="eventid"
@@ -44,6 +46,10 @@ export default {
       this.file = event.target.files[0]
 
       this.loading = true
+
+      setTimeout(() => {
+        this.loading = false
+      }, 1000)
       const promise = this.uploadFile({
         file: this.file,
         eventid: this.eventid,

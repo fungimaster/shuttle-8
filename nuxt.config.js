@@ -26,6 +26,7 @@ export default {
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
     ],
   },
+  //https://nuxtjs.org/docs/configuration-glossary/configuration-generate/#routes
   generate: {
     routes: ['/event/1', '/event/2', '/event/3'],
   },
