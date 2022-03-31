@@ -3,6 +3,9 @@ export default {
     return state.test
   },
   getFundsTotal(state) {
+    if (!state.funds_total) {
+      return
+    }
     return state.funds_total
   },
   getEvents(state) {

@@ -7,7 +7,7 @@ export default {
   state() {
     return {
       test: '',
-      founds_total: '',
+      funds_total: '',
       events: null,
     }
   },
