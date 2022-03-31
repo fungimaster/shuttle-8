@@ -28,7 +28,15 @@ export default {
   },
   //https://nuxtjs.org/docs/configuration-glossary/configuration-generate/#routes
   generate: {
-    routes: ['/event/1', '/event/2', '/event/3', 'event/PG3QsPREucP6nyd3g'],
+    routes: [
+      '/event/1',
+      '/event/2',
+      '/event/3',
+      'event/PG3QsPREucP6nyd3g',
+      'events/7mCgCNM29XbCkWzur',
+      'events/Kq47HJ9acDTfZ45mS',
+      'events/EA9jJ6kunYSanBF2W',
+    ],
   },
   publicRuntimeConfig: {
     baseURL:
