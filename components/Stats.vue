@@ -1,18 +1,8 @@
 <template>
   <div class="shadow-lg rounded-2xl w-full bg-white dark:bg-gray-800 px-10">
-    <div class="flex items-center">
-      <h2 class="text-pink-hero text-4xl tracking-wider">Insamlat</h2>
-    </div>
+    <div class="flex items-center"></div>
     <div class="flex flex-col justify-start">
-      <p
-        class="
-          text-gray-500
-          dark:text-gray-100
-          text-4xl text-left
-          tracking-wider
-          my-4
-        "
-      >
+      <p class="text-pink-dark-hero text-4xl tracking-wider">
         {{ content.metric }}
         <span class="text-sm"> kr </span>
       </p>
