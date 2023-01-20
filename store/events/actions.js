@@ -35,7 +35,7 @@ export default {
             method: 'imgAddPub',
             url: res.data.secure_url,
             publicId: res.data.public_id,
-            layoutArea: payload.name,
+            eventId: get event id            
             resource_type: resourceType,
           }
           this.$axios

@@ -10,13 +10,35 @@
         <template #svg>
           <SvgStandout />
         </template>
+
         <template #buttons>
-          <div class="hidden md:flex">
-            <button class="btn-pill btn-lg bg-white" type="button">
+          <div class="flex mb-4">
+            <small class="text-pink-dark-hero"
+              >* Anmälan till golf visas bara om det finns en aktiv tävling för
+              golf där anmälningsfönstret är öppen.</small
+            >
+          </div>
+          <div class="md:flex">
+            <button
+              class="btn-pill w-full md:w-1/2 btn-lg bg-white"
+              type="button"
+              @click="$_handleRouting('/minsida')"
+            >
+              Anmälan golf
+            </button>
+            <button hidden class="btn-pill btn-lg bg-white" type="button">
               Ge en gåva
             </button>
             <button
-              class="btn-pill btn-lg bg-white mt-5 md:mt-0 md:ml-10"
+              class="
+                btn-pill
+                w-full
+                md:w-1/2
+                btn-lg
+                bg-white
+                mt-5
+                md:mt-0 md:ml-10
+              "
               type="button"
             >
               Läs mer om oss
@@ -88,8 +110,10 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { utilityMethodsMixin } from '@/plugins/mixins/utilityMethodsMixin'
 
 export default {
+  mixins: [utilityMethodsMixin],
   data() {
     return {
       hero: {

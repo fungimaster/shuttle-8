@@ -116,6 +116,7 @@ export default {
       showDropdown: false,
       routes: [
         { value: '/', displayname: 'Hem' },
+        { value: '/minsida', displayname: 'Min sida' },
         { value: '/insamlingsevent', displayname: 'Insamlingsevent' },
         { value: '/bakgrund', displayname: 'Bakgrund' },
         { value: '/hjaltar', displayname: 'Alla våra Hjältar' },
