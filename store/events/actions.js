@@ -23,29 +23,28 @@ export default {
       } else {
         resourceType = 'image'
       }
-      console.log(resourceType)
+      // console.log(resourceType)
 
       const formData = new FormData()
       formData.append('file', payload.file)
       formData.append('upload_preset', this.$config.cloudinary_preset)
 
       this.$axios.post(cloudinaryUrl + 'upload', formData)
-      /*  .then((res) => {
+        .then((res) => {
           const obj = {
-            method: 'imgAddPub',
+            method: 'upsertEventImage',
             url: res.data.secure_url,
             publicId: res.data.public_id,
-            eventId: get event id            
+            event_id: 'fh66o99rZPkTQp8QF',
             resource_type: resourceType,
           }
           this.$axios
             .post(this.$config.baseURL, obj)
             .then(() => {
-              commit('REMOVE_BACKGROUND_IMAGE', payload.name)
-
-              dispatch('fetchBackgroundImages', payload.name)
-              commit('SET_CONTAINER_UPLOAD', false)
-              resolve()
+              // commit('REMOVE_BACKGROUND_IMAGE', payload.name)
+              // dispatch('fetchBackgroundImages', payload.name)
+              // commit('SET_CONTAINER_UPLOAD', false)
+              // resolve()
             })
             .catch((error) => {
               reject(error)
@@ -53,7 +52,7 @@ export default {
         })
         .catch((error) => {
           reject(error)
-        }) */
+        })
     })
   },
   getFunds({ dispatch, commit }, payload) {

@@ -1,0 +1,617 @@
+<template>
+  <div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div>
+        <label class="block text mb-0" for="company">
+          Företagsnamn
+          <span v-if="!validateCompany" class="text-rose-600">*</span>
+        </label>
+        <input
+          id="company"
+          v-model="form.company"
+          :state="validateCompany"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+      </div>
+      <div>
+        <label class="block text mb-0" for="orgno">
+          Org. nr
+          <span v-if="!validateOrgno" class="text-rose-600">*</span>
+        </label>
+        <input
+          id="orgno"
+          v-model="form.orgno"
+          :state="validateOrgno"
+          placeholder="555555-5555"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+        <span class="text-rose-600 text-xs italic" v-if="!validateOrgno"
+          >Format org nr: 555555-5555</span
+        >
+      </div>
+      <div>
+        <label class="block text mb-0" for="contact">
+          För- och efternamn kontaktperson
+          <span v-if="!validateContact" class="text-rose-600">*</span>
+        </label>
+        <input
+          id="contact"
+          v-model="form.contact"
+          :state="validateContact"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+      </div>
+      <div>
+        <label class="block text mb-0" for="email">
+          E-post kontaktperson
+          <span v-if="!validateEmail" class="text-rose-600">*</span>
+        </label>
+        <input
+          id="email"
+          v-model="form.email"
+          :state="validateEmail"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="email"
+          required
+        />
+        <span class="text-rose-600 text-xs italic" v-if="!validateEmail"
+          >Epost adressen är inte giltig</span
+        >
+      </div>
+      <div>
+        <label class="block text mb-0" for="mobile">
+          Mobilnr
+          <span v-if="!validateMobile" class="text-rose-600">*</span>
+        </label>
+        <input
+          id="mobile"
+          v-model="form.mobile"
+          :state="validateMobile"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="number"
+        />
+      </div>
+      <div>
+        <label class="block text mb-0" for="cart">
+          Behöver ni golfbil(ar)?
+        </label>
+
+        <input
+          id="cart"
+          v-model="form.cart"
+          class="mr-2 leading-tight"
+          type="checkbox"
+        />
+        <span
+          class="
+            appearance-none
+            w-full
+            text-md
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+        >
+          Ja *
+        </span>
+        <span class="block text-sm"
+          >* Golfbil godkänns endast mot uppvisande av läkarintyg</span
+        >
+      </div>
+      <div v-if="form.cart">
+        <label class="block text mb-0" for="cart_no">
+          Antal golfbilar
+          <span v-if="!validateCartNo && form.cart" class="text-rose-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="cart_no"
+          min="1"
+          max="2"
+          v-model="form.cart_no"
+          :state="validateCartNo"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="number"
+        />
+      </div>
+      <div v-if="form.cart">
+        <label class="block text mb-0" for="cart_why"> Fritext golfbil </label>
+        <input
+          id="cart_why"
+          v-model="form.cart_why"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+      </div>
+      <div>
+        <label class="block text mb-0" for="mobile">
+          Golf ID spelare 1
+          <span
+            v-if="!validatePlayer1 || !form.player1.length"
+            class="text-rose-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="player1"
+          v-model="form.player1"
+          :state="validatePlayer1"
+          placeholder="750101-001"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer1"
+          >Format golf-id: 750101-001</span
+        >
+      </div>
+      <div>
+        <label class="block text mb-0" for="mobile">
+          Golf ID spelare 2
+          <span
+            v-if="!validatePlayer2 || !form.player2.length"
+            class="text-rose-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="player2"
+          v-model="form.player2"
+          :state="validatePlayer2"
+          placeholder="750101-001"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer2"
+          >Format golf-id: 750101-001</span
+        >
+      </div>
+      <div>
+        <label class="block text mb-0" for="mobile">
+          Golf ID spelare 3
+          <span
+            v-if="!validatePlayer3 || !form.player3.length"
+            class="text-rose-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="player3"
+          v-model="form.player3"
+          :state="validatePlayer3"
+          placeholder="750101-001"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer3"
+          >Format golf-id: 750101-001</span
+        >
+      </div>
+      <div>
+        <label class="block text mb-0" for="mobile">
+          Golf ID spelare 4
+          <span
+            v-if="!validatePlayer4 || !form.player4.length"
+            class="text-rose-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="player4"
+          v-model="form.player4"
+          :state="validatePlayer4"
+          placeholder="750101-001"
+          required
+          class="
+            appearance-none
+            block
+            w-full
+            bg-stone-50/20
+            text-md
+            border border-gray-200
+            rounded
+            py-3
+            px-4
+            mb-3
+            leading-tight
+            focus:outline-none focus:bg-white focus:border-gray-300
+          "
+          type="text"
+        />
+        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer4"
+          >Format golf-id: 750101-001</span
+        >
+      </div>
+    </div>
+    <div class="col-span-2">
+      <label class="block text mb-0 mt-4" for="message"> Meddelande </label>
+      <textarea
+        id="message"
+        v-model="form.message"
+        class="
+          no-resize
+          appearance-none
+          block
+          w-full
+          bg-stone-50/20
+          border border-gray-200
+          rounded
+          text-md
+          py-3
+          px-4
+          mb-3
+          focus:outline-none focus:bg-white focus:border-gray-300
+          h-48
+          resize-none
+        "
+      ></textarea>
+    </div>
+    <div class="col-span-2">
+      <button
+        class="btn-pill btn-lg bg-white mt-5"
+        type="button"
+        @click="sendMessage"
+      >
+        Skicka
+        <font-awesome-icon
+          class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+          :icon="['far', 'heart']"
+        />
+      </button>
+      <div
+        v-if="showToastSuccess"
+        class="
+          text-white
+          px-6
+          py-4
+          border-0
+          rounded
+          relative
+          mb-4
+          bg-pink-dark-hero
+          mt-10
+        "
+      >
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell" />
+        </span>
+        <span class="inline-block text align-middle mr-8" style="padding: 0">
+          <span class="text-white"> Anmälan skickad</span>
+        </span>
+        <button
+          class="
+            absolute
+            bg-transparent
+            text-2xl
+            font-semibold
+            leading-none
+            right-0
+            top-0
+            mt-4
+            mr-6
+            outline-none
+            focus:outline-none
+          "
+        >
+          <span>×</span>
+        </button>
+      </div>
+      <div
+        v-if="showToastFail"
+        class="
+          text-white
+          px-6
+          py-4
+          border-0
+          rounded
+          relative
+          mb-4
+          bg-red-400
+          mt-10
+        "
+      >
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell" />
+        </span>
+        <span class="inline-block text align-middle mr-8" style="padding: 0">
+          <span class="text-white"> Fyll i alla fält</span>
+        </span>
+        <button
+          class="
+            absolute
+            bg-transparent
+            text-2xl
+            font-semibold
+            leading-none
+            right-0
+            top-0
+            mt-4
+            mr-6
+            outline-none
+            focus:outline-none
+          "
+        >
+          <span>×</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        company: '',
+        contact: '',
+        orgno: '',
+        email: '',
+        email_hidden: '',
+        mobile: '',
+        player1: '',
+        player2: '',
+        player3: '',
+        player4: '',
+        message: '',
+        cart: false,
+        cart_no: 0,
+        cart_why: '',
+      },
+      showToastSuccess: false,
+      showToastFail: false,
+    }
+  },
+  computed: {
+    showToast() {
+      return this.showToastStatus
+    },
+    validateCompany() {
+      if (this.form.company.length < 2) {
+        return false
+      }
+      return true
+    },
+    validateOrgno() {
+      if (this.form.orgno === '') {
+        return true
+      }
+
+      if (/^\d{6}(?:\d{2})?[-\s]?\d{4}\r?$/.test(this.form.orgno)) {
+        return true
+      }
+      return false
+    },
+    validateContact() {
+      if (this.form.contact.length < 6) {
+        return false
+      }
+      return true
+    },
+    validateEmail() {
+      if (this.form.email.length < 4) {
+        return true
+      }
+
+      if (/^\w+(\.-]?\w+)*@\w+(\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)) {
+        return true
+      }
+      return false
+    },
+    validateMobile() {
+      if (this.form.mobile.length < 6) {
+        return false
+      }
+      return true
+    },
+    validateCartNo() {
+      if (this.form.cart_no > 2 || this.form.cart_no < 1) {
+        return false
+      }
+      return true
+    },
+    validatePlayer1() {
+      if (!this.form.player1) {
+        return true
+      }
+
+      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player1)) {
+        return true
+      }
+      return false
+    },
+    validatePlayer2() {
+      if (this.form.player2 === '') {
+        return true
+      }
+
+      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player2)) {
+        return true
+      }
+      return false
+    },
+    validatePlayer3() {
+      if (this.form.player3 === '') {
+        return true
+      }
+
+      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player3)) {
+        return true
+      }
+      return false
+    },
+    validatePlayer4() {
+      if (this.form.player4 === '') {
+        return true
+      }
+
+      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player4)) {
+        return true
+      }
+      return false
+    },
+    validateForm() {
+      if (
+        this.validateCompany &&
+        this.validateOrgno &&
+        this.validateContact &&
+        this.validateContact &&
+        this.validateEmail &&
+        this.validateMobile &&
+        this.validatePlayer1 &&
+        this.validatePlayer2 &&
+        this.validatePlayer3 &&
+        this.validatePlayer4
+      ) {
+        return true
+      }
+      return false
+    },
+  },
+  methods: {
+    sendMessage() {
+      console.log(this.validateForm)
+    },
+  },
+}
+</script>

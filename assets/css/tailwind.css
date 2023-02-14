@@ -4,59 +4,53 @@
 
 @layer utilities {
   .btn-pill {
-    @apply text-black
-    tracking-wider
-    uppercase
-    text-sm
-    px-6
-    py-3
-    rounded-full
-    shadow
-    outline-none
-    focus:outline-none
-    mr-1
-    mb-1
-    ease-linear
-    transition-all
-    duration-150
-    border-2 
-    bg-white
-    border-pink-hero;
+    @apply text-black tracking-wider uppercase text-sm px-6 py-3 rounded-full shadow outline-none mr-1 mb-1 ease-linear transition-all duration-150 border-2 bg-white border-pink-hero;
   }
+
   .btn-pill:active {
     @apply bg-pink-600;
   }
+
   .btn-pill:hover {
     @apply shadow-lg;
   }
+
   .btn-pill:focus {
     @apply outline-none;
   }
+
   .btn-lg {
     @apply px-8 py-3 shadow-md;
   }
+
   .headline1 {
     @apply text-5xl text-pink-hero tracking-wider mb-10;
   }
+
   .headline2 {
-    @apply text-4xl text-pink-dark-hero tracking-wider  mb-8;
+    @apply text-4xl text-pink-dark-hero tracking-wider mb-8;
   }
+
   .headline3 {
-    @apply text-3xl text-pink-dark-hero tracking-wider  mb-6;
+    @apply text-3xl text-pink-dark-hero tracking-wider mb-6;
   }
+
   .headline4 {
-    @apply text-2xl text-pink-dark-hero tracking-wider  mb-4;
+    @apply text-2xl text-pink-dark-hero tracking-wider mb-4;
   }
+
   .headline5 {
-    @apply text-xl text-pink-dark-hero tracking-wider  mb-4;
+    @apply text-xl text-pink-dark-hero tracking-wider mb-4;
   }
 
   .text {
     @apply text-gray-500 text-lg tracking-wider leading-loose pb-4;
   }
+
   .bold {
     @apply text-lg leading-relaxed mt-6 mb-4 font-semibold text-gray-800;
   }
+
   .heart-bg {
     @apply bg-pink-dark-hero;
   }

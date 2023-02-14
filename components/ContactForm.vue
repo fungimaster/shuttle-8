@@ -1,9 +1,10 @@
 <template>
   <div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div>
-        <label class="block text mb-2" for="grid-password"> Namn </label>
+        <label class="block text mb-0" for="grid-password"> Namn </label>
         <input
+          id="email"
           v-model="name"
           class="
             appearance-none
@@ -19,13 +20,13 @@
             leading-tight
             focus:outline-none focus:bg-white focus:border-gray-300
           "
-          id="email"
           type="email"
         />
       </div>
       <div>
-        <label class="block text mb-2" for="grid-password"> E-post </label>
+        <label class="block text mb-0" for="grid-password"> E-post </label>
         <input
+          id="email"
           v-model="email"
           class="
             appearance-none
@@ -41,14 +42,14 @@
             leading-tight
             focus:outline-none focus:bg-white focus:border-gray-300
           "
-          id="email"
           type="email"
         />
       </div>
     </div>
     <div class="col-span-2">
-      <label class="block text mb-2" for="grid-password"> Meddelande </label>
+      <label class="block text mb-0" for="grid-password"> Meddelande </label>
       <textarea
+        id="message"
         v-model="message"
         class="
           no-resize
@@ -66,16 +67,15 @@
           h-48
           resize-none
         "
-        id="message"
       ></textarea>
     </div>
     <div class="col-span-2">
       <button
-        @click="sendMessage"
         class="btn-pill btn-lg bg-white mt-5"
         :style="!name || !email || !message ? 'opacity: 0.5' : ''"
         type="button"
         :disabled="!name || !email || !message"
+        @click="sendMessage"
       >
         Skicka
         <font-awesome-icon
@@ -174,6 +174,11 @@ export default {
       showToastFail: false,
     }
   },
+  computed: {
+    showToast() {
+      return this.showToastStatus
+    },
+  },
   methods: {
     sendMessage() {
       this.name = ''
@@ -183,11 +188,6 @@ export default {
       setTimeout(() => {
         this.showToastSuccess = false
       }, 3000)
-    },
-  },
-  computed: {
-    showToast() {
-      return this.showToastStatus
     },
   },
 }

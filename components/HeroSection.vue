@@ -4,11 +4,11 @@
       container
       mx-auto
       relative
-      pb-24
+      pb-10
       md:py-24
       grid
       md:grid-cols-2
-      gap-20
+      gap-5
       grid-cols-1
       place-content-center
       px-8
@@ -16,7 +16,7 @@
       py-10
     "
   >
-    <div class="md:hidden flex justify-center md:block pt-10" v-if="$slots.svg">
+    <div v-if="$slots.svg" class="md:hidden flex justify-center md:block pt-5">
       <slot name="svg"> </slot>
     </div>
     <div>
@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <div class="hidden md:block flex justify-center" v-if="$slots.svg">
+    <div v-if="$slots.svg" class="hidden md:block flex justify-center">
       <slot name="svg"> </slot>
     </div>
   </div>
@@ -77,7 +77,7 @@
 
 <script>
 export default {
-  props: [
+  /* props: [
     'isIndex',
     'headline1',
     'headline3',
@@ -85,7 +85,36 @@ export default {
     'color',
     'imgurl',
     'imgurl2',
-  ],
+  ], */
+  props: {
+    isIndex: {
+      type: Boolean,
+    },
+    headline1: {
+      type: String,
+      default: '',
+    },
+    headline2: {
+      type: String,
+      default: '',
+    },
+    headline3: {
+      type: String,
+      default: '',
+    },
+    color: {
+      type: String,
+      default: '',
+    },
+    imgurl: {
+      type: String,
+      default: '',
+    },
+    imgurl2: {
+      type: String,
+      default: '',
+    },
+  },
 
   methods: {
     headline(headline) {

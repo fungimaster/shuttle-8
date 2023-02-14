@@ -1,7 +1,7 @@
 <template>
   <div class="text-black shadow-sm mb-1">
     <nav class="p-2 py-5 mt-0 w-full z-10 top-0">
-      <div class="grid grid-cols-3 lg:grid-cols-5">
+      <div class="grid grid-cols-2 md:grid-cols-5">
         <div>
           <a
             class="
@@ -12,8 +12,8 @@
             @click="$_handleRouting('/'), (showDropdown = false)"
           >
             <img
-              class="md:w-30 ml-10 pt-4"
-              src="https://slagforhjaltar.se/wp-content/uploads/2021/03/Slag-for-hjaltar-logo-liten.png"
+              class="w-full md:w-30 ml-10 pt-4"
+              src="https://res.cloudinary.com/dn3hzwewp/image/upload/v1674221723/SFH/site/Slag-for-hjaltar-logo-liten.png"
               alt="logo"
             />
           </a>
@@ -22,7 +22,7 @@
           class="
             col-span-4
             hidden
-            lg:block
+            lg:hidden
             flex
             w-full
             pt-2
@@ -35,9 +35,9 @@
             class="list-reset flex justify-end flex-1 md:flex-none items-center"
           >
             <li
-              class="mr-3 relative"
               v-for="route in routes"
               :key="route.index"
+              class="mr-3 relative"
             >
               <div class="flex justify-center">
                 <font-awesome-icon
@@ -45,7 +45,6 @@
                   class="absolute h-5 -top-3 text-pink-hero"
                   :icon="['far', 'long-arrow-down']"
                 />
-
                 <a
                   class="
                     px-3
@@ -59,8 +58,8 @@
                     tracking-widest
                     text-gray-600
                   "
-                  @click="$_handleRouting(route.value)"
                   :class="[isCurrentPage(route.value ? route.value : 'index')]"
+                  @click="$_handleRouting(route.value)"
                   >{{ route.displayname }}</a
                 >
               </div>
@@ -68,10 +67,10 @@
           </ul>
         </div>
 
-        <div class="lg:hidden col-span-2 lg:col-span-4">
+        <div class="md:block col-span-1 md:col-span-4">
           <button
-            @click="showDropdown = !showDropdown"
             class="p-5 pb-3 float-right"
+            @click="showDropdown = !showDropdown"
           >
             <div id="nav-icon1" :class="showDropdown ? 'open' : ''">
               <span></span>
@@ -95,8 +94,8 @@
         v-if="showDropdown"
         class="lgMenu"
         :class="showDropdown ? 'enter' : ''"
-        @closeMenu="showDropdown = false"
         :routes="routes"
+        @closeMenu="showDropdown = false"
       />
     </div>
   </div>
@@ -116,7 +115,7 @@ export default {
       showDropdown: false,
       routes: [
         { value: '/', displayname: 'Hem' },
-        { value: '/minsida', displayname: 'Min sida' },
+        // { value: '/golf-anmalan', displayname: 'Min sida' },
         { value: '/insamlingsevent', displayname: 'Insamlingsevent' },
         { value: '/bakgrund', displayname: 'Bakgrund' },
         { value: '/hjaltar', displayname: 'Alla våra Hjältar' },
@@ -125,16 +124,14 @@ export default {
       ],
     }
   },
-
-  methods: {
-    isCurrentPage(page) {
-      return this.currentPage === page ? 'active' : null
-    },
-  },
-
   computed: {
     currentPage() {
       return this.$nuxt.$route.name
+    },
+  },
+  methods: {
+    isCurrentPage(page) {
+      return this.currentPage === page ? 'active' : null
     },
   },
 }

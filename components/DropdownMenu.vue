@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2 w-56 z-20 px-20 w-full">
+  <div class="mt-2 z-20 px-20 w-full md:w-1/2">
     <div
       class="bg-white"
       role="menu"
@@ -7,13 +7,13 @@
       aria-labelledby="options-menu"
     >
       <div class="py-1">
-        <div class="my-5" v-for="route in routes" :key="route.index">
+        <div class="my-5" v-for="(route, index) in routes" :key="route.index">
           <a @click="$_handleRouting(route.value), closeMenu()">
             <span class="tracking-wide text-lg block">
               {{ route.displayname }}
             </span>
           </a>
-          <hr class="text-black w-full mt-5" />
+          <hr class="text-black w-full mt-5" v-if="index + 1 < routes.length" />
         </div>
       </div>
     </div>

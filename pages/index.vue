@@ -22,7 +22,7 @@
             <button
               class="btn-pill w-full md:w-1/2 btn-lg bg-white"
               type="button"
-              @click="$_handleRouting('/minsida')"
+              @click="$_handleRouting('/golf-anmalan')"
             >
               Anmälan golf
             </button>

@@ -1,24 +1,27 @@
 <template>
   <div>
-    <div class="image-upload w-20">
-      <Spinner v-if="loading" />
-      <label
-        v-if="!loading"
-        :for="eventid"
-        class="cursor-pointer text-white hover:text-pink-hero"
-      >
-        <span class="py-2 px-7 rounded block bg-pink-dark-hero">
-          <font-awesome-icon class="w-7 h-7" :icon="['far', 'camera']" />
-        </span>
-      </label>
-      <input
-        v-if="!loading"
-        class="inputfile"
-        type="file"
-        :id="eventid"
-        @change="onUpload($event)"
-        accept=".jpg, .png"
-      />
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-5">
+      <div class="image-upload w-4/5">Ladda upp en bild från tävlingen:</div>
+      <div class="image-upload w-20 text-right">
+        <Spinner v-if="loading" />
+        <label
+          v-if="!loading"
+          :for="eventid"
+          class="cursor-pointer text-white hover:text-pink-hero"
+        >
+          <span class="py-2 px-7 rounded block bg-pink-dark-hero">
+            <font-awesome-icon class="w-7 h-7" :icon="['far', 'camera']" />
+          </span>
+        </label>
+        <input
+          v-if="!loading"
+          class="inputfile"
+          type="file"
+          :id="eventid"
+          @change="onUpload($event)"
+          accept=".jpg, .png"
+        />
+      </div>
     </div>
   </div>
 </template>
