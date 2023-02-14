@@ -12,15 +12,10 @@
         </template>
 
         <template #buttons>
-          <div class="flex mb-4">
-            <small class="text-pink-dark-hero"
-              >* Anmälan till golf visas bara om det finns en aktiv tävling för
-              golf där anmälningsfönstret är öppen.</small
-            >
-          </div>
+          <div class="flex mb-4"></div>
           <div class="md:flex">
             <button
-              class="btn-pill w-full md:w-1/2 btn-lg bg-white"
+              class="hidden btn-pill w-full md:w-1/2 btn-lg bg-white"
               type="button"
               @click="$_handleRouting('/golf-anmalan')"
             >
