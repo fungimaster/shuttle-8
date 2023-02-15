@@ -487,7 +487,6 @@ export default {
         contact: '',
         orgno: '',
         email: '',
-        email_hidden: '',
         mobile: '',
         player1: '',
         player2: '',
@@ -610,7 +609,22 @@ export default {
   },
   methods: {
     sendMessage() {
-      console.log(this.validateForm)
+      if (this.validateForm) {
+        this.$axios
+          .$post(this.$config.baseURL, {
+            method: 'registerTeamEmail',
+            data: this.form,
+          })
+          .then((response) => {
+            console.log(response)
+            this.showToastSuccess = true
+          })
+          .catch((error) => {
+            console.log(error)
+            this.showToastFail = true
+            // this.loading = false;
+          })
+      }
     },
   },
 }
