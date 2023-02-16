@@ -140,7 +140,7 @@
             leading-tight
             focus:outline-none focus:bg-white focus:border-gray-300
           "
-          type="number"
+          type="string"
         />
       </div>
       <div>
@@ -223,7 +223,7 @@
         />
       </div>
       <div>
-        <label class="block text mb-0" for="mobile">
+        <label class="block text mb-0" for="player1">
           Golf ID spelare 1
           <span
             v-if="!validatePlayer1 || !form.player1.length"
@@ -235,6 +235,7 @@
           id="player1"
           v-model="form.player1"
           :state="validatePlayer1"
+          @change="getPlayer('1', form.player1)"
           placeholder="750101-001"
           required
           class="
@@ -253,7 +254,8 @@
           "
           type="text"
         />
-        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer1"
+        <span v-if="id_player_1">{{ id_player_1 }}</span>
+        <span class="text-red-600 text-xs italic" v-if="!validatePlayer1"
           >Format golf-id: 750101-001</span
         >
       </div>
@@ -270,6 +272,7 @@
           id="player2"
           v-model="form.player2"
           :state="validatePlayer2"
+          @change="getPlayer('2', form.player2)"
           placeholder="750101-001"
           required
           class="
@@ -288,7 +291,8 @@
           "
           type="text"
         />
-        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer2"
+        <span v-if="id_player_2">{{ id_player_2 }}</span>
+        <span class="text-red-600 text-xs italic" v-if="!validatePlayer2"
           >Format golf-id: 750101-001</span
         >
       </div>
@@ -297,7 +301,7 @@
           Golf ID spelare 3
           <span
             v-if="!validatePlayer3 || !form.player3.length"
-            class="text-rose-600"
+            class="text-red-600"
             >*</span
           >
         </label>
@@ -305,6 +309,7 @@
           id="player3"
           v-model="form.player3"
           :state="validatePlayer3"
+          @change="getPlayer('3', form.player3)"
           placeholder="750101-001"
           required
           class="
@@ -323,7 +328,8 @@
           "
           type="text"
         />
-        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer3"
+        <span v-if="id_player_3">{{ id_player_3 }}</span>
+        <span class="text-red-600 text-xs italic" v-if="!validatePlayer3"
           >Format golf-id: 750101-001</span
         >
       </div>
@@ -340,6 +346,7 @@
           id="player4"
           v-model="form.player4"
           :state="validatePlayer4"
+          @change="getPlayer('4', form.player4)"
           placeholder="750101-001"
           required
           class="
@@ -358,7 +365,8 @@
           "
           type="text"
         />
-        <span class="text-rose-600 text-xs italic" v-if="!validatePlayer4"
+        <span v-if="id_player_4">{{ id_player_4 }}</span>
+        <span class="text-red-600 text-xs italic" v-if="!validatePlayer4"
           >Format golf-id: 750101-001</span
         >
       </div>
@@ -433,7 +441,45 @@
             focus:outline-none
           "
         >
-          <span>×</span>
+          <span @click="showToastSuccess = false">×</span>
+        </button>
+      </div>
+      <div
+        v-if="showToastFailUnique"
+        class="
+          text-white
+          px-6
+          py-4
+          border-0
+          rounded
+          relative
+          mb-4
+          bg-red-800
+          mt-10
+        "
+      >
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell" />
+        </span>
+        <span class="inline-block text align-middle mr-8" style="padding: 0">
+          <span class="text-white"> Golf-id är inte unika för spelarna</span>
+        </span>
+        <button
+          class="
+            absolute
+            bg-transparent
+            text-2xl
+            font-semibold
+            leading-none
+            right-0
+            top-0
+            mt-4
+            mr-6
+            outline-none
+            focus:outline-none
+          "
+        >
+          <span @click="showToastFailUnique = false">×</span>
         </button>
       </div>
       <div
@@ -471,7 +517,7 @@
             focus:outline-none
           "
         >
-          <span>×</span>
+          <span @click="showToastFail = false">×</span>
         </button>
       </div>
     </div>
@@ -497,8 +543,13 @@ export default {
         cart_no: 0,
         cart_why: '',
       },
+      id_player_1: null,
+      id_player_2: null,
+      id_player_3: null,
+      id_player_4: null,
       showToastSuccess: false,
       showToastFail: false,
+      showToastFailUnique: false,
     }
   },
   computed: {
@@ -538,7 +589,7 @@ export default {
       return false
     },
     validateMobile() {
-      if (this.form.mobile.length < 6) {
+      if (this.form.mobile.length < 9) {
         return false
       }
       return true
@@ -557,6 +608,7 @@ export default {
       if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player1)) {
         return true
       }
+
       return false
     },
     validatePlayer2() {
@@ -608,7 +660,96 @@ export default {
     },
   },
   methods: {
+    getPlayer(player, id) {
+      if (this['validatePlayer' + player]) {
+        this.$axios
+          .$post('https://admin.matchplay.se/methods/getPlayerByGolfid', {
+            method: 'getPlayerByGolfid',
+            golfid: id,
+          })
+          .then((response) => {
+            console.log(response)
+            if (response.notingit) {
+              this['id_player_' + player] = 'Ingen spelare hittades'
+            } else {
+              this['id_player_' + player] =
+                response.firstname +
+                ' ' +
+                response.lastname +
+                ' (' +
+                response.hcp +
+                ')'
+            }
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+      }
+    },
+    validatePlayers() {
+      let ret = true
+      if (this.form.player1 === this.form.player2) {
+        ret = false
+      }
+
+      if (this.form.player1 === this.form.player3) {
+        ret = false
+      }
+
+      if (this.form.player1 === this.form.player4) {
+        ret = false
+      }
+
+      if (this.form.player2 === this.form.player1) {
+        ret = false
+      }
+
+      if (this.form.player2 === this.form.player3) {
+        ret = false
+      }
+
+      if (this.form.player2 === this.form.player4) {
+        ret = false
+      }
+
+      if (this.form.player3 === this.form.player1) {
+        ret = false
+      }
+
+      if (this.form.player3 === this.form.player2) {
+        ret = false
+      }
+
+      if (this.form.player3 === this.form.player4) {
+        ret = false
+      }
+
+      if (this.form.player4 === this.form.player1) {
+        ret = false
+      }
+
+      if (this.form.player4 === this.form.player2) {
+        ret = false
+      }
+
+      if (this.form.player4 === this.form.player3) {
+        ret = false
+      }
+
+      return ret
+    },
     sendMessage() {
+      this.showToastFailUnique = false
+      this.showToastFail = false
+      this.showToastSuccess = false
+
+      if (!this.validatePlayers()) {
+        this.showToastFailUnique = true
+        return false
+      } else {
+        this.showToastFailUnique = false
+      }
+
       if (this.validateForm) {
         this.$axios
           .$post(this.$config.baseURL, {
@@ -617,13 +758,33 @@ export default {
           })
           .then((response) => {
             console.log(response)
+            this.showToastFail = false
             this.showToastSuccess = true
+            this.showToastFailUnique = false
+            this.form = {
+              company: '',
+              contact: '',
+              orgno: '',
+              email: '',
+              mobile: '',
+              player1: '',
+              player2: '',
+              player3: '',
+              player4: '',
+              message: '',
+              cart: false,
+              cart_no: 0,
+              cart_why: '',
+            }
           })
           .catch((error) => {
             console.log(error)
             this.showToastFail = true
+            this.showToastSuccess = false
             // this.loading = false;
           })
+      } else {
+        this.showToastFail = true
       }
     },
   },
