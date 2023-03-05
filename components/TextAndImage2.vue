@@ -8,7 +8,7 @@
         {{ content.headline }}
       </h1>
       <p class="text">{{ content.body }}</p>
-      <h3 class="headline3 pt-10" v-if="content.ending">
+      <h3 v-if="content.ending" class="headline3 pt-10">
         {{ content.ending }}
       </h3>
     </div>

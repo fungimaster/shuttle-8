@@ -24,12 +24,6 @@
         <span class="text"> Adress: Rååvägen 39 25270 Råå </span>
         <div class="mt-6">
           <button
-            @click="
-              $_handleRouting(
-                'https://www.linkedin.com/company/slagforhjaltar/',
-                true
-              )
-            "
             class="
               bg-white
               text-blue-400
@@ -47,6 +41,12 @@
               p-3
             "
             type="button"
+            @click="
+              $_handleRouting(
+                'https://www.linkedin.com/company/slagforhjaltar/',
+                true
+              )
+            "
           >
             <client-only>
               <font-awesome-icon
@@ -55,9 +55,6 @@
               />
             </client-only></button
           ><button
-            @click="
-              $_handleRouting('https://www.facebook.com/slagforhjaltar/', true)
-            "
             class="
               bg-white
               text-blue-600
@@ -76,6 +73,9 @@
             "
             type="button"
             href="https://www.facebook.com/slagforhjaltar/"
+            @click="
+              $_handleRouting('https://www.facebook.com/slagforhjaltar/', true)
+            "
           >
             <client-only>
               <font-awesome-icon

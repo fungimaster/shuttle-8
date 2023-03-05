@@ -6,23 +6,14 @@
       color="text-white"
     >
       <template #svg>
-        <SvgHero></SvgHero>
+        <SvgShowingSupport></SvgShowingSupport>
       </template>
     </HeroSection>
     <ImageAndText :content="content1">
       <template #content>
         <h3 class="headline3">
           <span
-            class="
-              w-10
-              h-10
-              shadow-lg
-              rounded-full
-              heart-bg
-              inline-flex
-              items-center
-              justify-center
-            "
+            class="w-10 h-10 shadow-lg rounded-full heart-bg inline-flex items-center justify-center"
           >
             <font-awesome-icon
               class="w-7 h-7 text-white overflow-visible"
@@ -80,20 +71,11 @@
         <HeroMention class="mb-10" :hero="hero1" />
         <HeroMention class="mb-10" :hero="hero1" />
       </div> -->
-      <TextAndImage :content="content2">
+      <TextAndImage :content="content2" hidden>
         <template #content>
           <h3 class="headline3">
             <span
-              class="
-                w-10
-                h-10
-                shadow-lg
-                rounded-full
-                heart-bg
-                inline-flex
-                items-center
-                justify-center
-              "
+              class="w-10 h-10 shadow-lg rounded-full heart-bg inline-flex items-center justify-center"
             >
               <font-awesome-icon
                 class="w-7 h-7 text-white overflow-visible"

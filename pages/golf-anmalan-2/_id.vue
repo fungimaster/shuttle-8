@@ -1,31 +1,10 @@
 <template>
   <div>
     <div
-      class="
-        container
-        mx-auto
-        relative
-        pb-1
-        md:py-10
-        grid
-        gap-5
-        grid-cols-1
-        place-content-center
-        px-8
-        md:px-16
-        py-10
-      "
+      class="container mx-auto relative pb-1 md:py-10 grid gap-5 grid-cols-1 place-content-center px-8 md:px-16 py-10"
     >
       <h1
-        class="
-          text-center
-          md:text-left
-          leading-normal
-          md:text-6xl
-          text-pink-hero text-4xl
-          tracking-wider
-          break-words
-        "
+        class="text-center md:text-left leading-normal md:text-6xl text-pink-hero text-4xl tracking-wider break-words"
       >
         {{ hero.headline1 }}
       </h1>
@@ -34,7 +13,7 @@
 
     <div class="container mx-auto px-8 md:px-16 pt-2">
       <div class="grid grid-cols-1 md:grid-cols-1 gap-10 mt-2">
-        <NewTeam />
+        <NewPlayers />
       </div>
     </div>
   </div>
@@ -44,8 +23,10 @@
 export default {
   data() {
     return {
+      layout: 'golf-anmalan-layout',
+
       hero: {
-        headline1: 'Anmälan golf 2023',
+        headline1: 'Registrera spelare',
         headline2:
           'Kul att ni vill vara med i årets tävling på Allerum GK fredagen den 26 maj. Fyll i alla fält i formuläret nedan och skicka in, se till att alla uppgifter stämmer :)',
       },

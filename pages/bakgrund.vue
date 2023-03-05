@@ -7,7 +7,7 @@
       imgurl="https://res.cloudinary.com/dk1b2ytfl/image/upload/v1643625332/slagforhjaltar-3_lkn6on.jpg"
     >
       <template #svg>
-        <SvgTeam />
+        <SvgWithLove />
       </template>
     </HeroSection>
 

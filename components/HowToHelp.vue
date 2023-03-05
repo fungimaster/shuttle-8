@@ -54,7 +54,7 @@ export default {
           color: 'bg-pink-600',
         },
         {
-          headline: 'Swish en gåva',
+          headline: 'Swisha en gåva',
           text: 'Du är också givetvis alltid välkommen att bidra till våra insamlingar via vårt Swish nummer eller QR kod.',
           color: 'bg-pink-300',
         },

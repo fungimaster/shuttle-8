@@ -13,7 +13,7 @@
         :key="imageIndex"
         class="w-full col-span-1 row-span-1 rounded"
       >
-        <img :src="image" @click="index = imageIndex" class="object-contain" />
+        <img :src="image" class="object-contain" @click="index = imageIndex" />
       </div>
     </div>
   </div>

@@ -2,13 +2,13 @@
   <div class="">
     <client-only>
       <HeroSection
-        :isIndex="true"
+        :is-index="true"
         :headline1="hero.headline1"
         :headline2="hero.headline2"
         color="text-white"
       >
         <template #svg>
-          <SvgStandout />
+          <SvgSpreadLove />
         </template>
 
         <template #buttons>
@@ -24,20 +24,12 @@
             <button hidden class="btn-pill btn-lg bg-white" type="button">
               Ge en gåva
             </button>
-            <button
-              class="
-                btn-pill
-                w-full
-                md:w-1/2
-                btn-lg
-                bg-white
-                mt-5
-                md:mt-0 md:ml-10
-              "
+            <!-- <button
+              class="btn-pill w-full md:w-1/2 btn-lg bg-white mt-5 md:mt-0 md:ml-10"
               type="button"
             >
               Läs mer om oss
-            </button>
+            </button> -->
           </div>
         </template>
       </HeroSection>
@@ -53,6 +45,11 @@
             />
             <Box class="w-full md:w-4/12 pr-5" :content="box3" />
           </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10 mb-10">
+            <Stats class="py-10 mt-5" :content="stats1" />
+            <Stats class="py-10 mt-5" :content="stats2" />
+            <Stats class="py-10 mt-5" :content="stats3" />
+          </div>
           <Gallery />
         </div>
       </div>
@@ -66,16 +63,7 @@
           <template #content>
             <h3 class="headline3">
               <span
-                class="
-                  w-10
-                  h-10
-                  shadow-lg
-                  rounded-full
-                  heart-bg
-                  inline-flex
-                  items-center
-                  justify-center
-                "
+                class="w-10 h-10 shadow-lg rounded-full heart-bg inline-flex items-center justify-center"
               >
                 <font-awesome-icon
                   class="w-7 h-7 text-white overflow-visible"
@@ -111,6 +99,19 @@ export default {
   mixins: [utilityMethodsMixin],
   data() {
     return {
+      stats1: {
+        metric: '1500000',
+        tagline: 'INSAMLAT & UTDELAT 2016-2018',
+      },
+      stats2: {
+        metric: '424852',
+        tagline: 'INSAMLAT & UTDELAT 2019',
+      },
+      stats3: {
+        metric: '328800',
+        tagline: 'INSAMLAT & UTDELAT 2020',
+      },
+
       hero: {
         headline1: 'Slag För Hjältar',
         headline2:
@@ -118,7 +119,7 @@ export default {
       },
       event1: {
         body1:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
+          'Dagens insamling överlämnades på plats till glada representanter från Barndiabetesfonden',
         headline: 'Utdelning',
         imgurl:
           'https://slagforhjaltar.se/wp-content/uploads/2021/11/slagforhjaltar-2021.jpg',

@@ -4,11 +4,7 @@
       <div class="grid grid-cols-2 md:grid-cols-5">
         <div>
           <a
-            class="
-              no-underline
-              hover:text-white hover:no-underline
-              cursor-pointer
-            "
+            class="no-underline hover:text-white hover:no-underline cursor-pointer"
             @click="$_handleRouting('/'), (showDropdown = false)"
           >
             <img
@@ -19,17 +15,7 @@
           </a>
         </div>
         <div
-          class="
-            col-span-4
-            hidden
-            lg:hidden
-            flex
-            w-full
-            pt-2
-            content-center
-            justify-between
-            md:w-6/6 md:justify-end
-          "
+          class="col-span-4 hidden lg:hidden flex w-full pt-2 content-center justify-between md:w-6/6 md:justify-end"
         >
           <ul
             class="list-reset flex justify-end flex-1 md:flex-none items-center"
@@ -46,18 +32,7 @@
                   :icon="['far', 'long-arrow-down']"
                 />
                 <a
-                  class="
-                    px-3
-                    py-2
-                    flex
-                    items-center
-                    text-lg
-                    hover:opacity-75
-                    cursor-pointer
-                    font-extralight
-                    tracking-widest
-                    text-gray-600
-                  "
+                  class="px-3 py-2 flex items-center text-lg hover:opacity-75 cursor-pointer font-extralight tracking-widest text-gray-600"
                   :class="[isCurrentPage(route.value ? route.value : 'index')]"
                   @click="$_handleRouting(route.value)"
                   >{{ route.displayname }}</a
@@ -90,13 +65,15 @@
       </div>
     </nav>
     <div>
-      <DropdownMenu
-        v-if="showDropdown"
-        class="lgMenu"
-        :class="showDropdown ? 'enter' : ''"
-        :routes="routes"
-        @closeMenu="showDropdown = false"
-      />
+      <transition name="fade">
+        <DropdownMenu
+          v-if="showDropdown"
+          class="lgMenu"
+          :class="showDropdown ? 'enter' : ''"
+          :routes="routes"
+          @closeMenu="showDropdown = false"
+        />
+      </transition>
     </div>
   </div>
 </template>
@@ -219,22 +196,14 @@ export default {
   transform: rotate(-135deg);
 }
 
-/* .lgMenu {
-  top: 0;
-  left: -400px;
-  overflow: hidden;
-
-  position: absolute;
-  z-index: 11;
-  opacity: 0;
-  transition: all 5s;
-  -webkit-transition: all 5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease;
 }
-
-.lgMenu.enter {
-  opacity: 1;
-  left: 0;
-} */
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(-300px);
+}
 </style>
 
 
