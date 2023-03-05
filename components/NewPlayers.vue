@@ -1,81 +1,182 @@
 <template>
   <div>
+    <h1>{{ teamId }}</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div>
-        <label class="block text mb-0" for="company">
-          Företagsnamn
-          <span v-if="!validateCompany" class="text-rose-600">*</span>
+        <label class="block text mb-0" for="player1">
+          Golf ID spelare 1
+          <span
+            v-if="!validatePlayer1 || !form.player1.length"
+            class="text-red-600"
+            >*</span
+          >
         </label>
         <input
-          id="company"
-          v-model="form.company"
-          :state="validateCompany"
+          id="player1"
+          v-model="form.player1"
+          :state="validatePlayer1"
+          placeholder="750101-001"
           required
           class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
           type="text"
+          @change="getPlayer('1', form.player1)"
         />
-      </div>
-      <div>
-        <label class="block text mb-0" for="orgno">
-          Org. nr
-          <span v-if="!validateOrgno" class="text-rose-600">*</span>
-        </label>
-        <input
-          id="orgno"
-          v-model="form.orgno"
-          :state="validateOrgno"
-          placeholder="555555-5555"
-          required
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
-          type="text"
-        />
-        <span v-if="!validateOrgno" class="text-rose-600 text-xs italic"
-          >Format org nr: 555555-5555</span
-        >
-      </div>
-      <div>
-        <label class="block text mb-0" for="contact">
-          För- och efternamn kontaktperson
-          <span v-if="!validateContact" class="text-rose-600">*</span>
-        </label>
-        <input
-          id="contact"
-          v-model="form.contact"
-          :state="validateContact"
-          required
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
-          type="text"
-        />
-      </div>
-      <div>
-        <label class="block text mb-0" for="email">
-          E-post kontaktperson
-          <span v-if="!validateEmail" class="text-rose-600">*</span>
-        </label>
-        <input
-          id="email"
-          v-model="form.email"
-          :state="validateEmail"
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
-          type="email"
-          required
-        />
-        <span v-if="!validateEmail" class="text-rose-600 text-xs italic"
-          >Epost adressen är inte giltig</span
+        <span v-if="id_player_1">{{ id_player_1 }}</span>
+        <span v-if="!validatePlayer1" class="text-red-600 text-xs italic"
+          >Format golf-id: 750101-001</span
         >
       </div>
       <div>
         <label class="block text mb-0" for="mobile">
-          Mobilnr
-          <span v-if="!validateMobile" class="text-rose-600">*</span>
+          Golf ID spelare 2
+          <span
+            v-if="!validatePlayer2 || !form.player2.length"
+            class="text-red-600"
+            >*</span
+          >
         </label>
         <input
-          id="mobile"
-          v-model="form.mobile"
-          :state="validateMobile"
+          id="player2"
+          v-model="form.player2"
+          :state="validatePlayer2"
+          placeholder="750101-001"
           required
           class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
-          type="string"
+          type="text"
+          @change="getPlayer('2', form.player2)"
+        />
+        <span v-if="id_player_2">{{ id_player_2 }}</span>
+        <span v-if="!validatePlayer2" class="text-red-600 text-xs italic"
+          >Format golf-id: 750101-001</span
+        >
+      </div>
+      <div>
+        <label class="block text mb-0" for="mobile">
+          Golf ID spelare 3
+          <span
+            v-if="!validatePlayer3 || !form.player3.length"
+            class="text-red-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="player3"
+          v-model="form.player3"
+          :state="validatePlayer3"
+          placeholder="750101-001"
+          required
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          type="text"
+          @change="getPlayer('3', form.player3)"
+        />
+        <span v-if="id_player_3">{{ id_player_3 }}</span>
+        <span v-if="!validatePlayer3" class="text-red-600 text-xs italic"
+          >Format golf-id: 750101-001</span
+        >
+      </div>
+      <div>
+        <label class="block text mb-0" for="mobile">
+          Golf ID spelare 4
+          <span
+            v-if="!validatePlayer4 || !form.player4.length"
+            class="text-red-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="player4"
+          v-model="form.player4"
+          :state="validatePlayer4"
+          placeholder="750101-001"
+          required
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          type="text"
+          @change="getPlayer('4', form.player4)"
+        />
+        <span v-if="id_player_4">{{ id_player_4 }}</span>
+        <span v-if="!validatePlayer4" class="text-red-600 text-xs italic"
+          >Format golf-id: 750101-001</span
+        >
+      </div>
+    </div>
+    <small
+    v-if="!showCartSection"
+
+      ><a
+        href="#"
+        class="text-pink-hero"
+        @click="showCartSection = true"
+        >Visa tillval för golfbilar</a
+      ></small
+    >
+    <small
+    v-if="showCartSection"
+      ><a
+        href="#"
+        class="text-pink-hero"
+        @click="showCartSection = false, form.cart = null, form.cart_no = null, form.cart_why = null "
+        >Dölj tillval för golfbilar</a
+      ></small
+    >
+
+    <div v-if="showCartSection">
+      <!-- ALERT -->      <div
+      class="text-white px-6 py-6 border-0 rounded relative mb-4 bg-red-400 mt-10"
+      >
+        <span class="text-xl inline-block mr-5 align-middle">
+          <font-awesome-icon class="w-7 h-7" :icon="['far', 'bell']" />
+        </span>
+        <span class="inline-block text align-middle mr-8" style="padding: 0">
+          <span class="text-white"
+            >Alla golfbilar bokas via Slag för Hjältar. Medicinskt intyg krävs och bilar fördelas efter behov och tillgång - kan man avstå så vill
+            vi att ni inte anmäler er som behov av golfbil. Tack för
+            förståelsen!</span
+          >
+        </span>
+      </div>
+
+      <label class="block text mb-0" for="cart">
+        Behöver ni golfbil(ar) och kan uppvisa medicinskt intyg?
+      </label>
+
+      <input
+        id="cart"
+        v-model="form.cart"
+        class="mr-2 leading-tight"
+        type="checkbox"
+      />
+      <span
+        class="appearance-none w-full text-md leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+      >
+        Ja
+      </span>
+
+
+      <div v-if="form.cart">
+        <label class="block text mb-0" for="cart_no">
+          Antal golfbilar
+          <span v-if="!validateCartNo && form.cart" class="text-red-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="cart_no"
+          v-model="form.cart_no"
+          min="1"
+          max="2"
+          :state="validateCartNo"
+          required
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          type="number"
+        />
+      </div>
+      <div v-if="form.cart">
+        <label class="block text mb-0" for="cart_why"> Fritext golfbil </label>
+        <input
+          id="cart_why"
+          v-model="form.cart_why"
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          type="text"
         />
       </div>
     </div>
@@ -99,7 +200,6 @@
           :icon="['far', 'heart']"
         />
       </button>
-
       <div
         v-if="showToastSuccess"
         class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-pink-dark-hero mt-10"
@@ -140,7 +240,7 @@
           <i class="fas fa-bell" />
         </span>
         <span class="inline-block text align-middle mr-8" style="padding: 0">
-          <span class="text-white"> Fyll i alla fält</span>
+          <span class="text-white">Något gick fel...</span>
         </span>
         <button
           class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
@@ -178,6 +278,8 @@ export default {
       showToastSuccess: false,
       showToastFail: false,
       showToastFailUnique: false,
+      showCartSection: false,
+      teamId:""
     }
   },
   computed: {
@@ -270,30 +372,25 @@ export default {
       return false
     },
     validateForm() {
-      console.log('%c 👊', 'color: #007acc;', 'validate form')
-
       if (
         this.validateCompany &&
         this.validateOrgno &&
         this.validateContact &&
+        this.validateContact &&
         this.validateEmail &&
-        this.validateMobile
+        this.validateMobile &&
+        this.validatePlayer1 &&
+        this.validatePlayer2 &&
+        this.validatePlayer3 &&
+        this.validatePlayer4
       ) {
         return true
       }
-
-      console.log('🟡 ---  this.validateMobile:', this.validateMobile)
-
-      console.log('🟡 --- this.validateEmail:', this.validateEmail)
-
-      console.log('🟡 --- this.validateContact:', this.validateContact)
-
-      console.log('🟡 --- this.validateOrgno:', this.validateOrgno)
-
-      console.log('🟡 --- this.validateCompany:', this.validateCompany)
-
       return false
     },
+  },
+  created() {
+    this.teamId = this.$route.params.id
   },
   methods: {
     getPlayer(player, id) {
@@ -379,14 +476,18 @@ export default {
       this.showToastFail = false
       this.showToastSuccess = false
 
-      /*       if (!this.validatePlayers()) {
+      if (!this.validatePlayers()) {
         this.showToastFailUnique = true
         return false
       } else {
         this.showToastFailUnique = false
-      } */
+      }
 
       if (this.validateForm) {
+
+
+        
+
         this.$axios
           .$post(this.$config.baseURL, {
             method: 'registerTeamEmail',

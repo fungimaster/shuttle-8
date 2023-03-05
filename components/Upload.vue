@@ -15,11 +15,11 @@
         </label>
         <input
           v-if="!loading"
+          :id="eventid"
           class="inputfile"
           type="file"
-          :id="eventid"
-          @change="onUpload($event)"
           accept=".jpg, .png"
+          @change="onUpload($event)"
         />
       </div>
     </div>

@@ -433,6 +433,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      windowWidth: window.innerWidth,
+    }
+  },
+  computed: {
+    isMobile() {
+      if (this.windowWidth <= 576) {
+        return true
+      }
+      return false
+    },
+  },
   destroyed() {
     window.removeEventListener('resize', this.handleResize)
   },
@@ -441,22 +454,9 @@ export default {
     window.addEventListener('resize', this.handleResize)
     /* eslint-enable */
   },
-  data() {
-    return {
-      windowWidth: window.innerWidth,
-    }
-  },
   methods: {
     handleResize() {
       this.windowWidth = window.innerWidth
-    },
-  },
-  computed: {
-    isMobile() {
-      if (this.windowWidth <= 576) {
-        return true
-      }
-      return false
     },
   },
 }

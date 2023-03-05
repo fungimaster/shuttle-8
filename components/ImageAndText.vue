@@ -8,7 +8,7 @@
         </div>
 
         <ul v-if="content.list" class="list-none mt-6">
-          <li class="py-2" v-for="element in content.list" :key="element.index">
+          <li v-for="element in content.list" :key="element.index" class="py-2">
             <div class="flex items-center">
               <div>
                 <span

@@ -40,10 +40,9 @@
             emot förslag på verksamheter som jobbar med att förbättra livet för
             barn och unga på olika vis.
           </p>
-          <h4 class="headline4">info@slagforhjaltar.se</h4>
+         <a href="mailto:info@slagforhjaltar.se"><h4 class="headline4">info@slagforhjaltar.se</h4></a> 
         </template>
       </ImageAndText>
-      <ContactForm />
     </div>
   </div>
 </template>
