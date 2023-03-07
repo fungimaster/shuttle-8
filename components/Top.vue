@@ -8,7 +8,7 @@
             @click="$_handleRouting('/'), (showDropdown = false)"
           >
             <img
-              class="w-full md:w-30 ml-10 pt-4"
+              class="w-full lg:w-56 md:w-30 ml-10 pt-4"
               src="https://res.cloudinary.com/dn3hzwewp/image/upload/v1674221723/SFH/site/Slag-for-hjaltar-logo-liten.png"
               alt="logo"
             />
