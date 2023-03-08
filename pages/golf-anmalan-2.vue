@@ -28,7 +28,7 @@ export default {
       hero: {
         headline1: 'Registrera spelare',
         headline2:
-          'Kul att ni vill vara med i årets tävling på Allerum GK fredagen den 26 maj. Fyll i alla fält i formuläret nedan och skicka in, se till att alla uppgifter stämmer :)',
+          'Här fyller ni i spelarena för ert lag. Ange samma organisationsnummer som i anmälan av laget.',
       },
       list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
     }

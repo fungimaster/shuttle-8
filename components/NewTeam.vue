@@ -66,7 +66,7 @@
       </div>
       <div>
         <label class="block text mb-0" for="mobile">
-          Mobilnr
+          Mobilnummer kontaktperson
           <span v-if="!validateMobile" class="text-rose-600">*</span>
         </label>
         <input
