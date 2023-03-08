@@ -9,10 +9,15 @@
         {{ hero.headline1 }}
       </h1>
       <p class="text">{{ hero.headline2 }}</p>
-      <p v-if="event && event.eventinfo" class="text">
-        {{ event.eventinfo }}
+
+      <p class="text">
+        Spelform: 4-mannalag <br />
+        Tider: 7.30 - 18.30 <br />
+        Pris: 10 000 kr <br />
+        I priset ingår tävlingsavgift, jippotävlingar, mat, greenfee
       </p>
-      <div v-if="event">
+      <p v-if="event && event.eventinfo" class="text">{{ event.eventinfo }}</p>
+      <div v-if="event" hidden>
         <p
           v-if="event.bookedslots && event.availableslots"
           class="text-left leading-normal text-pink-hero text-xl tracking-wider break-words"

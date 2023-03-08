@@ -8,7 +8,7 @@
   }
 
   .btn-pill:active {
-    @apply bg-pink-600;
+    @apply bg-pink-600 ;
   }
 
   .btn-pill:hover {
@@ -18,6 +18,10 @@
   .btn-pill:focus {
     @apply outline-none;
   }
+  .btn-pill:disabled{
+    @apply opacity-50 bg-white
+  }
+  
 
   .btn-lg {
     @apply px-8 py-3 shadow-md;

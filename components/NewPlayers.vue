@@ -3,6 +3,29 @@
     <h1>{{ teamId }}</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div>
+        <label class="block text mb-0" for="orgno">
+          Org. nr
+          <span v-if="!validateOrgno || !form.orgno.length" class="text-red-600"
+            >*</span
+          >
+        </label>
+        <input
+          id="orgno"
+          v-model="form.orgno"
+          :state="validateOrgno"
+          placeholder="555555-5555"
+          required
+          class="appearance-none w-full block bg-stone-50/20 text-md border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
+          type="text"
+        />
+
+        <span v-if="!validateOrgno" class="text-rose-600 text-xs italic"
+          >Format org nr: 555555-5555</span
+        >
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div>
         <label class="block text mb-0" for="player1">
           Golf ID spelare 1
           <span
@@ -17,12 +40,12 @@
           :state="validatePlayer1"
           placeholder="750101-001"
           required
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
           type="text"
           @change="getPlayer('1', form.player1)"
         />
-        <span v-if="id_player_1">{{ id_player_1 }}</span>
-        <span v-if="!validatePlayer1" class="text-red-600 text-xs italic"
+        <span v-if="id_player_1" class="text-xs">{{ id_player_1 }}</span>
+        <span v-if="!validatePlayer1" class="text-red-600 text-xs italic block"
           >Format golf-id: 750101-001</span
         >
       </div>
@@ -40,13 +63,15 @@
           v-model="form.player2"
           :state="validatePlayer2"
           placeholder="750101-001"
+          inputmode="numeric"
+          pattern="[- +()0-9]+"
           required
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
           type="text"
           @change="getPlayer('2', form.player2)"
         />
-        <span v-if="id_player_2">{{ id_player_2 }}</span>
-        <span v-if="!validatePlayer2" class="text-red-600 text-xs italic"
+        <span v-if="id_player_2" class="text-xs">{{ id_player_2 }}</span>
+        <span v-if="!validatePlayer2" class="text-red-600 text-xs italic block"
           >Format golf-id: 750101-001</span
         >
       </div>
@@ -65,12 +90,12 @@
           :state="validatePlayer3"
           placeholder="750101-001"
           required
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
           type="text"
           @change="getPlayer('3', form.player3)"
         />
-        <span v-if="id_player_3">{{ id_player_3 }}</span>
-        <span v-if="!validatePlayer3" class="text-red-600 text-xs italic"
+        <span v-if="id_player_3" class="text-xs">{{ id_player_3 }}</span>
+        <span v-if="!validatePlayer3" class="text-red-600 text-xs italic block"
           >Format golf-id: 750101-001</span
         >
       </div>
@@ -89,68 +114,69 @@
           :state="validatePlayer4"
           placeholder="750101-001"
           required
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
           type="text"
           @change="getPlayer('4', form.player4)"
         />
-        <span v-if="id_player_4">{{ id_player_4 }}</span>
-        <span v-if="!validatePlayer4" class="text-red-600 text-xs italic"
+        <span v-if="id_player_4" class="text-xs">{{ id_player_4 }}</span>
+        <span v-if="!validatePlayer4" class="text-red-600 text-xs italic block"
           >Format golf-id: 750101-001</span
         >
       </div>
     </div>
-    <small
-    v-if="!showCartSection"
-
-      ><a
-        href="#"
-        class="text-pink-hero"
-        @click="showCartSection = true"
+    <small v-if="!showCartSection" class="block py-5"
+      ><a href="#" class="text-pink-hero pt-5" @click="showCartSection = true"
         >Visa tillval för golfbilar</a
       ></small
     >
-    <small
-    v-if="showCartSection"
+    <small v-if="showCartSection"
       ><a
         href="#"
         class="text-pink-hero"
-        @click="showCartSection = false, form.cart = null, form.cart_no = null, form.cart_why = null "
+        @click="
+          ;(showCartSection = false),
+            (form.cart = null),
+            (form.cart_no = null),
+            (form.cart_why = null)
+        "
         >Dölj tillval för golfbilar</a
       ></small
     >
 
     <div v-if="showCartSection">
-      <!-- ALERT -->      <div
-      class="text-white px-6 py-6 border-0 rounded relative mb-4 bg-red-400 mt-10"
+      <!-- ALERT -->
+      <div
+        class="text-white px-6 py-6 border-0 rounded relative mb-4 bg-red-400 mt-10"
       >
         <span class="text-xl inline-block mr-5 align-middle">
           <font-awesome-icon class="w-7 h-7" :icon="['far', 'bell']" />
         </span>
         <span class="inline-block text align-middle mr-8" style="padding: 0">
           <span class="text-white"
-            >Alla golfbilar bokas via Slag för Hjältar. Medicinskt intyg krävs och bilar fördelas efter behov och tillgång - kan man avstå så vill
+            >Alla golfbilar bokas via Slag för Hjältar. Medicinskt intyg krävs
+            och bilar fördelas efter behov och tillgång - kan man avstå så vill
             vi att ni inte anmäler er som behov av golfbil. Tack för
             förståelsen!</span
           >
         </span>
       </div>
 
-      <label class="block text mb-0" for="cart">
+      <label class="block text mb-0">
         Behöver ni golfbil(ar) och kan uppvisa medicinskt intyg?
       </label>
 
       <input
-        id="cart"
+        id="cartcheck"
         v-model="form.cart"
         class="mr-2 leading-tight"
         type="checkbox"
       />
-      <span
-        class="appearance-none w-full text-md leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+      <label
+        for="cartcheck"
+        class="appearance-none w-full text-md leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
       >
         Ja
-      </span>
-
+      </label>
 
       <div v-if="form.cart">
         <label class="block text mb-0" for="cart_no">
@@ -166,7 +192,7 @@
           max="2"
           :state="validateCartNo"
           required
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
           type="number"
         />
       </div>
@@ -175,7 +201,7 @@
         <input
           id="cart_why"
           v-model="form.cart_why"
-          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+          class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
           type="text"
         />
       </div>
@@ -185,12 +211,13 @@
       <textarea
         id="message"
         v-model="form.message"
-        class="no-resize appearance-none block w-full bg-stone-50/20 border border-gray-200 rounded text-md py-3 px-4 mb-3 focus:outline-none focus:bg-white focus:border-gray-300 h-48 resize-none"
+        class="no-resize appearance-none block w-full bg-stone-50/20 border border-gray-300 rounded text-md py-3 px-4 mb-3 focus:outline-none focus:bg-white focus:border-gray-400 h-48 resize-none"
       ></textarea>
     </div>
+
     <div class="col-span-2">
       <button
-        class="btn-pill btn-lg bg-white mt-5"
+        class="btn-pill btn-lg bg-white mt-5 disabled:bg-white"
         type="button"
         @click="sendMessage"
       >
@@ -230,6 +257,22 @@
           class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
         >
           <span @click="showToastFailUnique = false">×</span>
+        </button>
+      </div>
+      <div
+        v-if="showToastFailOrg"
+        class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-800 mt-10"
+      >
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell" />
+        </span>
+        <span class="inline-block text align-middle mr-8" style="padding: 0">
+          <span class="text-white"> Kontrollera organisationsnummer</span>
+        </span>
+        <button
+          class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
+        >
+          <span @click="showToastFailOrg = false">×</span>
         </button>
       </div>
       <div
@@ -278,8 +321,9 @@ export default {
       showToastSuccess: false,
       showToastFail: false,
       showToastFailUnique: false,
+      showToastFailOrg: false,
       showCartSection: false,
-      teamId:""
+      teamId: '',
     }
   },
   computed: {
@@ -294,7 +338,7 @@ export default {
     },
     validateOrgno() {
       if (this.form.orgno === '') {
-        return true
+        return false
       }
 
       if (/^\d{6}(?:\d{2})?[-\s]?\d{4}\r?$/.test(this.form.orgno)) {
@@ -331,54 +375,20 @@ export default {
       return true
     },
     validatePlayer1() {
-      if (!this.form.player1) {
-        return true
-      }
-
-      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player1)) {
-        return true
-      }
-
-      return false
+      return this.validateHelper(this.form.player1, 1)
     },
     validatePlayer2() {
-      if (this.form.player2 === '') {
-        return true
-      }
-
-      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player2)) {
-        return true
-      }
-      return false
+      return this.validateHelper(this.form.player2, 2)
     },
     validatePlayer3() {
-      if (this.form.player3 === '') {
-        return true
-      }
-
-      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player3)) {
-        return true
-      }
-      return false
+      return this.validateHelper(this.form.player3, 3)
     },
     validatePlayer4() {
-      if (this.form.player4 === '') {
-        return true
-      }
-
-      if (/^\d{6}(?:\d{2})?[-\s]?\d{3}\r?$/.test(this.form.player4)) {
-        return true
-      }
-      return false
+      return this.validateHelper(this.form.player4, 4)
     },
     validateForm() {
       if (
-        this.validateCompany &&
         this.validateOrgno &&
-        this.validateContact &&
-        this.validateContact &&
-        this.validateEmail &&
-        this.validateMobile &&
         this.validatePlayer1 &&
         this.validatePlayer2 &&
         this.validatePlayer3 &&
@@ -393,6 +403,29 @@ export default {
     this.teamId = this.$route.params.id
   },
   methods: {
+    validateHelper(player, playerNumber) {
+      if (!player) {
+        return true
+      }
+      let validated = false
+
+      const re = /^[- ]*[0-9][- 0-9]*$/
+      if (re.test(player)) {
+        if (player.length === 6) {
+          this.form['player' + playerNumber] = player + '-'
+
+          validated = true
+        }
+
+        if (player.length === 10) {
+          validated = true
+        } else {
+          validated = false
+        }
+      }
+
+      return validated
+    },
     getPlayer(player, id) {
       if (this['validatePlayer' + player]) {
         this.$axios
@@ -404,6 +437,9 @@ export default {
             console.log(response)
             if (response.notingit) {
               this['id_player_' + player] = 'Ingen spelare hittades'
+            } else if (response.error) {
+              this['id_player_' + player] =
+                'Ingen spelare hittades. Ange ditt Golf-ID med de 6 första siffrorna i ditt personnummer och sedan 3 siffror efter bindestrecket.'
             } else {
               this['id_player_' + player] =
                 response.firstname +
@@ -475,6 +511,12 @@ export default {
       this.showToastFailUnique = false
       this.showToastFail = false
       this.showToastSuccess = false
+      this.showToastFailOrg = false
+
+      if (!this.validateOrgno) {
+        this.showToastFailOrg = true
+        return
+      }
 
       if (!this.validatePlayers()) {
         this.showToastFailUnique = true
@@ -484,13 +526,9 @@ export default {
       }
 
       if (this.validateForm) {
-
-
-        
-
         this.$axios
           .$post(this.$config.baseURL, {
-            method: 'registerTeamEmail',
+            method: 'registerTeamPlayers',
             data: this.form,
           })
           .then((response) => {
