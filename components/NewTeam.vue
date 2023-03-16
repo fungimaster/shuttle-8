@@ -22,14 +22,16 @@
         </label>
         <input
           id="orgno"
-          v-model="form.orgno"
+          v-model.trim="form.orgno"
           :state="validateOrgno"
           placeholder="555555-5555"
           required
           class="appearance-none block w-full bg-stone-50/20 text-md border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
           type="text"
         />
-        <span v-if="!validateOrgno" class="text-rose-600 text-xs italic"
+        <span
+          v-if="!validateOrgno && form.orgno.length > 9"
+          class="text-rose-600 text-xs italic"
           >Format org nr: 555555-5555</span
         >
       </div>
@@ -60,7 +62,9 @@
           type="email"
           required
         />
-        <span v-if="!validateEmail" class="text-rose-600 text-xs italic"
+        <span
+          v-if="!validateEmail && form.email.length > 3"
+          class="text-rose-600 text-xs italic"
           >Epost adressen är inte giltig</span
         >
       </div>
@@ -148,6 +152,22 @@
           <span @click="showToastFail = false">×</span>
         </button>
       </div>
+      <div
+        v-if="showToastFailError"
+        class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-400 mt-10"
+      >
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell" />
+        </span>
+        <span class="inline-block text align-middle mr-8" style="padding: 0">
+          <span class="text-white">Något gick fel</span>
+        </span>
+        <button
+          class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
+        >
+          <span @click="showToastFail = false">×</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -178,6 +198,7 @@ export default {
       showToastSuccess: false,
       showToastFail: false,
       showToastFailUnique: false,
+      showToastFailError: false,
     }
   },
   computed: {
@@ -191,10 +212,10 @@ export default {
       return true
     },
     validateOrgno() {
-      if (this.form.orgno === '') {
+      /*     if (this.form.orgno.length < 11) {
         return true
       }
-
+ */
       if (/^\d{6}(?:\d{2})?[-\s]?\d{4}\r?$/.test(this.form.orgno)) {
         return true
       }
@@ -207,9 +228,9 @@ export default {
       return true
     },
     validateEmail() {
-      if (this.form.email.length < 4) {
+      /*       if (this.form.email.length < 4) {
         return true
-      }
+      } */
 
       if (
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -274,8 +295,6 @@ export default {
       return false
     },
     validateForm() {
-      console.log('%c 👊', 'color: #007acc;', 'validate form')
-
       if (
         this.validateCompany &&
         this.validateOrgno &&
@@ -285,16 +304,6 @@ export default {
       ) {
         return true
       }
-
-      console.log('🟡 ---  this.validateMobile:', this.validateMobile)
-
-      console.log('🟡 --- this.validateEmail:', this.validateEmail)
-
-      console.log('🟡 --- this.validateContact:', this.validateContact)
-
-      console.log('🟡 --- this.validateOrgno:', this.validateOrgno)
-
-      console.log('🟡 --- this.validateCompany:', this.validateCompany)
 
       return false
     },
@@ -382,6 +391,7 @@ export default {
       this.showToastFailUnique = false
       this.showToastFail = false
       this.showToastSuccess = false
+      this.showToastFailError = false
 
       /*       if (!this.validatePlayers()) {
         this.showToastFailUnique = true
@@ -419,7 +429,7 @@ export default {
           })
           .catch((error) => {
             console.log(error)
-            this.showToastFail = true
+            this.showToastFailError = true
             this.showToastSuccess = false
             // this.loading = false;
           })
