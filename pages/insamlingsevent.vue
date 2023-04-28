@@ -187,11 +187,11 @@ export default {
       },
       event1: {
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269525/SFH/site/slagforhjaltar-6.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1200/v1647269525/SFH/site/slagforhjaltar-6.jpg',
       },
       event2: {
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269652/SFH/site/slagforhjaltar-21.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1200/v1647269652/SFH/site/slagforhjaltar-21.jpg',
       },
       content_2021: {
         body1:

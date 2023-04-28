@@ -80,13 +80,13 @@ export default {
       },
       content1: {
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269548/SFH/site/slagforhjaltar-13.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_800/v1647269548/SFH/site/slagforhjaltar-13.jpg',
 
         list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
       },
       content2: {
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269554/SFH/site/slagforhjaltar-15.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_800/v1647269554/SFH/site/slagforhjaltar-15.jpg',
         // list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
       },
       valuewords: {
@@ -100,7 +100,7 @@ export default {
         presentation:
           'Till vardags är jag hotelldirektör på Scandic Helsingborg Nord. Min familj består av min sambo, mina två döttrar och en bonusson. Jag är väldigt social och gillar att träffa och umgås med människor. Den fritid som blir över lägger jag gärna på golf – och padelspel. ',
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269953/SFH/site/3-480x600-1_zff4vi.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_500/v1647269953/SFH/site/3-480x600-1_zff4vi.jpg',
         imgurlmobile:
           'https://res.cloudinary.com/dn3hzwewp/image/upload/c_crop,g_face,h_400,w_400/r_max/c_scale,w_200/v1647269953/SFH/site/3-480x600-1_zff4vi.jpg',
       },
@@ -112,7 +112,7 @@ export default {
         presentation:
           'Jag är huvudägare av Eriks fönsterputs, delägare och VD på Heberleins samt delägare på Hälsomatlådan. För övrigt älskar jag att umgås med min fru och 2 barn, umgås med vänner, spela golf och se på ishockey. Jag är även engagerad som tränare för min sons fotbollslag i Gantofta IF. ',
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269953/SFH/site/5-480x600-1_mtrrg4.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_500/v1647269953/SFH/site/5-480x600-1_mtrrg4.jpg',
         imgurlmobile:
           'https://res.cloudinary.com/dn3hzwewp/image/upload/c_crop,g_face,h_400,w_400/r_max/c_scale,w_200/v1647269953/SFH/site/5-480x600-1_mtrrg4.jpg',
       },
@@ -124,7 +124,7 @@ export default {
         presentation:
           'Jag har förmånen att driva eget företag, Business Energizing,  som bidrar till människors hälsa inifrån och ut! Jag är matnörd av rang och tillsammans med mitt intresse för träning har det lagt grunden till varför jag idag jobbar med det som antagligen är det viktigaste för var och en av oss – vår hälsa. Jag jobbar huvudsakligen informativt genom föreläsningar och vetenskapliga tester.  ',
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269953/SFH/site/1-480x600-1_ifytru.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_500/v1647269953/SFH/site/1-480x600-1_ifytru.jpg',
         imgurlmobile:
           'https://res.cloudinary.com/dn3hzwewp/image/upload/c_crop,g_face,h_400,w_400/r_max/c_scale,w_200/v1647269953/SFH/site/1-480x600-1_ifytru.jpg',
       },
@@ -136,7 +136,7 @@ export default {
         presentation:
           'På fritiden umgås jag främst med min familj beståendes av min sambo och 1-åriga dotter. Skulle det därefter finns tid över så träffar ni mig vanligast på golfbanan där min stora hobby och passion ligger. Till vardags driver jag ett säkerhetsföretag som heter Professionell Säkerhet som fokuserar på bla. larm, passage och kameraövervakning till företag och större organisationer / myndigheter med utgångspunkt i Skåne.',
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269953/SFH/site/4-480x600-1_fhwarf.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_500/v1647269953/SFH/site/4-480x600-1_fhwarf.jpg',
         imgurlmobile:
           'https://res.cloudinary.com/dn3hzwewp/image/upload/c_crop,g_face,h_400,w_400/r_max/c_scale,w_200/v1647269953/SFH/site/4-480x600-1_fhwarf.jpg',
       },
