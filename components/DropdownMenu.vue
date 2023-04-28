@@ -1,5 +1,5 @@
 <template>
-  <div class="z-20 py-20 px-20 w-full md:w-1/2">
+  <div class="z-20 py-5 px-20 w-full md:w-1/2">
     <div
       class="bg-white"
       role="menu"
@@ -7,7 +7,7 @@
       aria-labelledby="options-menu"
     >
       <div class="py-1">
-        <button class="p-5 pb-3" @click="showDropdown = !showDropdown">
+        <button class="hidden p-5 pb-3" @click="showDropdown = !showDropdown">
           <div id="nav-icon2 open">
             <span></span>
             <span></span>
@@ -58,6 +58,10 @@ export default {
 /* .active {
   color: #c30075;
 } */
+
+a {
+  cursor: pointer;
+}
 
 #nav-icon1,
 #nav-icon2,

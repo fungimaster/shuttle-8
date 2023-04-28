@@ -34,7 +34,7 @@
         </template>
       </HeroSection>
 
-      <div class="pb-20 pt-0 md:pt-24 py-20">
+      <div class="pb-20 pt-0 md:pt-0 py-20">
         <div class="container mx-auto px-8 md:px-16">
           <div class="flex flex-wrap">
             <Box class="w-full md:w-4/12 pr-5" :content="box1" />
@@ -74,14 +74,21 @@
               Så hjälper vi
             </h3>
             <p class="text">
-              Det arbete vi gör är viktigt för oss och de organisationer vi
-              stödjer. Med hjälp av interna insamlingar där engagerade och
-              involverades hjälp har spelat stor roll så vi lyckats med att
-              stödja organisationer och hjälpa vederbörande till en förbättrad
-              livsstil. Under året 2019 delade vi ut vårt insamlade medel till
-              två organisationer som gör en stor skillnad i vårt samhälle. Alla
-              våra medel gick till Barncancerfonden och Ellas Hjältar – tack för
-              det fina arbetet ni har gjort och fortsätter att göra!
+              Stiftelsens engagerade arbete ska hjälpa barn och unga med behov
+              av stöd på olika vis. Stiftelsen arbetar genom att arrangera och
+              genomföra insamlingsevent och skänker sedan vidare 100% av
+              insamlade medel till organisationer som arbetar med att stötta
+              barn och unga. Hittills har nedan organisationer mottagit
+              donationer genom Slag för Hjältar:
+            </p>
+            <p class="text">
+            <ul>
+              <li>Barncancerfonden Södra</li>
+              <li>Ellas Hjältar</li>
+              <li>Jontefonden</li>
+              <li>Nätverket Prosit</li>
+              <li>Barndiabetesfonden</li>
+            </ul>
             </p>
           </template>
         </TextAndCard>
@@ -100,44 +107,47 @@ export default {
   data() {
     return {
       stats1: {
-        metric: '1500000',
-        tagline: 'INSAMLAT & UTDELAT 2016-2018',
+        metric: '2 866 817',
+        tagline: 'INSAMLAT & UTDELAT TOTALT',
       },
       stats2: {
-        metric: '424852',
-        tagline: 'INSAMLAT & UTDELAT 2019',
+        metric: '364 900',
+        tagline: 'INSAMLAT & UTDELAT 2022',
       },
       stats3: {
-        metric: '328800',
-        tagline: 'INSAMLAT & UTDELAT 2020',
+        metric: '248 265',
+        tagline: 'INSAMLAT & UTDELAT 2021',
       },
 
       hero: {
         headline1: 'Slag För Hjältar',
         headline2:
-          'Genom evenemang tillsammans med förening- och näringslivet donerar vi insamlade medel till icke vinstdrivande organisationer som arbetar inom vård, hälsa och omsorg.',
+          'Insamlingsstiftelsen som möjliggör en bättre tillvaro för barn och unga. Genom evenemang tillsammans med förenings- och näringslivet donerar vi 100% av alla insamlade medel till icke vinstdrivande organisationer som arbetar inom vård, hälsa och omsorg.',
       },
       event1: {
         body1:
-          'Dagens insamling överlämnades på plats till glada representanter från Barndiabetesfonden',
+          'Härlig bild från 2021 års insamling där nästan 250000:- överlämnades på plats till glada representanter från Barndiabetesfonden',
         headline: 'Utdelning',
         imgurl:
-          'https://slagforhjaltar.se/wp-content/uploads/2021/11/slagforhjaltar-2021.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682673805/SFH/eventphotos/2021.jpg',
       },
       box1: {
-        headline: 'Bakgrund',
-        text: 'Engagemanget började redan 2015 sedan en nära väns dotter till en av våra grundare, Daniel Telford, drabbades av cancer.',
+        headline: 'Om stiftelsen',
+        text: 'Våra värdeord är ledstjärnor i allt vi gör. Utan dem ingen stiftelse. Vill du stötta vårt arbete att hjälpa barn och unga i utsatta sammanhang - då har du kommit rätt.',
         color: 'bg-pink-300',
+        route: 'bakgrund',
       },
       box2: {
         headline: 'Insamlingsevent',
         text: 'Varje år håller vi flera insamlingsevents för att kunna knyta nya kontakter och dela en vacker gemenskap.',
         color: 'bg-pink-300',
+        route: 'insamlingsevent',
       },
       box3: {
-        headline: 'Så hjälper du!',
+        headline: 'Så hjälper du',
         text: 'Läs mer om hur just du kan komma att betyda mycket för de som inte har det så lätt just nu.',
         color: 'bg-pink-300',
+        route: 'hjalp',
       },
     }
   },

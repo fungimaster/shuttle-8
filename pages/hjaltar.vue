@@ -24,18 +24,18 @@
           Vi har många att tacka för mycket!
         </h3>
         <p class="text">
-          Vi har många att tacka för mycket! Att ha så många fina, engagerade
-          eldsjälar kopplade till stiftelsen gör oss otroligt ödmjuka och
-          lyckliga! Ni är många och vi önskar lyfta var och en av er till
-          skyarna! Nedan har vi en enkel sammanställning över genomförda event
-          och vilka företag vi haft förmånen att ha med oss på resan.
+          Att ha så många fina, engagerade eldsjälar kopplade till stiftelsen
+          gör oss otroligt ödmjuka och lyckliga! Ni är många och vi önskar lyfta
+          var och en av er till skyarna! Nedan har vi en enkel sammanställning
+          över hittills genomförda insamlingar och vilka företag vi haft
+          förmånen att ha med oss på resan.
         </p>
         <p class="text">
-          Ni är guld värda och ni står alla för stiftelsens värdeord: kärlek,
-          glädje, gemenskap och engagemang!
+          Ni är guld värda och ni delar alla stiftelsens värdegrund; kärlek,
+          glädje, gemenskap och engagemang.
         </p>
         <p class="text">
-          Tusen varma tack till var och en! För vad ni gör. Vilka ni är. Ni är
+          Tusen varma tack till var och en. För vad ni gör. Vilka ni är. Ni är
           alla stiftelsens hjältar!
         </p>
       </template>
@@ -115,21 +115,21 @@ export default {
   data() {
     return {
       stats1: {
-        metric: '1500000',
-        tagline: 'INSAMLAT & UTDELAT 2016-2018',
+        metric: '2 866 817',
+        tagline: 'INSAMLAT & UTDELAT TOTALT',
       },
       stats2: {
-        metric: '424852',
-        tagline: 'INSAMLAT & UTDELAT 2019',
+        metric: '364 900',
+        tagline: 'INSAMLAT & UTDELAT 2022',
       },
       stats3: {
-        metric: '328800',
-        tagline: 'INSAMLAT & UTDELAT 2020',
+        metric: '248 265',
+        tagline: 'INSAMLAT & UTDELAT 2021',
       },
       hero: {
         headline1: 'Alla våra Hjältar',
         headline2:
-          'Våra hjältar delar våran värdegrund formad runt kärlek, glädje, gemenskap & engagemang.',
+          'I stort som smått har vi förmånen att år från år möta såväl nya som återkommande godhjärtade Hjältar.',
       },
       content1: {
         imgurl:

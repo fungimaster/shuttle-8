@@ -11,21 +11,56 @@
           <SvgEvent></SvgEvent>
         </template>
       </HeroSection>
+      <!-- 2023 -->
       <div class="py-12 md:px-16 bg-gray-50">
         <TextAndCard
-          :ingress="content1.ingress"
-          :headline="content1.headline"
-          :content="content1"
+          :ingress="content_2023.ingress"
+          :headline="content_2023.headline"
+          :content="content_2023"
         >
           <template #content>
-            <h3 class="headline3">Vilken lycka!</h3>
+            <h3 class="headline3">2023 - Dags för vår tävling igen!</h3>
             <p class="text">
-              Tävlingen vi väntat så länge på att få hålla. Så många som velat
-              bidra med så mycket!
+              Snart drar vi igång årets tävling, kontakta oss för att se om det
+              finns platser kvar.
             </p>
             <p class="text">
-              Slag för Hjältar Gollf på fina Allerum Golfklubb den 27 augusti
-              inbringade smått otroliga 248 265 kronor till Barndiabetesfonden!
+              Tävlingen går av stapeln på Allerum GK fredagen den 26 maj 7.30 -
+              18.30 och kostar 10.000 per lag.
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
+            </p>
+            <p class="text">
+              All KÄRLEK från oss
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
+            </p>
+            <h4 class="headline4">
+              Anita Duverell, Daniel Telford, Henrik Karlsson, Bengt Wehlin,
+              Thomas Krøigård Hansen
+            </h4>
+          </template>
+        </TextAndCard>
+      </div>
+      <!-- 2022 -->
+      <div class="py-12 md:px-16 bg-gray-50">
+        <TextAndCard
+          :ingress="content_2022.ingress"
+          :headline="content_2022.headline"
+          :content="content_2022"
+        >
+          <template #content>
+            <h3 class="headline3">2022 - Vilken under dag vi hade!</h3>
+            <p class="text">
+              Vilken dag och vilken fest vi hade på Slag för Hjältars Golf!
+            </p>
+            <p class="text">
+              Totalt samlades det under dagen in fantastiska 364 900:- som
+              fördelades jämnt mellan Barndiabetesfonden och Nätverket Prosit.
               <font-awesome-icon
                 class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
                 :icon="['far', 'heart']"
@@ -48,11 +83,14 @@
               />
             </p>
             <p class="text">
-              Häng med oss på vår Facebooksida - Slag för Hjältar - detta är
-              bara ett litet första smakprov av alla underbara bilder vi tagit
-              under dagen. Vi kommer visa er alla deltagande lag, alla våra
-              enastående hålvärdar och såklart alla andra utan vilka vi inte
-              kunnat genomföra denna dag.
+              Häng med oss på vår
+              <a href="https://www.facebook.com/slagforhjaltar" target="_blank"
+                >Facebooksida - Slag för Hjältar</a
+              >
+              - detta är bara ett litet första smakprov av alla underbara bilder
+              vi tagit under dagen. Vi kommer visa er alla deltagande lag, alla
+              våra enastående hålvärdar och såklart alla andra utan vilka vi
+              inte kunnat genomföra denna dag.
             </p>
             <p class="text">
               All KÄRLEK från oss
@@ -68,123 +106,71 @@
           </template>
         </TextAndCard>
       </div>
-      <TextAndImage :content="event1" :showicon="false">
-        <template #content>
-          <h3 class="headline3">
-            <span
-              class="
-                w-10
-                h-10
-                shadow-lg
-                rounded-full
-                heart-bg
-                inline-flex
-                items-center
-                justify-center
-              "
-            >
+      <!-- 2021 -->
+      <div class="py-12 md:px-16 bg-gray-50">
+        <TextAndCard
+          :ingress="content_2021.ingress"
+          :headline="content_2021.headline"
+          :content="content_2021"
+        >
+          <template #content>
+            <h3 class="headline3">2021 - Vilken lycka!</h3>
+            <p class="text">
+              Tävlingen vi väntat så länge på att få hålla. Så många som velat
+              bidra med så mycket!
+            </p>
+            <p class="text">
+              Slag för Hjältar Golf på fina Allerum Golfklubb den 27 augusti
+              2021 inbringade smått otroliga 248 265 kronor till
+              Barndiabetesfonden!
               <font-awesome-icon
-                class="w-7 h-7 text-white overflow-visible"
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
                 :icon="['far', 'heart']"
               />
-            </span>
-
-            2021 - Nytt år och nya möjligheter!
-          </h3>
-          <p class="text">
-            Inbjudan till 2021 års golftävling i Insamlingsstiftelsen Slag För
-            Hjältars regi.
-          </p>
-          <p class="text">
-            Varmt välkomna till vår gemenskap genom att anmäla ett lag till
-            årets unika upplaga av Slag För Hjältars Golf. Förutom spännande
-            golfspel ser vi fram emot att dela en kul dag ihop med mycket
-            kärlek, engagemang och glädje!
-          </p>
-          <h4 class="headline4 pt-5">Hjältegolf - Som vår hjälte bidrar du</h4>
-          <p class="text">
-            Lagavgiften går 100% till stiftelsens insamling. Utdelningen görs
-            till, av stiftelsen, utsedda mottagare däribland Barncancerfonden
-            Södra och Ellas Hjältar
-          </p>
-          <h4 class="headline4 pt-5">Som vår hjälte får du</h4>
-          <p class="text">
-            Spel för fyra personer Frukost, diverse mat och förfriskningar på
-            banan samt mat efter tävlingen. Generöst prisbord Exponering på
-            plats, sociala medier samt på SFHs hemsida. Insamlingsstiftelsen
-            Slag för Hjältar möjliggör en bättre tillvaro för barn och unga.
-            Genom evenemang tillsammans med förening- och näringslivet donerar
-            vi insamlade medel till icke vinstdrivande organisationer som
-            arbetar inom vård, hälsa och omsorg.
-          </p>
-          <p class="text">
-            Anmäl dig snarast genom att maila info@slagforhjältar.se Varma
-            välkomsthälsningar från styrelsen
-          </p>
-          <h5 class="headline5 pt-5">
-            Slag för hjältar -Insamlingsstiftelsen – Vi gör det med kärlek!
-          </h5>
-        </template>
-      </TextAndImage>
-
-      <ImageAndText :content="event2">
-        <template #content>
-          <h3 class="headline3">
-            <span
-              class="
-                w-10
-                h-10
-                shadow-lg
-                rounded-full
-                heart-bg
-                inline-flex
-                items-center
-                justify-center
-              "
-            >
+            </p>
+            <p class="text">
+              Att samla goda människor på ett ställe för att göra gott
+              tillsammans - det visste vi på förhand var en underbar idé! Men
+              det vi skapade igår var inget mindre än ren och skär magi! Just nu
+              är vi omtumlade, glada och otroligt lyckliga att ha kunnat
+              genomföra eventet med alla er inblandade - inget mindre än riktiga
+              HJÄLTAR var och en av er!
               <font-awesome-icon
-                class="w-7 h-7 text-white overflow-visible"
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
                 :icon="['far', 'heart']"
               />
-            </span>
-
-            2020 Nu kör vi en avslutande insamling för året!
-          </h3>
-          <h4 class="headline4 pt-5">
-            Följ oss på vår Facebook sida under #julförhjältar
-          </h4>
-          <p class="text">
-            Vi kommer att avsluta året med att hjälpa tre av våra fantastiska
-            samarbetsorganisationer i deras arbete – ett arbete som är än mer
-            viktigt i dessa tider av social distansering och med begränsade
-            möjligheter till ett funktionellt liv när man befinner sig i utsatta
-            livsöden. Vi behöver nu din hjälp! Vill du göra en god gärning?
-          </p>
-          <h4 class="headline4 pt-5">Såhär tänker vi:</h4>
-          <p class="text">
-            Vi har valt att skänka pengar till Ellas Hjältar, Barncancerfonden
-            Södra och Jontefonden detta år och kommer initialt skänka 25 000 kr
-            till respektive organisation. Med er hjälp kan vi få in mer pengar
-            som kan förgylla deras verksamhet ytterligare. För varje insamlad
-            krona kommer vi i Slag för Hjältar att matcha det med lika mycket
-            till – så länge våra egna insamlade medel räcker till. Vi har
-            ytterligare 150 000 kr kvar att dela ut. Hjälp oss att dela ut varje
-            krona! Vill ni dedikera ert insamlade medel till någon av
-            organisationerna går det bra att göra så genom att skriva deras namn
-            i er inbetalning. Annars delas alla medel ut jämt mellan mottagarna.
-          </p>
-          <h4 class="headline4 pt-5">Swish: 123-5584784</h4>
-          <p class="text">
-            Glöm inte – en donerad krona till oss är en krona som når sin
-            mottagare!
-          </p>
-          <p class="text">
-            PS. Vi gör även gärna anpassade upplägg till ert företag som vill
-            vara med och bidra med ett valfritt belopp – maila intresse till
-            henrik@slagforhjaltar.se
-          </p>
-        </template>
-      </ImageAndText>
+              Just nu är vi omtumlade, glada och otroligt lyckliga att ha kunnat
+              genomföra eventet med alla er inblandade - inget mindre än riktiga
+              HJÄLTAR var och en av er!
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
+            </p>
+            <p class="text">
+              Häng med oss på vår
+              <a href="https://www.facebook.com/slagforhjaltar" target="_blank"
+                >Facebooksida - Slag för Hjältar</a
+              >
+              - detta är bara ett litet första smakprov av alla underbara bilder
+              vi tagit under dagen. Vi kommer visa er alla deltagande lag, alla
+              våra enastående hålvärdar och såklart alla andra utan vilka vi
+              inte kunnat genomföra denna dag.
+            </p>
+            <p class="text">
+              All KÄRLEK från oss
+              <font-awesome-icon
+                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
+                :icon="['far', 'heart']"
+              />
+            </p>
+            <h4 class="headline4">
+              Anita Duverell, Daniel Telford, Henrik Karlsson, Bengt Wehlin,
+              Thomas Krøigård Hansen
+            </h4>
+          </template>
+        </TextAndCard>
+      </div>
     </client-only>
   </div>
 </template>
@@ -197,7 +183,7 @@ export default {
         headline1: 'Insamlings-',
         headline3: 'event',
         headline2:
-          'Varje år arrangerar vi flera insamlingsevents där vi alla kan fira med kärlek, glädje, gemenskap & engagemang!',
+          'Våra events och arrangemang är det som utgör grunden till våra insamlingar. Varje år kommer vi samman med vårt fantastiska nätverk av företag, föreningar och privatpersoner för att skapa gott.',
       },
       event1: {
         imgurl:
@@ -207,12 +193,25 @@ export default {
         imgurl:
           'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269652/SFH/site/slagforhjaltar-21.jpg',
       },
-      content1: {
+      content_2021: {
         body1:
-          'Dagens insamling överlämnades på plats till glada representanter från Barndiabetesfonden ',
+          'Dagens insamling överlämnades på plats till glada representanter från Barndiabetesfonden.',
         headline: 'Vilken lycka!',
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/v1647270348/SFH/site/slagforhjaltar-2021.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682673805/SFH/eventphotos/2021.jpg',
+      },
+      content_2022: {
+        body1:
+          'Dagens insamling överlämnades på plats till glada representanter från Barndiabetesfonden och Nätverket prosit.',
+        headline: 'Underbart!',
+        imgurl:
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682673805/SFH/eventphotos/2022_2.jpg',
+      },
+      content_2023: {
+        body1: 'Vi ser så mycket fram emot årets tävling på Allerum GK.',
+        headline: 'Förväntansfulla',
+        imgurl:
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682674252/SFH/eventphotos/2023.jpg',
       },
     }
   },

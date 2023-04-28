@@ -14,6 +14,7 @@
             />
           </a>
         </div>
+
         <div
           class="col-span-4 hidden lg:hidden flex w-full pt-2 content-center justify-between md:w-6/6 md:justify-end"
         >
@@ -61,9 +62,16 @@
               <span></span>
             </div>
           </button>
+          <div
+            class="p-5 pb-3 float-right hidden md:block cursor-pointer"
+            @click="$_handleRouting('hjalp')"
+          >
+            Swischa en gåva idag! <span class="font-bold">123 558 47 84</span>
+          </div>
         </div>
       </div>
     </nav>
+
     <div>
       <transition name="fade">
         <DropdownMenu
@@ -94,7 +102,7 @@ export default {
         { value: '/', displayname: 'Hem' },
         // { value: '/golf-anmalan', displayname: 'Min sida' },
         { value: '/insamlingsevent', displayname: 'Insamlingsevent' },
-        { value: '/bakgrund', displayname: 'Bakgrund' },
+        { value: '/bakgrund', displayname: 'Om stiftelsen' },
         { value: '/hjaltar', displayname: 'Alla våra Hjältar' },
         { value: '/hjalp', displayname: 'Så hjälper du' },
         { value: '/kontakt', displayname: 'Kontakt' },
@@ -121,6 +129,10 @@ export default {
 /* .active {
   color: #c30075;
 } */
+
+a {
+  cursor: pointer;
+}
 
 #nav-icon1,
 #nav-icon2,

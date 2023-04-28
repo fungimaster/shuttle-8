@@ -1,20 +1,6 @@
 <template>
   <div
-    class="
-      container
-      mx-auto
-      relative
-      pb-10
-      md:py-24
-      grid
-      md:grid-cols-2
-      gap-5
-      grid-cols-1
-      place-content-center
-      px-8
-      md:px-16
-      py-10
-    "
+    class="container mx-auto relative pb-10 md:py-12 grid md:grid-cols-2 gap-5 grid-cols-1 place-content-center px-8 md:px-16 py-10"
   >
     <div v-if="$slots.svg" class="md:hidden flex justify-center md:block pt-5">
       <slot name="svg"> </slot>
@@ -22,43 +8,20 @@
     <div>
       <div>
         <h1
-          class="
-            text-center
-            md:text-left
-            leading-normal
-            text-6xl text-pink-hero
-            tracking-wider
-            break-words
-          "
+          class="text-center md:text-left leading-normal text-6xl text-pink-hero tracking-wider break-words"
         >
           {{ headline1 }}
         </h1>
         <h1
           v-if="headline3"
-          class="
-            text-center
-            md:text-left
-            leading-normal
-            text-6xl text-pink-hero
-            tracking-wider
-            break-words
-          "
+          class="text-center md:text-left leading-normal text-6xl text-pink-hero tracking-wider break-words"
         >
           {{ headline3 }}
         </h1>
       </div>
       <div class="">
         <p
-          class="
-            text-gray-500 text-lg
-            tracking-wider
-            leading-loose
-            pb-4
-            text-center
-            md:text-left
-            mt-4
-            text-xl
-          "
+          class="text-gray-500 text-lg tracking-wider leading-loose pb-4 text-center md:text-left mt-4 text-xl"
         >
           {{ headline2 }}
         </p>

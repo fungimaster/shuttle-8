@@ -15,16 +15,7 @@
         <template #content>
           <h3 class="headline3">
             <span
-              class="
-                w-10
-                h-10
-                shadow-lg
-                rounded-full
-                heart-bg
-                inline-flex
-                items-center
-                justify-center
-              "
+              class="w-10 h-10 shadow-lg rounded-full heart-bg inline-flex items-center justify-center"
             >
               <font-awesome-icon
                 class="w-7 h-7 text-white overflow-visible"
@@ -35,12 +26,14 @@
             Kontakt oss!
           </h3>
           <p class="text">
-            Du är alltid välkommen att kontakta oss och det gör du på bästa sätt
-            genom att skicka ett mejl till info@slagforhjaltar.se. Vi tar gärna
-            emot förslag på verksamheter som jobbar med att förbättra livet för
-            barn och unga på olika vis.
+            Du är alltid välkommen att kontakta oss. Enklast genom att skicka
+            ett mejl till info@slagforhjaltar.se. Vi tar gärna emot förslag på
+            verksamheter som jobbar med att förbättra livet för barn och unga på
+            olika vis. Tack för ditt engagemang!
           </p>
-         <a href="mailto:info@slagforhjaltar.se"><h4 class="headline4">info@slagforhjaltar.se</h4></a> 
+          <a href="mailto:info@slagforhjaltar.se"
+            ><h4 class="headline4">info@slagforhjaltar.se</h4></a
+          >
         </template>
       </ImageAndText>
     </div>
@@ -54,7 +47,7 @@ export default {
       hero: {
         headline1: 'Kontakt',
         headline2:
-          ' Har du något förslag eller önskar söka medel är du välkommen att skriva till oss via formuläret nedan.',
+          'Har du någon idé eller ett förslag kring en insamlingsaktivitet? Kanske vill du delta som volontär? Oavsett är du välkommen att kontakta oss enligt nedan!',
       },
       content1: {
         imgurl:

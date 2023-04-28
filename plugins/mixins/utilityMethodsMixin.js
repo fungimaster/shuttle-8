@@ -2,6 +2,9 @@ export const utilityMethodsMixin = {
   methods: {
     $_handleRouting(route, externalurl) {
       console.log('route', route)
+      if (!route) {
+        return;
+      }
       // EXTERNAL URL
       if (externalurl) {
         window.open(route)

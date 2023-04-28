@@ -36,7 +36,7 @@ export default {
       hero: {
         headline1: 'Så hjälper du',
         headline2:
-          'Tveka aldrig att kontakta oss på något av nedanstående sätt, vi svarar gärna på frågor!',
+          'Det finns många vis att stötta insamlingstiftelsen på. Du är alltid välkommen och uppskattad för ditt initiativ - stort som smått.',
       },
 
       help1: {

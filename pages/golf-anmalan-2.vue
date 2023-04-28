@@ -28,7 +28,7 @@ export default {
       hero: {
         headline1: 'Registrera spelare',
         headline2:
-          'Här fyller ni i spelarena för ert lag. Ange samma organisationsnummer som i anmälan av laget.',
+          'Här fyller ni i spelarna för ert lag. Ange samma organisationsnummer som i anmälan av laget.',
       },
       list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
     }

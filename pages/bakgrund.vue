@@ -10,8 +10,31 @@
         <SvgWithLove />
       </template>
     </HeroSection>
+    <ValueWords :content="valuewords" :showicon="false"> </ValueWords>
+    <TextAndImage :content="content2" :showicon="false">
+      <template #content>
+        <p class="text">
+          En av stiftelsens grundare, Daniel Telford, började redan 2015
+          arrangera golftävlingar när en nära väns barn drabbades av cancer.
+          Mottagare de första åren var Barncancerfonden Södra. I början av 2019
+          bildades Insamlingsstiftelsen Slag för Hjältar tillsammans med Henrik
+          Karlsson och Bengt Wehlin. Styrelsen förstärktes med Anita Duverell
+          och Thomas Krøigård Hansen – och det ideella arbetet med att utveckla
+          stiftelsen och dess aktiviteter påbörjades.
+        </p>
+        <p class="text">
+          Idag är vi stolta att se stiftelsens arbete resultera i mängder av
+          utbetalningar av våra insamlade medel till icke vinstdrivande
+          organisationer som arbetar inom vård, hälsa och omsorg för barn och
+          ungas välmående. Vårt engagemang stöttas av det lokala förenings- och
+          näringslivet - vilket vi är otroligt tacksamma och ödmjuka inför. Vi
+          är också otroligt stolta över att kunna skänka vidare 100% av
+          stiftelsens insamlade medel.
+        </p>
+      </template>
+    </TextAndImage>
 
-    <ImageAndText :content="content1">
+    <!-- <ImageAndText :content="content1">
       <template #content>
         <h3 class="headline3">
           Vi är stiftelsen som alltid gör allt med kärlek!
@@ -34,23 +57,8 @@
           påbörjades.
         </p>
       </template>
-    </ImageAndText>
-    <TextAndImage :content="content2" :showicon="false">
-      <template #content>
-        <p class="text">
-          Idag är vi stolta att se stiftelsens insatser ta varierade skepnader
-          genom olika gemensamma aktiviteter med framförallt ett engagerat
-          näringsliv kopplat till styrelsen.
-        </p>
-        <p class="text">
-          Insamlingsstiftelsen Slag för Hjältar möjliggör en bättre tillvaro för
-          barn och unga. Genom evenemang tillsammans med förening- och
-          näringslivet donerar vi insamlade medel till icke vinstdrivande
-          organisationer som arbetar inom vård, hälsa och omsorg.
-        </p>
-      </template>
-    </TextAndImage>
-    <div class="container mx-auto px-8 md:px-16 pt-20">
+    </ImageAndText> -->
+    <div class="container mx-auto px-8 md:px-16 pt-0">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-28">
         <Profile :profile="profile1" />
         <Profile :profile="profile2" />
@@ -67,23 +75,28 @@ export default {
     return {
       hero: {
         headline1: 'Om stiftelsen',
-        headline2: 'Våra värdeord är kärlek, glädje, gemenskap och engagemang',
+        headline2:
+          'Våra värdeord är ledstjärnor i allt vi gör. Utan dem ingen stiftelse. Vill du stötta vårt arbete att hjälpa barn och unga i utsatta sammanhang - då har du kommit rätt.',
       },
       content1: {
         imgurl:
           'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269548/SFH/site/slagforhjaltar-13.jpg',
 
-        list: [],
+        list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
       },
       content2: {
         imgurl:
           'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269554/SFH/site/slagforhjaltar-15.jpg',
+        // list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
+      },
+      valuewords: {
         list: ['kärlek', 'glädje', 'gemenskap', 'engagemang'],
       },
       profile3: {
         name: 'Thomas Hansen',
         title: 'Hoteldirektör',
         location: 'Skåne',
+        email: 'thomas@slagforhjaltar.se',
         presentation:
           'Till vardags är jag hotelldirektör på Scandic Helsingborg Nord. Min familj består av min sambo, mina två döttrar och en bonusson. Jag är väldigt social och gillar att träffa och umgås med människor. Den fritid som blir över lägger jag gärna på golf – och padelspel. ',
         imgurl:
@@ -95,6 +108,7 @@ export default {
         name: 'Daniel Telford',
         title: 'VD',
         location: 'Skåne',
+        email: 'daniel@slagforhjaltar.se',
         presentation:
           'Jag är huvudägare av Eriks fönsterputs, delägare och VD på Heberleins samt delägare på Hälsomatlådan. För övrigt älskar jag att umgås med min fru och 2 barn, umgås med vänner, spela golf och se på ishockey. Jag är även engagerad som tränare för min sons fotbollslag i Gantofta IF. ',
         imgurl:
@@ -106,6 +120,7 @@ export default {
         name: 'Anita Duverell',
         title: 'VD',
         location: 'Skåne',
+        email: 'anita@slagforhjaltar.se',
         presentation:
           'Jag har förmånen att driva eget företag, Business Energizing,  som bidrar till människors hälsa inifrån och ut! Jag är matnörd av rang och tillsammans med mitt intresse för träning har det lagt grunden till varför jag idag jobbar med det som antagligen är det viktigaste för var och en av oss – vår hälsa. Jag jobbar huvudsakligen informativt genom föreläsningar och vetenskapliga tester.  ',
         imgurl:
@@ -116,7 +131,8 @@ export default {
       profile2: {
         name: 'Henrik Karlsson',
         title: '',
-        location: '',
+        location: 'Skåne',
+        email: 'henrik@slagforhjaltar.se',
         presentation:
           'På fritiden umgås jag främst med min familj beståendes av min sambo och 1-åriga dotter. Skulle det därefter finns tid över så träffar ni mig vanligast på golfbanan där min stora hobby och passion ligger. Till vardags driver jag ett säkerhetsföretag som heter Professionell Säkerhet som fokuserar på bla. larm, passage och kameraövervakning till företag och större organisationer / myndigheter med utgångspunkt i Skåne.',
         imgurl:
