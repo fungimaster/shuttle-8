@@ -26,7 +26,7 @@
           {{ headline2 }}
         </p>
       </div>
-      <div v-if="$slots.buttons" class="mt-24">
+      <div v-if="$slots.buttons" class="mt-12">
         <slot name="buttons"> </slot>
       </div>
     </div>

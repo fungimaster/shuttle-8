@@ -24,7 +24,7 @@
           {{ profile.presentation }}
         </p>
 
-        <div class="pt-12 pb-8">
+        <div class="pt-12 pb-8 mb-2">
           <a :href="'mailto:' + profile.email">
             <button
               class="bg-pink-dark-hero hover:bg-purple-hero text-white font-bold py-2 px-8 md:px-16 rounded-full"

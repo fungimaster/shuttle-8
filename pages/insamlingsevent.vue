@@ -21,8 +21,15 @@
           <template #content>
             <h3 class="headline3">2023 - Dags för vår tävling igen!</h3>
             <p class="text">
-              Snart drar vi igång årets tävling, kontakta oss för att se om det
-              finns platser kvar.
+              Snart drar vi igång årets tävling och vi har fortfarande några få
+              lagplatser kvar, anmälan på knappen nedan!
+              <button
+                class="mt-6 btn-pill w-full md:w-1/2 btn-lg bg-white"
+                type="button"
+                @click="$_handleRouting('/golf-anmalan-1')"
+              >
+                Anmälan golf 2023
+              </button>
             </p>
             <p class="text">
               Tävlingen går av stapeln på Allerum GK fredagen den 26 maj 7.30 -
@@ -176,7 +183,9 @@
 </template>
 
 <script>
+import { utilityMethodsMixin } from '@/plugins/mixins/utilityMethodsMixin'
 export default {
+  mixins: [utilityMethodsMixin],
   data() {
     return {
       hero: {

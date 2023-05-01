@@ -15,11 +15,11 @@
           <div class="flex mb-4"></div>
           <div class="md:flex">
             <button
-              class="hidden btn-pill w-full md:w-1/2 btn-lg bg-white"
+              class="btn-pill w-full md:w-1/2 btn-lg bg-white"
               type="button"
-              @click="$_handleRouting('/golf-anmalan')"
+              @click="$_handleRouting('/golf-anmalan-1')"
             >
-              Anmälan golf
+              Anmälan golf 2023
             </button>
             <button hidden class="btn-pill btn-lg bg-white" type="button">
               Ge en gåva
@@ -93,7 +93,7 @@
           </template>
         </TextAndCard>
       </div>
-      <HowToHelp />
+      <HowToHelp></HowToHelp>
     </client-only>
   </div>
 </template>

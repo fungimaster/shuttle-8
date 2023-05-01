@@ -133,11 +133,11 @@ export default {
       },
       content1: {
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269548/SFH/site/slagforhjaltar-12.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1200/v1647269548/SFH/site/slagforhjaltar-12.jpg',
       },
       content2: {
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269525/SFH/site/slagforhjaltar-6.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1200/v1647269525/SFH/site/slagforhjaltar-6.jpg',
       },
       hero1: {
         body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed reiciendis, amet magnam ipsam est tempore explicabo accusamus quas perspiciatis, voluptates qui saepe, nostrum possimus itaque consequuntur non quam nobis.',

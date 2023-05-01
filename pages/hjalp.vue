@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <HowToHelp></HowToHelp>
+    <HowToHelp :count="3"></HowToHelp>
   </div>
 </template>
 

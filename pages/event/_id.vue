@@ -10,7 +10,7 @@
       </template>
     </HeroSection> -->
 
-    <div class="py-12 md:px-16 bg-gray-25" v-if="event">
+    <div v-if="event" class="py-12 md:px-16 bg-gray-25">
       <TextAndImage :content="event1" :showicon="false">
         <template #content>
           <h3 class="headline3">{{ event.eventname }}</h3>
@@ -37,11 +37,7 @@
         </CoolLightBox>
         <h3 class="headline3">Bilder från våra härliga deltagare</h3>
         <div
-          class="
-            grid-cols-3
-            space-y-2
-            lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-2
-          "
+          class="grid-cols-3 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-2"
         >
           <div
             v-for="(image, imageIndex) in photos"
@@ -50,8 +46,8 @@
           >
             <img
               :src="formatImage(image.url)"
-              @click="index = imageIndex"
               class="object-contain"
+              @click="index = imageIndex"
             />
           </div>
         </div>
@@ -66,9 +62,6 @@ import CoolLightBox from 'vue-cool-lightbox'
 import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 
 export default {
-  created() {
-    this.eventId = this.$route.params.id
-  },
   components: {
     CoolLightBox,
   },
@@ -87,13 +80,16 @@ export default {
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione itaque quas mollitia quis in aliquid sint hic ipsum vel quod eveniet nobis tempora, neque molestiae libero cupiditate rem numquam!m',
         headline: 'Utdelning',
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto/v1647269554/SFH/site/slagforhjaltar-15.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_800/v1647269554/SFH/site/slagforhjaltar-15.jpg',
       },
     }
   },
   async fetch() {
     await this.getFunds()
     await this.getPhotos()
+  },
+  created() {
+    this.eventId = this.$route.params.id
   },
   computed: {
     ...mapGetters('events', ['getEvents']),
