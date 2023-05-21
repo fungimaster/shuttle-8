@@ -525,10 +525,12 @@ export default {
         this.showToastFailUnique = false
       }
 
+      console.log(this.form)
+
       if (this.validateForm) {
         this.$axios
           .$post(this.$config.baseURL, {
-            method: 'registerTeamPlayers',
+            method: 'registerPlayersEmail',
             data: this.form,
           })
           .then((response) => {
