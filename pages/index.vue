@@ -50,6 +50,8 @@
             <Stats class="py-10 mt-5" :content="stats2" />
             <Stats class="py-10 mt-5" :content="stats3" />
           </div>
+          <br />
+          <h3 class="headline3">Lite härliga bilder från 2023 års tävling!</h3>
           <Gallery />
         </div>
       </div>
