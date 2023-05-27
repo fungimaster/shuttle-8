@@ -34,14 +34,24 @@ export default {
   data() {
     return {
       items: [
-        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682693030/SFH/site/283015428_8180119352013755_6210579723116529307_n.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188389/SFH/site/sfh_2023_9.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188389/SFH/site/sfh_2023_13.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188389/SFH/site/sfh_2023_12.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188389/SFH/site/sfh_2023_2.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188389/SFH/site/sfh_2023_1.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188388/SFH/site/sfh_2023_6.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188388/SFH/site/sfh_2023_5.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188388/SFH/site/sfh_2023_7.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188388/SFH/site/sfh_2023_3.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188388/SFH/site/sfh_2023_10.jpg',
+        /*  'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682693030/SFH/site/283015428_8180119352013755_6210579723116529307_n.jpg',
         'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682693030/SFH/site/283242837_8183376658354691_275727149514486940_n.jpg',
         'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682693031/SFH/site/283144026_8180120088680348_8014949950135797282_n.jpg',
         'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1647269654/SFH/site/slagforhjaltar-18.jpg',
         'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1647269653/SFH/site/slagforhjaltar-20.jpg',
         'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1647269652/SFH/site/slagforhjaltar-19.jpg',
         'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1647269612/SFH/site/slagforhjaltar-49.jpg',
-        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1647269593/SFH/site/slagforhjaltar-38.jpg',
+        'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1647269593/SFH/site/slagforhjaltar-38.jpg', */
       ],
       index: null,
     }

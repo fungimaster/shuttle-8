@@ -19,32 +19,11 @@
           :content="content_2023"
         >
           <template #content>
-            <h3 class="headline3">2023 - Dags för vår tävling igen!</h3>
+            <h3 class="headline3">2023 - Vilken succé!</h3>
             <p class="text">
-              Snart drar vi igång årets tävling och vi har fortfarande några få
-              lagplatser kvar, anmälan på knappen nedan!
-              <button
-                class="mt-6 btn-pill w-full md:w-1/2 btn-lg bg-white"
-                type="button"
-                @click="$_handleRouting('/golf-anmalan-1')"
-              >
-                Anmälan golf 2023
-              </button>
-            </p>
-            <p class="text">
-              Tävlingen går av stapeln på Allerum GK fredagen den 26 maj 7.30 -
-              18.30 och kostar 10.000 per lag.
-              <font-awesome-icon
-                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
-                :icon="['far', 'heart']"
-              />
-            </p>
-            <p class="text">
-              All KÄRLEK från oss
-              <font-awesome-icon
-                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
-                :icon="['far', 'heart']"
-              />
+              Den 25 september spelades 2023 års upplaga av vår golftävling,
+              återkom gärna hit snart eller besök vår facebooksida för att se
+              mer från eventet!
             </p>
             <h4 class="headline4">
               Anita Duverell, Daniel Telford, Henrik Karlsson, Bengt Wehlin,
@@ -63,44 +42,39 @@
           <template #content>
             <h3 class="headline3">2022 - Vilken under dag vi hade!</h3>
             <p class="text">
-              Vilken dag och vilken fest vi hade på Slag för Hjältars Golf!
+              En dag att minnas - Slag för Hjältar Golf 2022! Totalt samlades
+              det under dagen in fantastiska 364 900:- som fördelades jämnt
+              mellan Barndiabetesfonden och Nätverket Prosit. Ett varmt tack
+              till Allerum GK för att ni gör detta med oss.
             </p>
+
             <p class="text">
-              Totalt samlades det under dagen in fantastiska 364 900:- som
-              fördelades jämnt mellan Barndiabetesfonden och Nätverket Prosit.
+              Tusen tack till er alla som på olika vis skapade en dag full av
+              glädje, engagemang och kärlek! Volontärer, spelare, hålvärdar -
+              alla är ni våra hjältar!
               <font-awesome-icon
                 class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
                 :icon="['far', 'heart']"
               />
             </p>
             <p class="text">
-              Att samla goda människor på ett ställe för att göra gott
-              tillsammans - det visste vi på förhand var en underbar idé! Men
-              det vi skapade igår var inget mindre än ren och skär magi!
-              <font-awesome-icon
-                class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
-                :icon="['far', 'heart']"
-              />
-              Just nu är vi omtumlade, glada och otroligt lyckliga att ha kunnat
-              genomföra eventet med alla er inblandade - inget mindre än riktiga
-              HJÄLTAR var och en av er!
+              ”Jag har spelat golf i över 30 år - men jag har aldrig varit med
+              om en sådan här fantastisk dag på en golfbana” - sagt av en av
+              våra deltagande spelare.
               <font-awesome-icon
                 class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
                 :icon="['far', 'heart']"
               />
             </p>
             <p class="text">
-              Häng med oss på vår
+              På vår
               <a href="https://www.facebook.com/slagforhjaltar" target="_blank"
-                >Facebooksida - Slag för Hjältar</a
+                >Facebooksida</a
               >
-              - detta är bara ett litet första smakprov av alla underbara bilder
-              vi tagit under dagen. Vi kommer visa er alla deltagande lag, alla
-              våra enastående hålvärdar och såklart alla andra utan vilka vi
-              inte kunnat genomföra denna dag.
+              kan ni se en mängder av bilder från dagen. Följ oss gärna.
             </p>
             <p class="text">
-              All KÄRLEK från oss
+              Vi är så tacksamma. Kärlek från oss.
               <font-awesome-icon
                 class="w-4 h-4 text-pink-dark-hero overflow-visible inline"
                 :icon="['far', 'heart']"
@@ -217,10 +191,10 @@ export default {
           'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682673805/SFH/eventphotos/2022_2.jpg',
       },
       content_2023: {
-        body1: 'Vi ser så mycket fram emot årets tävling på Allerum GK.',
-        headline: 'Förväntansfulla',
+        body1: 'Årets tävling blev återigen en succé!',
+        headline: 'Tack!',
         imgurl:
-          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1682674252/SFH/eventphotos/2023.jpg',
+          'https://res.cloudinary.com/dn3hzwewp/image/upload/q_auto,w_1024/v1685188388/SFH/site/sfh_2023_6.jpg',
       },
     }
   },

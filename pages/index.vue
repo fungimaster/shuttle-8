@@ -14,14 +14,14 @@
         <template #buttons>
           <div class="flex mb-4"></div>
           <div class="md:flex">
-            <button
+            <button hidden
               class="btn-pill w-full md:w-1/2 btn-lg bg-white"
               type="button"
               @click="$_handleRouting('/golf-anmalan-1')"
             >
               Anmälan golf 2023
             </button>
-            <button hidden class="btn-pill btn-lg bg-white" type="button">
+            <button class="btn-pill btn-lg bg-white" type="button"  @click="$_handleRouting('/hjalp')">
               Ge en gåva
             </button>
             <!-- <button
@@ -107,14 +107,18 @@ export default {
   data() {
     return {
       stats1: {
-        metric: '2 866 817',
+        metric: '3 256 817',
         tagline: 'INSAMLAT & UTDELAT TOTALT',
       },
       stats2: {
+        metric: '390 000',
+        tagline: 'INSAMLAT & UTDELAT 2023',
+      },
+      stats3: {
         metric: '364 900',
         tagline: 'INSAMLAT & UTDELAT 2022',
       },
-      stats3: {
+      stats3_old: {
         metric: '248 265',
         tagline: 'INSAMLAT & UTDELAT 2021',
       },
