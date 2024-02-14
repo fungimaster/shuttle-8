@@ -21,9 +21,9 @@
           <template #content>
             <h3 class="headline3">2023 - Vilken succé!</h3>
             <p class="text">
-              Den 25 september spelades 2023 års upplaga av vår golftävling,
-              återkom gärna hit snart eller besök vår facebooksida för att se
-              mer från eventet!
+              Den 26 maj spelades 2023 års upplaga av vår golftävling, återkom
+              gärna hit snart eller besök vår facebooksida för att se mer från
+              eventet!
             </p>
             <h4 class="headline4">
               Anita Duverell, Daniel Telford, Henrik Karlsson, Bengt Wehlin,
