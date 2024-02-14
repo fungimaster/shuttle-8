@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  //removes unused styles in production
+  //removes unused styles in production...
   purge: [
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',
